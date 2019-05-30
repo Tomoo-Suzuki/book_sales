@@ -1,17 +1,16 @@
 import React from 'react';
-const Labels = () => {
+const itemDataWrap = () => {
     return (
         <span>
-            <ul>
-            <li>無料</li>
-            <li>無料あり</li>
-            <li>割引</li>
-            <li>割引あり</li>
-            <li>NEW</li>
-            <li>20%OFF</li>
-            <li>完結</li>
-            </ul>
+            <a href="">bookTitle</a>
+            <a>releaseDate</a>
+            <a>pointUp</a>
+            <a>bookAuther</a>
+            <a>bookPublisher</a>
+            <a>bookLabel</a>
+            <a>bookMagazine</a>
+            <a>bookExplain</a>
         </span>
     );
 };
-export default Labels;
+export default itemDataWrap;
