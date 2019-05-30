@@ -16,7 +16,7 @@ module.exports = {
     hot:true,
     inline:true,
     openPage: "index.html", //自動で指定したページを開く
-    contentBase: path.join(__dirname, '/'), // HTML等コンテンツのルートディレクトリ
+    contentBase: path.join(__dirname, 'dist'), // HTML等コンテンツのルートディレクトリ
     watchContentBase: true, //コンテンツの変更監視をする
     port: 8888, // ポート番号
   },

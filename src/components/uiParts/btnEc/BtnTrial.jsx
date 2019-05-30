@@ -4,10 +4,8 @@ export const BtnTrial = () => {
     return (
         <li>
             <a href="">
-              <span>リストに入れる</span>
+              <span>[無料]試し読み</span>
             </a>
-            <span>sid0000000001</span>
-            <span>リストに入れました</span>
         </li>
     );
 };
@@ -15,7 +13,7 @@ export const BtnTrialL = () => {
     return (
         <li>
             <a href="">
-              <span>リストに入れる</span>
+              <span>[無料]試し読み</span>
             </a>
         </li>
     );

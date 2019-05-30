@@ -4,10 +4,10 @@ export const BtnReserve = () => {
     return (
         <li>
             <a href="">
-              <span>リストに入れる</span>
+              <span>予約する</span>
             </a>
             <span>sid0000000001</span>
-            <span>リストに入れました</span>
+            <span>予約しました</span>
         </li>
     );
 };
@@ -15,7 +15,7 @@ export const BtnReserveL = () => {
     return (
         <li>
             <a href="">
-              <span>リストに入れる</span>
+              <span>予約する</span>
             </a>
         </li>
     );
