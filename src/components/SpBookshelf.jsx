@@ -4,7 +4,7 @@ import Itemlist from 'components/ItemList';
 
 import 'scss/pcBookshelf';
 
-class SpTopBookshelf extends React.Component {
+class SpBookshelf extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -19,4 +19,4 @@ class SpTopBookshelf extends React.Component {
     }
 }
 
-export default SpTopBookshelf;
+export default SpBookshelf;

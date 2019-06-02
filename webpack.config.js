@@ -55,6 +55,8 @@ module.exports = {
       lib: path.resolve(__dirname, 'lib'),
       img: path.resolve(__dirname, 'img'),
       scss: path.resolve(__dirname, 'src/scss'),
+      util: path.resolve(__dirname, 'src/util'),
+      dummy: path.resolve(__dirname, 'dummy')
     }
   }
   /*,

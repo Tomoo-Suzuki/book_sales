@@ -1,0 +1,18 @@
+{
+    "itemName":"風の谷のナウシカ",
+    "itemAuther":"宮崎駿",
+    "itemPublisher":"studioジブリ",
+    "itemPhoto":"",
+    "itemUrl":"風の谷のナウシカ",
+    "itemNo":"000000001",
+    "itemLabel":"",
+    "itemPrice":450,
+    "itemPoint":112,
+    "itemReleaseDate":"20190923",
+    "itemExprain":"これはもちろんただの HTTP レスポンスであり、実際の JSON ではありません。 response オブジェクトから JSON を抽出するには、 json() メソッドを使用する必要があります。(Body のミックスインとして定義されていて、これは Request と Response の両オブジェクトに実装されています。)",
+    "itemPointUp":12,
+    "itemDiscountRate":13,
+    "itemStatus":6,
+    "itemCategory":"ファンタジー",
+    "itemFlag":[0,0,1,0,0,0,0,0,0]
+}

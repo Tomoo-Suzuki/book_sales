@@ -4,9 +4,10 @@ import Itemlist from 'components/ItemList';
 
 import 'scss/pcBookshelf';
 
-class PcTopBookshelf extends React.Component {
+class PcBookshelf extends React.Component {
     constructor(props) {
         super(props);
+        console.log(props);
     }
     render() {
         return (
@@ -18,4 +19,4 @@ class PcTopBookshelf extends React.Component {
     }
 }
 
-export default PcTopBookshelf;
+export default PcBookshelf;
