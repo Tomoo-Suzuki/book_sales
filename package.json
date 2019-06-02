@@ -8,9 +8,11 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch",
-    "start":"webpack-dev-server"
+    "start": "webpack-dev-server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-router": "^5.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
