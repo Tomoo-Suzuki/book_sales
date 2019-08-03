@@ -1,0 +1,30 @@
+html {
+    font-size: 62.5%;
+
+    body {
+        font-size: 1.4rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+        color: #666666;
+    }
+}
+
+.wrapper {
+    .container {
+        max-width: 1444px;
+
+        .contents {
+            .contents_inner {
+                min-width: 980px;
+            }
+        }
+    }
+}
+
+.section1,
+.section2,
+.section3,
+.section4,
+.sliderSection,
+.footerBefore {
+    margin-top: 60px;
+}

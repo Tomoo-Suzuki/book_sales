@@ -5,7 +5,7 @@ module.exports = {
   watch: true,
   mode: 'development',
   entry: {
-    pc: './src/container/Bookshelf.jsx'
+    book: './src/entrypoint/index.jsx'
   },
   output: {
     filename: '[name].bundle.js',
@@ -50,12 +50,13 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss', '.ts', '.css', '.json', '.txt'],
     alias: {
       entrypoint: path.resolve(__dirname, 'src/entrypoint'),
-      scss: path.resolve(__dirname, 'scss'),
+      container: path.resolve(__dirname, 'src/container'),
       components: path.resolve(__dirname, 'src/components'),
+      scss: path.resolve(__dirname, 'scss'),
       lib: path.resolve(__dirname, 'lib'),
       img: path.resolve(__dirname, 'img'),
       scss: path.resolve(__dirname, 'src/scss'),
-      util: path.resolve(__dirname, 'src/util'),
+      js: path.resolve(__dirname, 'src/js'),
       dummy: path.resolve(__dirname, 'dummy')
     }
   }

@@ -1,0 +1,279 @@
+{
+	"memberName":"ＮＴＴ Ｂ",
+	"memberID":"747474",
+	"history": {
+		"book": {
+			"deliverylist": [
+				{
+					"date": "20171222",
+					"commodityList": [
+						{
+							"commodityCode": "9000339295",
+							"seriesId": "265553"
+						},
+						{
+							"commodityCode": "9000239627",
+							"seriesId": "221956"
+						},
+						{
+							"commodityCode": "9000234251",
+							"seriesId": "21874"
+						},
+						{
+							"commodityCode": "9000232200",
+							"seriesId": "216282"
+						}
+					]
+				},
+				{
+					"date": "20180112",
+					"commodityList": [
+						{
+							"commodityCode": "9000232201",
+							"seriesId": "216282"
+						},
+						{
+							"commodityCode": "9000210424",
+							"seriesId": "192947"
+						},
+						{
+							"commodityCode": "9000210425",
+							"seriesId": "192947"
+						},
+						{
+							"commodityCode": "9000210421",
+							"seriesId": "192947"
+						}
+					]
+				},
+				{
+					"date": "20180221",
+					"commodityList": [
+						{
+							"commodityCode": "9000210422",
+							"seriesId": "192947"
+						},
+						{
+							"commodityCode": "9000192676",
+							"seriesId": "187103"
+						},
+						{
+							"commodityCode": "9000192677",
+							"seriesId": "187103"
+						}
+					]
+				},
+				{
+					"date": "20180311",
+					"commodityList": [
+						{
+							"commodityCode": "9000192065",
+							"seriesId": "185887"
+						}
+					]
+				},
+				{
+					"date": "20180412",
+					"commodityList": [
+						{
+							"commodityCode": "9000191439",
+							"seriesId": "184977"
+						},
+						{
+							"commodityCode": "9000191440",
+							"seriesId": "184977"
+						}
+					]
+				},
+				{
+					"date": "20180505",
+					"commodityList": [
+						{
+							"commodityCode": "9000212123",
+							"seriesId": "184474"
+						},
+						{
+							"commodityCode": "9000220135",
+							"seriesId": "184474"
+						},
+						{
+							"commodityCode": "9000219866",
+							"seriesId": "181526"
+						},
+						{
+							"commodityCode": "9000219867",
+							"seriesId": "181526"
+						}
+					]
+				},
+				{
+					"date": "20180612",
+					"commodityList": [
+						{
+							"commodityCode": "9000219865",
+							"seriesId": "181524"
+						},
+						{
+							"commodityCode": "9000467166",
+							"seriesId": "181524"
+						},
+						{
+							"commodityCode": "",
+							"seriesId": ""
+						},
+						{
+							"commodityCode": "",
+							"seriesId": ""
+						}
+					]
+				},
+				{
+					"date": "20180724",
+					"commodityList": [
+						{
+							"commodityCode": "9000188088",
+							"seriesId": "176156"
+						},
+						{
+							"commodityCode": "9000188089",
+							"seriesId": "176156"
+						},
+						{
+							"commodityCode": "9000188090",
+							"seriesId": "176156"
+						},
+						{
+							"commodityCode": "9000188064",
+							"seriesId": "176155"
+						}
+					]
+				},
+				{
+					"date": "20180811",
+					"commodityList": [
+						{
+							"commodityCode": "9000184684",
+							"seriesId": "150873"
+						},
+						{
+							"commodityCode": "9000184685",
+							"seriesId": "150873"
+						},
+						{
+							"commodityCode": "9000171099",
+							"seriesId": "126857"
+						},
+						{
+							"commodityCode": "9000169922",
+							"seriesId": "125614"
+						}
+					]
+				},
+				{
+					"date": "20180924",
+					"commodityList": [
+						{
+							"commodityCode": "9000169361",
+							"seriesId": "124827"
+						},
+						{
+							"commodityCode": "9000169363",
+							"seriesId": "124827"
+						},
+						{
+							"commodityCode": "9000554740",
+							"seriesId": "372913"
+						},
+						{
+							"commodityCode": "9000584104",
+							"seriesId": "372913"
+						}
+					]
+				},
+				{
+					"date": "20181016",
+					"commodityList": [
+						{
+							"commodityCode": "9000658828",
+							"seriesId": "271326"
+						}
+					]
+				},
+				{
+					"date": "20181128",
+					"commodityList": [
+						{
+							"commodityCode": "9000339296",
+							"seriesId": "265554"
+						},
+						{
+							"commodityCode": "9000192677",
+							"seriesId": "187103"
+						},
+						{
+							"commodityCode": "9000210421",
+							"seriesId": "192947"
+						}
+					]
+				}
+			]
+		},
+		"music": {
+			"deliverylist": [
+				{
+					"date": "20180918",
+					"commodityList": [
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "393939"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "404040"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "414141"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "424242"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "434343"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "454545"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "464646"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "474747"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "484848"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "494949"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "505050"
+						},
+						{
+							"commodityCode": "m12345678",
+							"seriesId": "515151"
+						}
+					]
+				}
+			]
+		}
+	}
+}

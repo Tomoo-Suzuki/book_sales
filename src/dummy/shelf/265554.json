@@ -1,0 +1,53 @@
+{
+    "total": 1,
+    "count": 1,
+    "status": "00000000",
+    "contents": [
+        {
+            "series_id": "265554",
+            "item": "9000339296",
+            "item_name": "『サザエさん』の秘密　エディターズカット版",
+            "detail": "女優の大原櫻子が8日、自身のインスタグラムで広瀬すずとの2ショットを公開した。2人に対して「かわいい」などと称賛の声が集まる中、広瀬が手に持つスマホアクセサリーにデザインされた野性爆弾くっきーの顔にも、ファンの注目が集まっている。",
+            "unit_price": 432,
+            "now_price": 432,
+            "point": 4,
+            "point_magnification": 1,
+            "point_campaign_name": "全品ポイント30倍キャンペーン",
+            "shop_name": "ひかりTVブック",
+            "detail_url": "https://book.hikaritv.net/book/content/book-store/9000339296/",
+            "thumbnail": "https://book.hikaritv.net/shopping/img/commodity/shop/book-store/commodity/9000339296_m.jpg",
+            "category_code": [
+                "bk135"
+            ],
+            "category_name": [
+                "実用・ホビー・暮らし・健康"
+            ],
+            "title_name": "『サザエさん』の秘密　エディターズカット版",
+            "publisher": "データハウス",
+            "author": [
+                "世田谷サザエさん研究会"
+            ],
+            "title_no": 1,
+            "labal_name": "",
+            "bv_sample_url": "https://book.hikaritv.net/browser_viewer/sample/index.html#cid=BT000026555400100101900209&pid=pbrgargt&title=%E3%80%8E%E3%82%B5%E3%82%B6%E3%82%A8%E3%81%95%E3%82%93%E3%80%8F%E3%81%AE%E7%A7%98%E5%AF%86%E3%80%80%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC%E3%82%BA%E3%82%AB%E3%83%83%E3%83%88%E7%89%88&url=https%3A%2F%2Fbook.hikaritv.net%2Fbook%2Fcontent%2Fbook-store%2F9000339296%2F",
+            "icon_list": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "thumbnail_small": "https://book.hikaritv.net/shopping/img/commodity/shop/book-store/commodity/9000339296_t.jpg",
+            "genre": "business",
+            "genre_name": "ビジネス・実用等",
+            "latest_flg": 1,
+            "complete": 0,
+            "reserve": 0,
+            "display_type": "single",
+            "sales_date": ""
+        }
+    ]
+}
