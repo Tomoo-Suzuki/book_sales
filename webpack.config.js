@@ -13,8 +13,8 @@ module.exports = {
   },
   devServer: {
     open: true, //ブラウザを自動で開く
-    hot:true,
-    inline:true,
+    hot: true,
+    inline: true,
     openPage: "index.html", //自動で指定したページを開く
     contentBase: path.join(__dirname, 'dist'), // HTML等コンテンツのルートディレクトリ
     watchContentBase: true, //コンテンツの変更監視をする
@@ -52,6 +52,9 @@ module.exports = {
       entrypoint: path.resolve(__dirname, 'src/entrypoint'),
       container: path.resolve(__dirname, 'src/container'),
       components: path.resolve(__dirname, 'src/components'),
+      reducer: path.resolve(__dirname, 'src/reducer'),
+      state: path.resolve(__dirname, 'src/state'),
+      action: path.resolve(__dirname, 'src/action'),
       scss: path.resolve(__dirname, 'scss'),
       lib: path.resolve(__dirname, 'lib'),
       img: path.resolve(__dirname, 'img'),
