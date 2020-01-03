@@ -1,27 +1,29 @@
 import React from "react";
 import Navigation from "components/uiParts/Navigation";
-import Itemlist from "components/ItemList";
+import Itemlist from "components/uiParts/ItemList";
 
 import "scss/pcBookshelf";
 
-class Bookshelf extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
     this.items = this.props.items;
   }
   render() {
-    //console.log(this.props.items);
+    /*
     let itemLists = this.items.map(function(elm, key) {
       return <Itemlist items={elm} key={key} />;
     });
+    */
 
     return (
       <div className="Bookshelf">
+        <h1>Search</h1>
         <Navigation />
-        {itemLists}
+        {/*itemLists*/}
       </div>
     );
   }
 }
 
-export default Bookshelf;
+export default Search;

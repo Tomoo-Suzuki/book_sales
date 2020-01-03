@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "reducer/mainReducer";
-import Book from "container/Book";
+import App from "container/App";
 
 const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Book />
+    <App />
   </Provider>,
 
   document.getElementById("contents")
