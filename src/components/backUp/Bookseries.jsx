@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "components/uiParts/Navigation";
-import Itemlist from "components/ItemList";
+import Itemlist from "components/uiParts/ItemList";
 
 import "scss/Bookseries";
 
