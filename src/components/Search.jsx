@@ -1,4 +1,6 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import Navigation from "components/uiParts/Navigation";
 import Itemlist from "components/uiParts/ItemList";
 
@@ -13,7 +15,15 @@ class Search extends React.Component {
     });
 
     return (
-      <div className="Bookshelf">
+      <div className="Bookseries">
+        <Helmet>
+          <title>Bookseries | Search</title>
+          <meta
+            name="description"
+            content="BookseriesSearchのディスクリプション"
+          />
+          <meta name="keyword" content="suzuki,book,bookseries,search" />
+        </Helmet>
         <h1>Search</h1>
         <Navigation />
         {itemLists}

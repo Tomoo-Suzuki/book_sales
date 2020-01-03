@@ -1,4 +1,6 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import Navigation from "components/uiParts/Navigation";
 import Itemlist from "components/uiParts/ItemList";
 
@@ -13,7 +15,15 @@ class List extends React.Component {
     });
 
     return (
-      <div className="Bookshelf">
+      <div className="Bookseries">
+        <Helmet>
+          <title>Bookseries | List</title>
+          <meta
+            name="description"
+            content="BookseriesListのディスクリプション"
+          />
+          <meta name="keyword" content="suzuki,book,bookseries,list" />
+        </Helmet>
         <h1>List</h1>
         <Navigation />
         {itemLists}
