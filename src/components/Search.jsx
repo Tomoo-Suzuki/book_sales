@@ -2,8 +2,6 @@ import React from "react";
 import Navigation from "components/uiParts/Navigation";
 import Itemlist from "components/uiParts/ItemList";
 
-import "scss/pcBookshelf";
-
 class Search extends React.Component {
   constructor(props) {
     super(props);

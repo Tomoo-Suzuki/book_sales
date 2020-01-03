@@ -1,0 +1,173 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+/deep/html,
+/deep/body,
+/deep/div,
+/deep/span,
+/deep/object,
+/deep/iframe,
+/deep/h1,
+/deep/h2,
+/deep/h3,
+/deep/h4,
+/deep/h5,
+/deep/h6,
+/deep/p,
+/deep/blockquote,
+/deep/pre,
+/deep/abbr,
+/deep/address,
+/deep/cite,
+/deep/code,
+/deep/del,
+/deep/dfn,
+/deep/em,
+/deep/img,
+/deep/ins,
+/deep/kbd,
+/deep/q,
+/deep/samp,
+/deep/small,
+/deep/strong,
+/deep/sub,
+/deep/sup,
+/deep/var,
+/deep/b,
+/deep/i,
+/deep/dl,
+/deep/dt,
+/deep/dd,
+/deep/ol,
+/deep/ul,
+/deep/li,
+/deep/fieldset,
+/deep/form,
+/deep/label,
+/deep/legend,
+/deep/table,
+/deep/caption,
+/deep/tbody,
+/deep/tfoot,
+/deep/thead,
+/deep/tr,
+/deep/th,
+/deep/td,
+/deep/article,
+/deep/aside,
+/deep/canvas,
+/deep/details,
+/deep/figcaption,
+/deep/figure,
+/deep/footer,
+/deep/header,
+/deep/hgroup,
+/deep/menu,
+/deep/nav,
+/deep/section,
+/deep/summary,
+/deep/time,
+/deep/mark,
+/deep/audio,
+/deep/video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/deep/body {
+    line-height: 1;
+}
+
+/deep/article,
+/deep/aside,
+/deep/details,
+/deep/figcaption,
+/deep/figure,
+/deep/footer,
+/deep/header,
+/deep/hgroup,
+/deep/menu,
+/deep/nav,
+/deep/section {
+    display: block;
+}
+
+/deep/nav ul {
+    list-style: none;
+}
+
+/deep/blockquote,
+/deep/q {
+    quotes: none;
+}
+
+/deep/blockquote:before,
+/deep/blockquote:after,
+/deep/q:before,
+/deep/q:after {
+    content: '';
+    content: none;
+}
+
+/deep/a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+/deep/ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+/deep/mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/deep/del {
+    text-decoration: line-through;
+}
+
+/deep/abbr[title],
+/deep/dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+/deep/table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+/deep/hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/deep/input,
+/deep/select {
+    vertical-align: middle;
+}
