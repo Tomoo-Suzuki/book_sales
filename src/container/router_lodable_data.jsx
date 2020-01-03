@@ -1,9 +1,6 @@
 import React from "react";
 import Loadable from "react-loadable";
-
-const Loading = "Loading";
-
-console.log(Loading);
+import Loading from "components/uiParts/Loading";
 
 const Top = Loadable({
   loader: () => import("components/Top"),
@@ -65,15 +62,15 @@ const routes = [
     component: Search
   },
   {
-    path: "/bookshelf/top",
+    path: "/bookshelf-top",
     exact: true,
-    name: "/bookshelf-top",
+    name: "bookshelf-top",
     component: BookshelfTop
   },
   {
-    path: "/bookshelf/detail",
+    path: "/bookshelf-detail",
     exact: true,
-    name: "/bookshelf-detail",
+    name: "bookshelf-detail",
     component: BookshelfDetail
   }
 ];

@@ -16,37 +16,31 @@ class App extends React.Component {
     const url = "./dummy/item.json";
     fetchBook(url, dataSet);
   }
-  /*
-  elementSwitch() {
+  render() {
     const items = this.state.items;
     const itemLength = Object.keys(items).length;
-    if (itemLength != "") {
-      this.element = <Bookshelf />;
-    }
-  }
-  */
-  render() {
     this.navs = [];
-    this.elms = routes.map((route, idx) => {
-      console.log(route.path);
-      this.navs.push(
-        <li>
-          <Link to={route.path} key={idx}>
-            {route.name}
-          </Link>
-        </li>
-      );
-      return route.component ? (
-        <Route
-          key={route.name}
-          name={route.name}
-          exact={route.exact}
-          path={route.path}
-          render={props => <route.component />}
-        />
-      ) : null;
-    });
 
+    if (itemLength) {
+      this.elms = routes.map((route, idx) => {
+        this.navs.push(
+          <li>
+            <Link to={route.path} key={idx}>
+              {route.name}
+            </Link>
+          </li>
+        );
+        return route.component ? (
+          <Route
+            key={route.name}
+            name={route.name}
+            exact={route.exact}
+            path={route.path}
+            render={props => <route.component items={items} />}
+          />
+        ) : null;
+      });
+    }
     return (
       <BrowserRouter>
         <div>
