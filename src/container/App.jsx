@@ -1,10 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import fetchBook from "js/fetch";
 import { BrowserRouter, Route, Link, Redirect, Switch } from "react-router-dom";
 
 import routes from "container/router_lodable_data.jsx";
+import Header from "components/uiParts/Header";
+import Footer from "components/uiParts/Footer";
 
+import "scss/index.scss";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -43,14 +45,22 @@ class App extends React.Component {
     }
     return (
       <BrowserRouter>
-        <div>
-          <ul>{this.navs}</ul>
-        </div>
-        <div>
-          <Switch>
-            {this.elms}
-            <Redirect exact from="/" to="/" />
-          </Switch>
+        <div className="wrapper">
+          <Header />
+          <div className="contents">
+            <div className="contents-inner">
+              <div>
+                <ul>{this.navs}</ul>
+              </div>
+              <div>
+                <Switch>
+                  {this.elms}
+                  <Redirect exact from="/" to="/" />
+                </Switch>
+              </div>
+            </div>
+          </div>
+          <Footer />
         </div>
       </BrowserRouter>
     );
