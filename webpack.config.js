@@ -52,7 +52,7 @@ module.exports = {
       entrypoint: path.resolve(__dirname, 'src/entrypoint'),
       container: path.resolve(__dirname, 'src/container'),
       components: path.resolve(__dirname, 'src/components'),
-      reducer: path.resolve(__dirname, 'src/reducer'),
+      reducers: path.resolve(__dirname, 'src/reducers'),
       state: path.resolve(__dirname, 'src/state'),
       action: path.resolve(__dirname, 'src/action'),
       scss: path.resolve(__dirname, 'scss'),
