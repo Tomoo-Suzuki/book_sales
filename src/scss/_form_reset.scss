@@ -1,7 +1,7 @@
-/deep/input,
-/deep/button,
-/deep/textarea,
-/deep/select {
+input,
+button,
+textarea,
+select {
     margin: 0;
     padding: 0;
     background: none;
@@ -13,26 +13,26 @@
     appearance: none;
 }
 
-/deep/textarea {
+textarea {
     resize: vertical;
 }
 
-/deep/input[type='checkbox'],
-/deep/input[type='radio'] {
+input[type='checkbox'],
+input[type='radio'] {
     //display: none;
     border-radius: 50%;
 
 
 }
 
-/deep/input[type='submit'],
-/deep/input[type='button'],
-/deep/label,
-/deep/button,
-/deep/select {
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
     cursor: pointer;
 }
 
-/deep/select::-ms-expand {
+select::-ms-expand {
     display: none;
 }
