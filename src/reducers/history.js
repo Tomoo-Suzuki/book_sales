@@ -1,7 +1,7 @@
 import actions from 'action/actions.js'
 import initialState from 'state/initialState.js'
 
-function mainReducer(state = initialState, actions) {
+function history(state = initialState, actions) {
   switch (actions.type) {
     case 'SET_PAGE_TYPE':
       return Object.assign({}, state, {
@@ -12,4 +12,4 @@ function mainReducer(state = initialState, actions) {
   }
 }
 
-export default mainReducer;
+export default history;
