@@ -1,0 +1,48 @@
+input,
+textarea {
+    border: solid #eeeeee 1px;
+}
+
+.form-book {
+    width: 75.6rem;
+    margin: 7.2rem auto;
+    font-size: 1.4rem;
+
+    dl {
+        margin-bottom: 2.4rem;
+        display: table;
+
+        dt,
+        dd {
+            display: table-cell;
+
+            input {
+                display: inline-block;
+                border: #eeeeee solid 1px;
+                border-radius: 3px;
+                width: 12rem;
+                padding: 4px;
+                height: 2rem;
+            }
+        }
+
+        dt {
+            width: 16rem;
+            vertical-align: top;
+        }
+
+        dd {
+            width: 59.6rem;
+
+            >div,
+            >span,
+            >div>span {
+                margin-right: 1.6rem;
+            }
+
+            >div {
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+}

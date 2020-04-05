@@ -16,7 +16,10 @@ import NameKana from "components/formParts/NameKana";
 import Detail from "components/formParts/Detail";
 import ProductNumber from "components/formParts/ProductNumber";
 
-import "scss/_form_reset.scss";
+import "scss/_reset";
+import "scss/_form_reset";
+import "scss/_common";
+import "scss/_form";
 
 class Form extends React.Component {
   constructor(props) {
@@ -36,21 +39,21 @@ class Form extends React.Component {
         </Helmet>
         <h1>Form</h1>
         <Navigation />
-        <div>
-          <Address />
-          <Email />
+        <main class="form-book">
           <ReceptionDate />
-          <Color />
-          <File />
-          <Size />
-          <Company />
           <Name />
-          <Tel />
-          <CustomerType />
           <NameKana />
-          <Detail />
+          <Address />
+          <Tel />
+          <Email />
+          <Company />
+          <CustomerType />
+          <Color />
+          <Size />
           <ProductNumber />
-        </div>
+          <Detail />
+          <File />
+        </main>
       </div>
     );
   }

@@ -30,8 +30,8 @@ const BookshelfDetail = Loadable({
   loader: () => import("components/BookshelfDetail"),
   loading: Loading,
 });
-const Form = Loadable({
-  loader: () => import("components/Form"),
+const FormContents = Loadable({
+  loader: () => import("components/FormContents"),
   loading: Loading,
 });
 const routes = [
@@ -81,7 +81,7 @@ const routes = [
     path: "/form",
     exact: true,
     name: "form",
-    component: Form,
+    component: FormContents,
   },
 ];
 export default routes;
