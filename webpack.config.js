@@ -18,6 +18,7 @@ module.exports = {
     openPage: "index.html", //自動で指定したページを開く
     contentBase: path.join(__dirname, 'dist'), // HTML等コンテンツのルートディレクトリ
     watchContentBase: true, //コンテンツの変更監視をする
+    historyApiFallback: true,
     port: 8888, // ポート番号
   },
   module: {

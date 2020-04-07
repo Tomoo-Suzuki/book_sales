@@ -1,12 +1,13 @@
 import React from "react";
-const ReceptionDate = () => {
+
+const Birthday = () => {
   return (
     <dl>
-      <dt>ご登録日　inputHiddenにする</dt>
+      <dt>生年月日</dt>
       <dd>
         <input type="date" name="receptionDate" />
       </dd>
     </dl>
   );
 };
-export default ReceptionDate;
+export default Birthday;

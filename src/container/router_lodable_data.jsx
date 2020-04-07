@@ -30,8 +30,12 @@ const BookshelfDetail = Loadable({
   loader: () => import("components/BookshelfDetail"),
   loading: Loading,
 });
-const FormContents = Loadable({
-  loader: () => import("components/FormContents"),
+const FormLogin = Loadable({
+  loader: () => import("components/FormLogin"),
+  loading: Loading,
+});
+const FormAccount = Loadable({
+  loader: () => import("components/FormAccount"),
   loading: Loading,
 });
 const routes = [
@@ -78,10 +82,16 @@ const routes = [
     component: BookshelfDetail,
   },
   {
-    path: "/form",
+    path: "/login",
     exact: true,
-    name: "form",
-    component: FormContents,
+    name: "login",
+    component: FormLogin,
+  },
+  {
+    path: "/account",
+    exact: true,
+    name: "account",
+    component: FormAccount,
   },
 ];
 export default routes;

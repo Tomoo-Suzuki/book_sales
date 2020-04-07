@@ -6,75 +6,75 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
-/deep/html,
-/deep/body,
-/deep/div,
-/deep/span,
-/deep/object,
-/deep/iframe,
-/deep/h1,
-/deep/h2,
-/deep/h3,
-/deep/h4,
-/deep/h5,
-/deep/h6,
-/deep/p,
-/deep/blockquote,
-/deep/pre,
-/deep/abbr,
-/deep/address,
-/deep/cite,
-/deep/code,
-/deep/del,
-/deep/dfn,
-/deep/em,
-/deep/img,
-/deep/ins,
-/deep/kbd,
-/deep/q,
-/deep/samp,
-/deep/small,
-/deep/strong,
-/deep/sub,
-/deep/sup,
-/deep/var,
-/deep/b,
-/deep/i,
-/deep/dl,
-/deep/dt,
-/deep/dd,
-/deep/ol,
-/deep/ul,
-/deep/li,
-/deep/fieldset,
-/deep/form,
-/deep/label,
-/deep/legend,
-/deep/table,
-/deep/caption,
-/deep/tbody,
-/deep/tfoot,
-/deep/thead,
-/deep/tr,
-/deep/th,
-/deep/td,
-/deep/article,
-/deep/aside,
-/deep/canvas,
-/deep/details,
-/deep/figcaption,
-/deep/figure,
-/deep/footer,
-/deep/header,
-/deep/hgroup,
-/deep/menu,
-/deep/nav,
-/deep/section,
-/deep/summary,
-/deep/time,
-/deep/mark,
-/deep/audio,
-/deep/video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -84,42 +84,42 @@ Twitter: @rich_clark
     background: transparent;
 }
 
-/deep/body {
+body {
     line-height: 1;
 }
 
-/deep/article,
-/deep/aside,
-/deep/details,
-/deep/figcaption,
-/deep/figure,
-/deep/footer,
-/deep/header,
-/deep/hgroup,
-/deep/menu,
-/deep/nav,
-/deep/section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
-/deep/nav ul {
+nav ul {
     list-style: none;
 }
 
-/deep/blockquote,
-/deep/q {
+blockquote,
+q {
     quotes: none;
 }
 
-/deep/blockquote:before,
-/deep/blockquote:after,
-/deep/q:before,
-/deep/q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
 
-/deep/a {
+a {
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -128,37 +128,37 @@ Twitter: @rich_clark
 }
 
 /* change colours to suit your needs */
-/deep/ins {
+ins {
     background-color: #ff9;
     color: #000;
     text-decoration: none;
 }
 
 /* change colours to suit your needs */
-/deep/mark {
+mark {
     background-color: #ff9;
     color: #000;
     font-style: italic;
     font-weight: bold;
 }
 
-/deep/del {
+del {
     text-decoration: line-through;
 }
 
-/deep/abbr[title],
-/deep/dfn[title] {
+abbr[title],
+dfn[title] {
     border-bottom: 1px dotted;
     cursor: help;
 }
 
-/deep/table {
+table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
-/deep/hr {
+hr {
     display: block;
     height: 1px;
     border: 0;
@@ -167,7 +167,7 @@ Twitter: @rich_clark
     padding: 0;
 }
 
-/deep/input,
-/deep/select {
+input,
+select {
     vertical-align: middle;
 }
