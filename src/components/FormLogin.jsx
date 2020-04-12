@@ -1,14 +1,14 @@
 import React from "react";
-import Navigation from "components/uiParts/Navigation";
+import Navigation from "_components/uiParts/Navigation";
 import { Helmet } from "react-helmet";
 
-import UserId from "components/formParts/UserId";
-import Password from "components/formParts/Password";
+import UserId from "_components/formParts/UserId";
+import Password from "_components/formParts/Password";
 
-import "scss/_reset";
-import "scss/_form_reset";
-import "scss/_common";
-import "scss/_form";
+import "_scss/_reset";
+import "_scss/_form_reset";
+import "_scss/_common";
+import "_scss/_form";
 
 class FormLogin extends React.Component {
   constructor(props) {
