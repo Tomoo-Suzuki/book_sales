@@ -1,5 +1,5 @@
-import actions from 'action/actions.js'
-import initialState from 'state/initialState.js'
+import actions from '_action/actions.js'
+import initialState from '_state/initialState.js'
 
 function member(state = initialState, actions) {
   switch (actions.type) {

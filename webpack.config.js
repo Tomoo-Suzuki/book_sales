@@ -52,18 +52,18 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".scss", ".ts", ".css", ".json", ".txt"],
     alias: {
-      entrypoint: path.resolve(__dirname, "src/entrypoint"),
-      container: path.resolve(__dirname, "src/container"),
-      components: path.resolve(__dirname, "src/components"),
-      reducers: path.resolve(__dirname, "src/reducers"),
-      state: path.resolve(__dirname, "src/state"),
-      action: path.resolve(__dirname, "src/action"),
-      scss: path.resolve(__dirname, "scss"),
-      lib: path.resolve(__dirname, "lib"),
-      img: path.resolve(__dirname, "img"),
-      scss: path.resolve(__dirname, "src/scss"),
-      js: path.resolve(__dirname, "src/js"),
-      dummy: path.resolve(__dirname, "dummy")
+      _entrypoint: path.resolve(__dirname, "src/entrypoint"),
+      _container: path.resolve(__dirname, "src/container"),
+      _components: path.resolve(__dirname, "src/components"),
+      _reducers: path.resolve(__dirname, "src/reducers"),
+      _state: path.resolve(__dirname, "src/state"),
+      _action: path.resolve(__dirname, "src/action"),
+      _scss: path.resolve(__dirname, "scss"),
+      _lib: path.resolve(__dirname, "lib"),
+      _img: path.resolve(__dirname, "img"),
+      _scss: path.resolve(__dirname, "src/scss"),
+      _js: path.resolve(__dirname, "src/js"),
+      _dummy: path.resolve(__dirname, "dummy")
     }
   }
   /*,

@@ -1,97 +1,97 @@
 import React from "react";
 import Loadable from "react-loadable";
-import Loading from "components/uiParts/Loading";
+import Loading from "_components/uiParts/Loading";
 
 const Top = Loadable({
-  loader: () => import("components/Top"),
-  loading: Loading,
+  loader: () => import("_components/Top"),
+  loading: Loading
 });
 const Genre = Loadable({
-  loader: () => import("components/Genre"),
-  loading: Loading,
+  loader: () => import("_components/Genre"),
+  loading: Loading
 });
 const List = Loadable({
-  loader: () => import("components/List"),
-  loading: Loading,
+  loader: () => import("_components/List"),
+  loading: Loading
 });
 const Detail = Loadable({
-  loader: () => import("components/Detail"),
-  loading: Loading,
+  loader: () => import("_components/Detail"),
+  loading: Loading
 });
 const Search = Loadable({
-  loader: () => import("components/Search"),
-  loading: Loading,
+  loader: () => import("_components/Search"),
+  loading: Loading
 });
 const BookshelfTop = Loadable({
-  loader: () => import("components/BookshelfTop"),
-  loading: Loading,
+  loader: () => import("_components/BookshelfTop"),
+  loading: Loading
 });
 const BookshelfDetail = Loadable({
-  loader: () => import("components/BookshelfDetail"),
-  loading: Loading,
+  loader: () => import("_components/BookshelfDetail"),
+  loading: Loading
 });
 const FormLogin = Loadable({
-  loader: () => import("components/FormLogin"),
-  loading: Loading,
+  loader: () => import("_components/FormLogin"),
+  loading: Loading
 });
 const FormAccount = Loadable({
-  loader: () => import("components/FormAccount"),
-  loading: Loading,
+  loader: () => import("_components/FormAccount"),
+  loading: Loading
 });
 const routes = [
   {
     path: "/",
     exact: true,
     name: "top",
-    component: Top,
+    component: Top
   },
   {
     path: "/genre",
     exact: true,
     name: "genre",
-    component: Genre,
+    component: Genre
   },
   {
     path: "/list",
     exact: true,
     name: "list",
-    component: List,
+    component: List
   },
   {
     path: "/detail",
     exact: true,
     name: "detail",
-    component: Detail,
+    component: Detail
   },
   {
     path: "/search",
     exact: true,
     name: "search",
-    component: Search,
+    component: Search
   },
   {
     path: "/bookshelf-top",
     exact: true,
     name: "bookshelf-top",
-    component: BookshelfTop,
+    component: BookshelfTop
   },
   {
     path: "/bookshelf-detail",
     exact: true,
     name: "bookshelf-detail",
-    component: BookshelfDetail,
+    component: BookshelfDetail
   },
   {
     path: "/login",
     exact: true,
     name: "login",
-    component: FormLogin,
+    component: FormLogin
   },
   {
     path: "/account",
     exact: true,
     name: "account",
-    component: FormAccount,
-  },
+    component: FormAccount
+  }
 ];
 export default routes;

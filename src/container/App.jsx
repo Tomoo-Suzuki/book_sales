@@ -1,12 +1,12 @@
 import React from "react";
-import fetchBook from "js/fetch";
+import fetchBook from "_js/fetch";
 import { BrowserRouter, Route, Link, Redirect, Switch } from "react-router-dom";
 
-import routes from "container/router_lodable_data.jsx";
-import Header from "components/uiParts/Header";
-import Footer from "components/uiParts/Footer";
+import routes from "_container/router_lodable_data.jsx";
+import Header from "_components/uiParts/Header";
+import Footer from "_components/uiParts/Footer";
 
-import "scss/index.scss";
+import "_scss/index.scss";
 class App extends React.Component {
   constructor(props) {
     super(props);

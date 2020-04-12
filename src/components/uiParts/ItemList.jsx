@@ -1,8 +1,8 @@
 import React from "react";
-import Labels from "components/uiParts/Labels";
-import PhotoWrap from "components/uiParts/PhotoWrap";
-import ItemDataWrap from "components/uiParts/ItemDataWrap";
-import BtnWrap from "components/uiParts/BtnWrap";
+import Labels from "_components/uiParts/Labels";
+import PhotoWrap from "_components/uiParts/PhotoWrap";
+import ItemDataWrap from "_components/uiParts/ItemDataWrap";
+import BtnWrap from "_components/uiParts/BtnWrap";
 class ItemList extends React.Component {
   constructor(props) {
     super(props);

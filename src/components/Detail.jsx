@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import Navigation from "components/uiParts/Navigation";
-import Itemlist from "components/uiParts/ItemList";
+import Navigation from "_components/uiParts/Navigation";
+import Itemlist from "_components/uiParts/ItemList";
 
 class Detail extends React.Component {
   constructor(props) {
