@@ -1,7 +1,8 @@
 {
     "name": "book_sales",
     "version": "1.0.0",
-    "description": "",
+    "description": "aplication of book sales",
+    "repository": "github book_sales",
     "main": "index.js",
     "scripts": {
         "server": "node ./node_modules/.bin/http-server -p 8000",
