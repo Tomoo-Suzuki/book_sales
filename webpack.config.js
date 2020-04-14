@@ -21,7 +21,7 @@ module.exports = {
     watchContentBase: true, //コンテンツの変更監視をする
     historyApiFallback: true,
     port: 8888, // ポート番号
-    host: "0.0.0.0" //dockerと連携売る時に
+    host: "0.0.0.0" //dockerと連携する時に
   },
   module: {
     rules: [{
