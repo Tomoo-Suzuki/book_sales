@@ -1,5 +1,5 @@
 import React from "react";
-export const SelectOrderYear = () => {
+export const SelectYear = () => {
   return (
     <select>
       <option>2020年代</option>

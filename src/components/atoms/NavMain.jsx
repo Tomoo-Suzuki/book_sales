@@ -1,5 +1,5 @@
 import React from "react";
-export default function Loading(props) {
+export default function NavMain(props) {
   return (
     <nav>
       <div>logo-BookSales</div>

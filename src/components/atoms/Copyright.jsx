@@ -1,4 +1,4 @@
 import React from "react";
-export default function Loading(props) {
+export default function Copyright(props) {
   return <div>copyright</div>;
 }

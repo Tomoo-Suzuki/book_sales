@@ -5,7 +5,7 @@ import BtnConfig from "_components/atoms/uiBtn/BtnConfig";
 import DisplayNum from "_components/atoms/DisplayNum";
 import Pager from "_components/atoms/Pager";
 import BtnOrderChange from "_components/atoms/uiBtn/BtnOrderChange";
-const PcNavigation = () => {
+const Navigation = () => {
   return (
     <nav className="">
       <div>
@@ -21,4 +21,4 @@ const PcNavigation = () => {
     </nav>
   );
 };
-export default PcNavigation;
+export default Navigation;
