@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TitleBookshelf = (
+export const Title = (
   <div className="titleWrap">
     <h2></h2>
   </div>

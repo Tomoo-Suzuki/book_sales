@@ -1,4 +1,4 @@
 import React from "react";
-export default function Loading(props) {
+export default function Logo(props) {
   return <div>Logo-BookUpload</div>;
 }
