@@ -1,5 +1,5 @@
 import React from "react";
-export default function Loading(props) {
+export default function NavFooter(props) {
   return (
     <nav>
       <div>
