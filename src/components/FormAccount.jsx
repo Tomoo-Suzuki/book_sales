@@ -1,15 +1,15 @@
 import React from "react";
-import Navigation from "_components/uiParts/Navigation";
+import Navigation from "_components/organisms/Navigation";
 import { Helmet } from "react-helmet";
 
-import Name from "_components/formParts/Name";
-import NameKana from "_components/formParts/NameKana";
-import Address from "_components/formParts/Address";
-import Tel from "_components/formParts/Tel";
-import Email from "_components/formParts/Email";
-import Gender from "_components/formParts/Gender";
-import Birthday from "_components/formParts/Birthday";
-import ReceptionDate from "_components/formParts/ReceptionDate";
+import Name from "_components/atoms/formParts/Name";
+import NameKana from "_components/atoms/formParts/NameKana";
+import Address from "_components/atoms/formParts/Address";
+import Tel from "_components/atoms/formParts/Tel";
+import Email from "_components/atoms/formParts/Email";
+import Gender from "_components/atoms/formParts/Gender";
+import Birthday from "_components/atoms/formParts/Birthday";
+import ReceptionDate from "_components/atoms/formParts/ReceptionDate";
 
 import "_scss/_reset";
 import "_scss/_form_reset";

@@ -1,9 +1,9 @@
 import React from "react";
-import Navigation from "_components/uiParts/Navigation";
+import Navigation from "_components/organisms/Navigation";
 import { Helmet } from "react-helmet";
 
-import UserId from "_components/formParts/UserId";
-import Password from "_components/formParts/Password";
+import UserId from "_components/atoms/formParts/UserId";
+import Password from "_components/atoms/formParts/Password";
 
 import "_scss/_reset";
 import "_scss/_form_reset";

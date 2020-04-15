@@ -1,8 +1,6 @@
 import React from "react";
 class Labels extends React.Component {
   render() {
-    console.log(this.props);
-
     this.labelElements = [];
     this.labels = this.props.labels;
     if (this.labels[0]) {
