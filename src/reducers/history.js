@@ -1,4 +1,4 @@
-import actions from '_action/actions.js'
+import actions from '_actions/actions.js'
 import initialState from '_state/initialState.js'
 
 function history(state = initialState, actions) {
