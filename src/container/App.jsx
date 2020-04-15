@@ -1,5 +1,5 @@
 import React from "react";
-import fetchBook from "_js/fetch";
+import fetchBook from "_lib/fetch";
 import { BrowserRouter, Route, Link, Redirect, Switch } from "react-router-dom";
 
 import routes from "_container/router_lodable_data.jsx";
@@ -38,7 +38,7 @@ class App extends React.Component {
             name={route.name}
             exact={route.exact}
             path={route.path}
-            render={props => <route.component items={items} />}
+            render={(props) => <route.component items={items} />}
           />
         ) : null;
       });
