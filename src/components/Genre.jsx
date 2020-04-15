@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import Navigation from "_components/uiParts/Navigation";
-import Itemlist from "_components/uiParts/ItemList";
+import Navigation from "_components/organisms/Navigation";
+import Itemlist from "_components/organisms/ItemList";
 
 class GenreTop extends React.Component {
   constructor(props) {

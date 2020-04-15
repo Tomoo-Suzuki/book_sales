@@ -3,8 +3,8 @@ import fetchBook from "_lib/fetch";
 import { BrowserRouter, Route, Link, Redirect, Switch } from "react-router-dom";
 
 import routes from "_container/router_lodable_data.jsx";
-import Header from "_components/uiParts/Header";
-import Footer from "_components/uiParts/Footer";
+import Header from "_components/organisms/Header";
+import Footer from "_components/organisms/Footer";
 
 import "_scss/index.scss";
 class App extends React.Component {
@@ -26,7 +26,7 @@ class App extends React.Component {
     if (itemLength) {
       this.elms = routes.map((route, idx) => {
         this.navs.push(
-          <li>
+          <li key={idx}>
             <Link to={route.path} key={idx}>
               {route.name}
             </Link>
