@@ -1,16 +1,20 @@
 import React from "react";
 import ToTop from "_components/atoms/ToTop";
-import NavFooter from "_components/atoms/NavFooter";
-import MenuFooter from "_components/atoms/ItemCount";
+import SiteSwitcherFooter from "_components/atoms/SiteSwitcherFooter";
+import MenuFooter from "_components/atoms/MenuFooter";
 import Copyright from "_components/atoms/Copyright";
+
+import "_scss/organisms/_footer";
 class Footer extends React.Component {
   render() {
     return (
-      <footer>
+      <footer className="footer">
         <ToTop />
-        <NavFooter />
-        <MenuFooter />
-        <Copyright />
+        <div className="footer_inner">
+          <SiteSwitcherFooter />
+          <MenuFooter />
+          <Copyright />
+        </div>
       </footer>
     );
   }
