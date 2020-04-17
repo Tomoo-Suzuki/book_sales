@@ -1,16 +1,15 @@
 const path = require("path");
 const webpack = require("webpack");
 
-
 module.exports = {
   watch: true,
   mode: "development",
   entry: {
-    book: "./src/index.jsx"
+    book: "./src/index.jsx",
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "public")
+    path: path.resolve(__dirname, "public"),
   },
   devServer: {
     open: true, //ブラウザを自動で開く
@@ -21,33 +20,39 @@ module.exports = {
     watchContentBase: true, //コンテンツの変更監視をする
     historyApiFallback: true,
     port: 8888, // ポート番号
-    host: "0.0.0.0" //dockerと連携する時に
+    host: "0.0.0.0", //dockerと連携する時に
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.txt$/,
-        use: "raw-loader"
+        use: "raw-loader",
       },
       {
         test: [/\.js$/, /\.jsx$/],
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: "babel-loader",
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [{
-            loader: "style-loader"
+        use: [
+          {
+            loader: "style-loader",
           },
           {
-            loader: "css-loader"
+            loader: "css-loader",
           },
           {
-            loader: "sass-loader"
-          }
-        ]
-      }
-    ]
+            loader: "sass-loader",
+          },
+        ],
+      },
+      {
+        test: [/\.jpe?g/, /\.png/, /\.svg/, /\.gif/, /\.ico/],
+        use: "file-loader",
+      },
+    ],
   },
   resolve: {
     extensions: [".js", ".jsx", ".scss", ".ts", ".css", ".json", ".txt"],
@@ -62,9 +67,9 @@ module.exports = {
       _img: path.resolve(__dirname, "img"),
       _scss: path.resolve(__dirname, "src/scss"),
       _lib: path.resolve(__dirname, "src/lib"),
-      _dummy: path.resolve(__dirname, "dummy")
-    }
-  }
+      _dummy: path.resolve(__dirname, "dummy"),
+    },
+  },
   /*,
     plugins: [
       new webpack.optimize.UglifyJsPlugin(),

@@ -5,11 +5,6 @@ import { Helmet } from "react-helmet";
 import UserId from "_components/atoms/formParts/UserId";
 import Password from "_components/atoms/formParts/Password";
 
-import "_scss/_reset";
-import "_scss/_form_reset";
-import "_scss/_common";
-import "_scss/_form";
-
 class FormLogin extends React.Component {
   constructor(props) {
     super(props);
