@@ -1,0 +1,21 @@
+.menuFooter {
+    margin: 5rem 0;
+
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        >li {
+            margin: 0 5rem 0 0;
+
+            >a {
+                color: #ffffff;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,9 @@
 import React from "react";
+import "_scss/atoms/_navHeader";
+
 export default function NavHeader(props) {
   return (
-    <nav>
+    <nav className="nav_header">
       <ul>
         <li>異世界ファンタジー</li>
         <li>現代ファンタジー</li>
