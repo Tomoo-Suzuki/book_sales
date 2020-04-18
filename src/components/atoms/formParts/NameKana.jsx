@@ -1,5 +1,7 @@
 import React from "react";
-const NameKana = () => {
+const NameKana = (props) => {
+  const { val, updateState } = props;
+
   return (
     <dl>
       <dt>フリガナ</dt>
@@ -12,6 +14,8 @@ const NameKana = () => {
             pattern="[ァ-ヴー/s ]+"
             placeholder="ヤマダ"
             title="カタカナを入力してください"
+            value={val.lastNameKana}
+            onChange={(e) => updateState(e)}
           />
         </span>
         <span>
@@ -22,6 +26,8 @@ const NameKana = () => {
             pattern="[ァ-ヴー/s ]+"
             placeholder="キョウコ"
             title="カタカナを入力してください"
+            value={val.firstNameKana}
+            onChange={(e) => updateState(e)}
           />
         </span>
       </dd>

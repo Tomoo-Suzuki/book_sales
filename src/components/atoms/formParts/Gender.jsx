@@ -1,6 +1,8 @@
 import React from "react";
 
-const Gender = () => {
+const Gender = (props) => {
+  const { val, updateState } = props;
+
   return (
     <dl>
       <dt>ジェンダー</dt>

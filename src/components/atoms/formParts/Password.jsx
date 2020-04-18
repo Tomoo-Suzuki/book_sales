@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Password = (props) => {
   const { val, updateState } = props;
   const [visible, funcIsVisible] = useState("password");
-  let inputType;
 
   let displayPassword = () => {
     if (visible === "password") {
