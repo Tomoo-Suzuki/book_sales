@@ -8,7 +8,13 @@ import Password from "_components/atoms/formParts/Password";
 class FormLogin extends React.Component {
   constructor(props) {
     super(props);
-    this.items = this.props.items;
+    this.state = {
+      userId: "",
+      password: "",
+    };
+  }
+  setFormData(e) {
+    this.setState({ [e.target.name]: e.target.value });
   }
   render() {
     return (
@@ -23,14 +29,24 @@ class FormLogin extends React.Component {
         </Helmet>
         <h1>Form</h1>
         <Navigation />
-        <main class="form-book">
+        <main className="form-book">
           <h2>ログイン</h2>
-          <UserId />
-          <Password />
+          <UserId
+            val={this.state}
+            updateState={(e) => {
+              this.setFormData(e);
+            }}
+          />
+          <Password
+            val={this.state}
+            updateState={(e) => {
+              this.setFormData(e);
+            }}
+          />
           <div>
             <input name="skip" value="1" id="skip" type="checkbox" />
             <label htmlFor="skip">次回から自動的にログイン</label>
-            <p class="attention">
+            <p className="attention">
               ネットカフェや公共の場所、学校など、自分専用のパソコン以外では自動ログインのチェックをせず、使用後は必ずログアウトしてください。
             </p>
             <div>
