@@ -1,13 +1,13 @@
 import React from "react";
-import { BtnCart } from "_components/atoms/submitBtn/BtnCart";
-import { BtnReserve } from "_components/atoms/submitBtn/BtnReserve";
-import { BtnWish } from "_components/atoms/submitBtn/BtnWish";
-import { BtnTrial } from "_components/atoms/submitBtn/BtnTrial";
-import { BtnFree } from "_components/atoms/submitBtn/BtnFree";
-import { BtnCartNew } from "_components/atoms/submitBtn/BtnCartNew";
-import { BtnReserveNew } from "_components/atoms/submitBtn/BtnReserveNew";
-import { BtnWishNew } from "_components/atoms/submitBtn/BtnWishNew";
-import { BtnTrialNew } from "_components/atoms/submitBtn/BtnTrialNew";
+import { BtnCart } from "_components/atoms/submitBtn/purchase/BtnCart";
+import { BtnReserve } from "_components/atoms/submitBtn/purchase/BtnReserve";
+import { BtnWish } from "_components/atoms/submitBtn/purchase/BtnWish";
+import { BtnTrial } from "_components/atoms/submitBtn/purchase/BtnTrial";
+import { BtnFree } from "_components/atoms/submitBtn/purchase/BtnFree";
+import { BtnCartNew } from "_components/atoms/submitBtn/purchase/BtnCartNew";
+import { BtnReserveNew } from "_components/atoms/submitBtn/purchase/BtnReserveNew";
+import { BtnWishNew } from "_components/atoms/submitBtn/purchase/BtnWishNew";
+import { BtnTrialNew } from "_components/atoms/submitBtn/purchase/BtnTrialNew";
 class BtnWrap extends React.Component {
   render() {
     this.status = this.props.status;
