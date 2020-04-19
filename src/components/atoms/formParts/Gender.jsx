@@ -23,7 +23,7 @@ const Gender = (props) => {
             type="radio"
             name="gender"
             value="woman"
-            checked={val.gender === "man"}
+            checked={val.gender === "woman"}
             onChange={(e) => updateState(e)}
           />
         </label>

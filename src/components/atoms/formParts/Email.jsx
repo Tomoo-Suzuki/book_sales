@@ -9,7 +9,7 @@ const Email = (props) => {
         <dd>
           <input
             type="email"
-            name="mail"
+            name="email"
             required
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
             placeholder="09021334566"
@@ -23,8 +23,8 @@ const Email = (props) => {
         <dt>メール(確認用)</dt>
         <dd>
           <input
-            type="emailConfirm"
-            name="mail2"
+            type="email"
+            name="emailConfirm"
             required
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
             placeholder="09021334566"

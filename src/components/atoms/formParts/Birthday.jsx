@@ -9,7 +9,7 @@ const Birthday = (props) => {
       <dd>
         <input
           type="date"
-          name="receptionDate"
+          name="birthday"
           value={val.birthday}
           onChange={(e) => updateState(e)}
         />

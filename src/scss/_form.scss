@@ -31,12 +31,19 @@ textarea {
         }
 
         .radioAndCheckbox {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
             >label {
-                width: 70px;
+                width: 10rem;
                 display: inline-block;
+                margin-right: 2rem;
+                padding-bottom: 2rem;
             }
 
-            input[type='radio'] {
+            input[type='radio'],
+            input[type='checkbox'] {
                 position: relative;
                 display: inline-block;
 

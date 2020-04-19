@@ -10,9 +10,12 @@ import Address from "_components/atoms/formParts/Address";
 import Tel from "_components/atoms/formParts/Tel";
 import Email from "_components/atoms/formParts/Email";
 import Gender from "_components/atoms/formParts/Gender";
+import Purpose from "_components/atoms/formParts/Purpose";
 import Birthday from "_components/atoms/formParts/Birthday";
 import ReceptionDate from "_components/atoms/formParts/ReceptionDate";
 import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
+
+import moment from "moment";
 
 import setFormData from "_lib/setFormData";
 
@@ -24,6 +27,8 @@ import "_scss/_form";
 class FormAccount extends React.Component {
   constructor(props) {
     super(props);
+    const today = moment().format("YYYY年MM月DD日");
+
     this.state = {
       zip: "",
       prefecture: "",
@@ -34,12 +39,19 @@ class FormAccount extends React.Component {
       email: "",
       emailConfirm: "",
       gender: "",
+      purpose: {
+        upload: "",
+        read: "",
+        buy: "",
+        sell: "",
+        other: "",
+      },
       firstName: "",
       firstNameKana: "",
       lastName: "",
       lastNameKana: "",
       tel: "",
-      receptionDate: "",
+      receptionDate: today,
     };
     this.setFormData = setFormData.bind(this);
   }
@@ -57,11 +69,8 @@ class FormAccount extends React.Component {
     return (
       <div className="Bookseries">
         <Helmet>
-          <title>Bookseries | Detail</title>
-          <meta
-            name="description"
-            content="BookseriesDetailディスクリプション"
-          />
+          <title>Book Sell | Account Form</title>
+          <meta name="description" content="会員登録フォーム" />
           <meta name="keyword" content="suzuki,book,bookseries, detail" />
         </Helmet>
         <h1>Form</h1>
@@ -108,6 +117,12 @@ class FormAccount extends React.Component {
               val={this.state}
               updateState={(e) => {
                 this.setFormData(e);
+              }}
+            />
+            <Purpose
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e, true);
               }}
             />
             <Birthday
