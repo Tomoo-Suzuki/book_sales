@@ -1,4 +1,6 @@
-input,
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
     border: solid #eeeeee 1px;
 }
@@ -16,13 +18,65 @@ textarea {
         dd {
             display: table-cell;
 
-            input {
+            input[type='text'],
+            input[type='email'],
+            input[type='tel'] {
                 display: inline-block;
                 border: #eeeeee solid 1px;
                 border-radius: 3px;
                 width: 12rem;
                 padding: 4px;
                 height: 2rem;
+            }
+        }
+
+        .radioAndCheckbox {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            >label {
+                width: 10rem;
+                display: inline-block;
+                margin-right: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            input[type='radio'],
+            input[type='checkbox'] {
+                position: relative;
+                display: inline-block;
+
+                &:after {
+                    position: absolute;
+                    top: -10px;
+                    right: -25px;
+                    display: block;
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    border: #eeeeee solid 1px;
+                    border-radius: 50%;
+                }
+
+                &:before {
+                    position: absolute;
+                    top: -7px;
+                    right: -22px;
+                    display: block;
+                    content: '';
+                    width: 9px;
+                    height: 9px;
+                    border: #eeeeee solid 1px;
+                    border-radius: 50%;
+                }
+
+                &:checked {
+                    &:before {
+                        background: #019c96;
+                    }
+
+                }
             }
         }
 
@@ -44,5 +98,6 @@ textarea {
                 margin-bottom: 1.6rem;
             }
         }
+
     }
 }
