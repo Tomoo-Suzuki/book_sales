@@ -1,26 +1,26 @@
-input[type='text'],
-input[type='email'],
-input[type='tel'],
-textarea {
+/deep/ input[type='text'],
+/deep/ input[type='email'],
+/deep/ input[type='tel'],
+/deep/ textarea {
     border: solid #eeeeee 1px;
 }
 
-.form-book {
+/deep/ .form-book {
     width: 75.6rem;
     margin: 7.2rem auto;
     font-size: 1.4rem;
 
-    dl {
+    /deep/ dl {
         margin-bottom: 2.4rem;
         display: table;
 
-        dt,
-        dd {
+        /deep/ dt,
+        /deep/ dd {
             display: table-cell;
 
-            input[type='text'],
-            input[type='email'],
-            input[type='tel'] {
+            /deep/ input[type='text'],
+            /deep/ input[type='email'],
+            /deep/ input[type='tel'] {
                 display: inline-block;
                 border: #eeeeee solid 1px;
                 border-radius: 3px;
@@ -30,24 +30,24 @@ textarea {
             }
         }
 
-        .radioAndCheckbox {
+        /deep/ .radioAndCheckbox {
             display: inline-flex;
             flex-wrap: wrap;
             justify-content: flex-start;
 
-            >label {
+            /deep/>label {
                 width: 10rem;
                 display: inline-block;
                 margin-right: 2rem;
                 padding-bottom: 2rem;
             }
 
-            input[type='radio'],
-            input[type='checkbox'] {
+            /deep/ input[type='radio'],
+            /deep/ input[type='checkbox'] {
                 position: relative;
                 display: inline-block;
 
-                &:after {
+                /deep/ &:after {
                     position: absolute;
                     top: -10px;
                     right: -25px;
@@ -59,7 +59,7 @@ textarea {
                     border-radius: 50%;
                 }
 
-                &:before {
+                /deep/ &:before {
                     position: absolute;
                     top: -7px;
                     right: -22px;
@@ -71,8 +71,8 @@ textarea {
                     border-radius: 50%;
                 }
 
-                &:checked {
-                    &:before {
+                /deep/ &:checked {
+                    /deep/ &:before {
                         background: #019c96;
                     }
 
@@ -80,21 +80,21 @@ textarea {
             }
         }
 
-        dt {
+        /deep/ dt {
             width: 16rem;
             vertical-align: top;
         }
 
-        dd {
+        /deep/ dd {
             width: 59.6rem;
 
-            >div,
-            >span,
-            >div>span {
+            /deep/>div,
+            /deep/>span,
+            /deep/>div>span {
                 margin-right: 1.6rem;
             }
 
-            >div {
+            /deep/>div {
                 margin-bottom: 1.6rem;
             }
         }
