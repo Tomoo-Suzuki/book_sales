@@ -99,7 +99,7 @@ const Address = (props) => {
           <span>
             <input
               type="text"
-              name="adress3"
+              name="address3"
               required
               placeholder="3-7-18"
               value={val.adress3}

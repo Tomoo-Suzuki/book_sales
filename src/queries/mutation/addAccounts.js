@@ -25,4 +25,3 @@ const addAcounts = `mutation{
           purpose
   }
 }`
-`

@@ -9,24 +9,24 @@ const NameKana = (props) => {
         <span>
           <input
             type="text"
-            name="lastNameKana"
+            name="last_name_kana"
             required
             pattern="[ァ-ヴー/s ]+"
             placeholder="ヤマダ"
             title="カタカナを入力してください"
-            value={val.lastNameKana}
+            value={val.last_name_kana}
             onChange={(e) => updateState(e)}
           />
         </span>
         <span>
           <input
             type="text"
-            name="firstNameKana"
+            name="first_name_kana"
             required
             pattern="[ァ-ヴー/s ]+"
             placeholder="キョウコ"
             title="カタカナを入力してください"
-            value={val.firstNameKana}
+            value={val.first_name_kana}
             onChange={(e) => updateState(e)}
           />
         </span>

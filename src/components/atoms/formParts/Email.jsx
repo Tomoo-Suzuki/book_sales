@@ -12,7 +12,7 @@ const Email = (props) => {
             name="email"
             required
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-            placeholder="09021334566"
+            placeholder="aaa@bbb.cc.dd"
             title="メールアドレス"
             value={val.email}
             onChange={(e) => updateState(e)}
@@ -24,12 +24,12 @@ const Email = (props) => {
         <dd>
           <input
             type="email"
-            name="emailConfirm"
+            name="email_confirm"
             required
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-            placeholder="09021334566"
+            placeholder="aaa@bbb.cc.dd"
             title="メールアドレス確認"
-            value={val.emailConfirm}
+            value={val.email_confirm}
             onChange={(e) => updateState(e)}
           />
         </dd>

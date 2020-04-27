@@ -7,11 +7,11 @@ const ReceptionDate = (props) => {
     <dl>
       <dt>ご登録日</dt>
       <dd>
-        <span>{val.receptionDate}</span>
+        <span>{val.reception_date}</span>
         <input
           type="hidden"
           name="receptionDate"
-          value={val.receptionDate}
+          value={val.reception_date}
           onChange={(e) => updateState(e)}
         />
       </dd>

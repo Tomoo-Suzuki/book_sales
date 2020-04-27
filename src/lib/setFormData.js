@@ -18,8 +18,6 @@ export default function setFormData(e, isCheckbox) {
       [e.target.name]: newPurpose
     });
 
-    console.log(this.state.purpose)
-
   } else {
     this.setState({
       [e.target.name]: e.target.value

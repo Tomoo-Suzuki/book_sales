@@ -20,6 +20,7 @@ import moment from "moment";
 import setFormData from "_lib/setFormData";
 import request from "_lib/request";
 import { account } from "_queries/query/account";
+import { addAccount } from "_queries/mutation/addAccount";
 
 import "_scss/_reset";
 import "_scss/_form_reset";
@@ -35,11 +36,11 @@ class FormAccount extends React.Component {
       zip: "",
       prefecture: "",
       city: "",
-      adress3: "",
+      address3: "",
       building: "",
       birthday: "",
       email: "",
-      emailConfirm: "",
+      email_confirm: "",
       gender: "",
       purpose: {
         upload: "",
@@ -48,25 +49,28 @@ class FormAccount extends React.Component {
         sell: "",
         other: "",
       },
-      firstName: "",
-      firstNameKana: "",
-      lastName: "",
-      lastNameKana: "",
+      first_name: "",
+      first_name_kana: "",
+      last_name: "",
+      last_name_kana: "",
       tel: "",
-      receptionDate: today,
+      reception_date: today,
     };
     this.setFormData = setFormData.bind(this);
     this.request = request.bind(this);
-    this.request(account);
+    //this.addAccount = addAccount.bind(this);
+    this.request(account, 0);
   }
   submitFormData() {
     const accountForm = document.forms.accountForm;
     const formData = new FormData(accountForm);
-    axios.post("/foo", formData);
-    //確認用
+    let tempHash = {};
     for (let item of formData) {
-      console.log(item);
+      tempHash[item[0]] = item[1];
     }
+    console.log(JSON.stringify(tempHash));
+    console.log(addAccount(tempHash));
+    request(addAccount(tempHash), 1);
   }
 
   render() {
@@ -81,6 +85,7 @@ class FormAccount extends React.Component {
         <Navigation />
         <main className="form-book">
           <form name="accountForm">
+            <input type="hidden" name="id" value="00002" />
             <ReceptionDate
               val={this.state}
               updateState={(e) => {

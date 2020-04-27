@@ -9,20 +9,20 @@ const Name = (props) => {
         <span>
           <input
             type="text"
-            name="lastName"
+            name="last_name"
             required
             placeholder="山田"
-            value={val.lastName}
+            value={val.last_name}
             onChange={(e) => updateState(e)}
           />
         </span>
         <span>
           <input
             type="text"
-            name="firstName"
+            name="first_name"
             required
             placeholder="京子"
-            value={val.firstName}
+            value={val.first_name}
             onChange={(e) => updateState(e)}
           />
         </span>
