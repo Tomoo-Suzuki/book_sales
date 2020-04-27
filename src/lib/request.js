@@ -7,7 +7,7 @@ export default function request(que, type) {
         query: que
       })
       .then(function (res) {
-        //console.log(res);
+        console.log(res);
       })
       .catch(function (e) {
         console.log("反映テスト01");
@@ -20,7 +20,7 @@ export default function request(que, type) {
         query: que
       })
       .then(function (res) {
-        //console.log(res);
+        console.log(res);
       })
       .catch(function (e) {
         console.log("反映テスト00");

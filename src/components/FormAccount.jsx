@@ -68,8 +68,6 @@ class FormAccount extends React.Component {
     for (let item of formData) {
       tempHash[item[0]] = item[1];
     }
-    console.log(JSON.stringify(tempHash));
-    console.log(addAccount(tempHash));
     request(addAccount(tempHash), 1);
   }
 
