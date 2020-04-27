@@ -18,6 +18,8 @@ import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
 import moment from "moment";
 
 import setFormData from "_lib/setFormData";
+import request from "_lib/request";
+import { account } from "_queries/query/account";
 
 import "_scss/_reset";
 import "_scss/_form_reset";
@@ -54,6 +56,8 @@ class FormAccount extends React.Component {
       receptionDate: today,
     };
     this.setFormData = setFormData.bind(this);
+    this.request = request.bind(this);
+    this.request(account);
   }
   submitFormData() {
     const accountForm = document.forms.accountForm;

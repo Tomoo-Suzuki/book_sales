@@ -7,6 +7,9 @@ import UserId from "_components/atoms/formParts/UserId";
 import Password from "_components/atoms/formParts/Password";
 import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
 
+import request from "_lib/request";
+import { login } from "_queries/query/login";
+
 class FormLogin extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +17,8 @@ class FormLogin extends React.Component {
       userId: "",
       password: "",
     };
+    this.request = request.bind(this);
+    this.request(login);
   }
   setFormData(e) {
     this.setState({ [e.target.name]: e.target.value });

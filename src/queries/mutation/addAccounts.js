@@ -1,0 +1,28 @@
+const addAcounts = `mutation{
+  addAccount(id:"00002",
+          last_name:"森下",
+          first_name:"翔",
+          last_name_kana:"モリシタ",
+          first_name_kana:"カケル",
+          birthday:"2000-09-17",
+          zip:"2231116",
+          prefecture:"東京都",
+          city:"江東区",
+          address3:"宇美駅",
+          building:"グランサーガ",
+          purpose:"不明"){
+    id,
+          last_name,
+          first_name,
+          last_name_kana,
+          first_name_kana,
+          birthday,
+          zip,
+          prefecture,
+          city,
+          address3,
+          building,
+          purpose
+  }
+}`
+`
