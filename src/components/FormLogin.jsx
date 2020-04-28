@@ -60,7 +60,7 @@ class FormLogin extends React.Component {
                 this.setFormData(e);
               }}
             />
-            <BtnPost submit={this.submitFormData} />
+            <BtnPost submit={this.submitFormData} btnName="ログイン" />
             <div>
               <input name="skip" value="1" id="skip" type="checkbox" />
               <label htmlFor="skip">次回から自動的にログイン</label>

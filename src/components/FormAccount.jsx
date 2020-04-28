@@ -138,7 +138,7 @@ class FormAccount extends React.Component {
                 this.setFormData(e);
               }}
             />
-            <BtnPost submit={this.submitFormData} />
+            <BtnPost submit={this.submitFormData} btnName="確認する" />
           </form>
         </main>
       </div>

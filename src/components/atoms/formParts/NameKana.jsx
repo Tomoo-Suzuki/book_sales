@@ -3,7 +3,7 @@ const NameKana = (props) => {
   const { val, updateState } = props;
 
   return (
-    <dl>
+    <dl className="require">
       <dt>フリガナ</dt>
       <dd>
         <span>

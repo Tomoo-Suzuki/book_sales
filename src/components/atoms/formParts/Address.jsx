@@ -60,7 +60,7 @@ const Address = (props) => {
   ));
 
   return (
-    <dl>
+    <dl className="require">
       <dt>ご住所</dt>
       <dd className="adress-data-wrap">
         <div>
@@ -74,7 +74,7 @@ const Address = (props) => {
           />
         </div>
         <div>
-          <span>
+          <span className="selectCustome">
             <select
               name="prefecture"
               required

@@ -4,7 +4,7 @@ const Birthday = (props) => {
   const { val, updateState } = props;
 
   return (
-    <dl>
+    <dl className="require">
       <dt>生年月日</dt>
       <dd>
         <input
