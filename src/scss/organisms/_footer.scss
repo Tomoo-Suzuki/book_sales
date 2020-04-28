@@ -1,8 +1,10 @@
+@import '../color';
+
 .footer {
     width: 100%;
     font-size: 1.4rem;
     color: #ffffff;
-    background: #2f9be2;
+    background: $sell_green_dark;
     padding-bottom: 3rem;
 
     .footer_inner {

@@ -1,3 +1,5 @@
+@import '../color';
+
 .searchBox {
     >label {
         >input {
@@ -10,7 +12,7 @@
         }
 
         >button {
-            background: #2f9be2;
+            background: $sell_green_dark;
             color: #ffffff;
             font-weight: bold;
             width: 3rem;
