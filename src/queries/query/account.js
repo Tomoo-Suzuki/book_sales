@@ -1,4 +1,10 @@
-export const account = `{
+import {
+  select_account
+} from "_redux/actions/action.js";
+import request from "_lib/request";
+
+export const account = (dispatch) => {
+  const query = `{
   account(id:"00001") {
     id,
     last_name,
@@ -17,3 +23,5 @@ export const account = `{
     purpose
   }
 }`
+  request(query, 0, select_account, dispatch);
+};

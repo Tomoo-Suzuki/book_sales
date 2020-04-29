@@ -1,6 +1,5 @@
 //actionCreator
 export const insert_account = function (object) {
-  console.log(object)
   return ({
     type: 'INSERT_ACCOUNT',
     value: object
