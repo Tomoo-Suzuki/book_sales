@@ -57,9 +57,7 @@ module.exports = {
     alias: {
       _container: path.resolve(__dirname, "src/container"),
       _components: path.resolve(__dirname, "src/components"),
-      _reducers: path.resolve(__dirname, "src/reducers"),
-      _state: path.resolve(__dirname, "src/state"),
-      _actions: path.resolve(__dirname, "src/actions"),
+      _redux: path.resolve(__dirname, "src/redux"),
       _scss: path.resolve(__dirname, "scss"),
       _lib: path.resolve(__dirname, "lib"),
       _img: path.resolve(__dirname, "img"),

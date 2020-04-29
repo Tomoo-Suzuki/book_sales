@@ -1,5 +1,6 @@
 import React from "react";
-import axios from "axios";
+import * as Redux from "react-redux";
+import { insert_account } from "_redux/actions/action.js";
 
 import Navigation from "_components/organisms/Navigation";
 import { Helmet } from "react-helmet";
@@ -56,7 +57,9 @@ class FormAccount extends React.Component {
       tel: "",
       reception_date: today,
     };
+
     this.setFormData = setFormData.bind(this);
+    this.submitFormData = this.submitFormData.bind(this);
     this.request = request.bind(this);
     //this.addAccount = addAccount.bind(this);
     this.request(account, 0);
@@ -69,6 +72,8 @@ class FormAccount extends React.Component {
       tempHash[item[0]] = item[1];
     }
     request(addAccount(tempHash), 1);
+    console.log(this.props.items);
+    this.props.dispatch(insert_account(tempHash));
   }
 
   render() {
@@ -146,4 +151,5 @@ class FormAccount extends React.Component {
   }
 }
 
-export default FormAccount;
+// export default FormAccount;
+export default Redux.connect()(FormAccount);

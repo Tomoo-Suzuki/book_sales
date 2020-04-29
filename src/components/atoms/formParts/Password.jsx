@@ -15,7 +15,7 @@ const Password = (props) => {
     }
   };
   return (
-    <reactfragment>
+    <React.Fragment>
       <dl>
         <dt>パスワード</dt>
         <dd className="has_tooltip">
@@ -35,7 +35,7 @@ const Password = (props) => {
       <button onClick={displayPassword} className={"btn_" + inputType}>
         {nameBtn}
       </button>
-    </reactfragment>
+    </React.Fragment>
   );
 };
 export default Password;
