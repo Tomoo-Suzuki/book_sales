@@ -23,5 +23,6 @@ export const account = (dispatch) => {
     purpose
   }
 }`
-  request(query, 0, select_account, dispatch);
+  const res = request(query, 'account', select_account, dispatch);
+
 };
