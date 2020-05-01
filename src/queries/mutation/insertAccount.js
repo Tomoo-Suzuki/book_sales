@@ -35,5 +35,5 @@ export const insertAccount = (form, dispatch) => {
               purpose
       }
     }`;
-  request(query, 1, insert_account, dispatch);
+  request(query, 'insertAccount', insert_account, dispatch);
 };

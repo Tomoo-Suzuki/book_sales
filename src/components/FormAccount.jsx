@@ -19,7 +19,7 @@ import moment from "moment";
 
 import setFormData from "_lib/setFormData";
 import { insertAccount } from "_queries/mutation/insertAccount";
-import { account } from "_queries/query/account";
+import { selectAccount } from "_queries/query/selectAccount";
 
 import "_scss/_reset";
 import "_scss/_form_reset";
@@ -60,8 +60,7 @@ class FormAccount extends React.Component {
     this.submitFormData = this.submitFormData.bind(this);
     //account = account.bind(this);
     //this.addAccount = addAccount.bind(this);
-    console.log(this.props);
-    account(this.props.dispatch);
+    selectAccount(this.props.dispatch);
   }
   submitFormData() {
     const thisFrom = document.forms.accountForm;
@@ -80,7 +79,7 @@ class FormAccount extends React.Component {
         <Navigation />
         <main className="form-book">
           <form name="accountForm">
-            <input type="hidden" name="id" value="00026" />
+            <input type="hidden" name="id" value="00030" />
             <ReceptionDate
               val={this.state}
               updateState={(e) => {
