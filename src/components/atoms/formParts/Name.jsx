@@ -1,9 +1,10 @@
 import React from "react";
+
 const Name = (props) => {
   const { val, updateState } = props;
 
   return (
-    <dl>
+    <dl className="require">
       <dt>お名前</dt>
       <dd>
         <span>

@@ -4,7 +4,7 @@ const Tel = (props) => {
   const { val, updateState } = props;
 
   return (
-    <dl>
+    <dl className="require">
       <dt>お電話番号</dt>
       <dd>
         <input

@@ -1,0 +1,17 @@
+@import '../color';
+
+.has_tooltip {
+    position: relative;
+
+    .tooltip {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 20rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        background: #efefef;
+        border-radius: .4rem;
+    }
+}

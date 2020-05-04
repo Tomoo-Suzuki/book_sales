@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import * as Redux from "react-redux";
 
 import Navigation from "_components/organisms/Navigation";
 import { Helmet } from "react-helmet";
@@ -18,9 +18,8 @@ import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
 import moment from "moment";
 
 import setFormData from "_lib/setFormData";
-import request from "_lib/request";
-import { account } from "_queries/query/account";
-import { addAccount } from "_queries/mutation/addAccount";
+import { insertAccount } from "_queries/mutation/insertAccount";
+import { selectAccount } from "_queries/query/selectAccount";
 
 import "_scss/_reset";
 import "_scss/_form_reset";
@@ -56,19 +55,16 @@ class FormAccount extends React.Component {
       tel: "",
       reception_date: today,
     };
+
     this.setFormData = setFormData.bind(this);
-    this.request = request.bind(this);
+    this.submitFormData = this.submitFormData.bind(this);
+    //account = account.bind(this);
     //this.addAccount = addAccount.bind(this);
-    this.request(account, 0);
+    selectAccount(this.props.dispatch);
   }
   submitFormData() {
-    const accountForm = document.forms.accountForm;
-    const formData = new FormData(accountForm);
-    let tempHash = {};
-    for (let item of formData) {
-      tempHash[item[0]] = item[1];
-    }
-    request(addAccount(tempHash), 1);
+    const thisFrom = document.forms.accountForm;
+    insertAccount(thisFrom, this.props.dispatch);
   }
 
   render() {
@@ -83,7 +79,7 @@ class FormAccount extends React.Component {
         <Navigation />
         <main className="form-book">
           <form name="accountForm">
-            <input type="hidden" name="id" value="00002" />
+            <input type="hidden" name="id" value="00030" />
             <ReceptionDate
               val={this.state}
               updateState={(e) => {
@@ -138,7 +134,7 @@ class FormAccount extends React.Component {
                 this.setFormData(e);
               }}
             />
-            <BtnPost submit={this.submitFormData} />
+            <BtnPost submit={this.submitFormData} btnName="確認する" />
           </form>
         </main>
       </div>
@@ -146,4 +142,5 @@ class FormAccount extends React.Component {
   }
 }
 
-export default FormAccount;
+// export default FormAccount;
+export default Redux.connect()(FormAccount);

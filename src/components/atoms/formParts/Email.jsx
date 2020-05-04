@@ -4,7 +4,7 @@ const Email = (props) => {
 
   return (
     <span>
-      <dl>
+      <dl className="require">
         <dt>メール</dt>
         <dd>
           <input
@@ -19,7 +19,7 @@ const Email = (props) => {
           />
         </dd>
       </dl>
-      <dl>
+      <dl className="require">
         <dt>メール(確認用)</dt>
         <dd>
           <input

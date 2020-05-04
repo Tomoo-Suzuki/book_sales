@@ -4,7 +4,7 @@ const Gender = (props) => {
   const { val, updateState } = props;
 
   return (
-    <dl>
+    <dl className="require">
       <dt>ジェンダー</dt>
       <dd className="radioAndCheckbox">
         <label>

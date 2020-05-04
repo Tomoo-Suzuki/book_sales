@@ -1,8 +1,7 @@
-import actions from '_actions/actions.js'
 import initialState from '_state/initialState.js'
 
-function member(state = initialState, actions) {
-  switch (actions.type) {
+function book(state = initialState, action) {
+  switch (action.type) {
     case 'SET_PAGE_TYPE':
       return Object.assign({}, state, {
         pageType: action.value
@@ -12,4 +11,4 @@ function member(state = initialState, actions) {
   }
 }
 
-export default member;
+export default book;

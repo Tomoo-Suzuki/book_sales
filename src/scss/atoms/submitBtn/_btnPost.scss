@@ -1,0 +1,21 @@
+@import '../../color';
+
+.btnWrap {
+    text-align: center;
+
+    .btn {
+        >button {
+            background: $sell_green_dark;
+            color: #ffffff;
+            display: inline-block;
+            border-radius: 3px;
+            width: 16rem;
+            padding: 4px;
+            height: 3rem;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

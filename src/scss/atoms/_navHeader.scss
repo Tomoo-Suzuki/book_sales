@@ -1,3 +1,5 @@
+@import '../color';
+
 .nav_header {
     >ul {
         display: flex;
@@ -13,7 +15,7 @@
             padding: 0.3rem 1rem;
             white-space: nowrap;
             color: #ffffff;
-            background: #2f9be2;
+            background: $sell_green_dark;
             border-radius: 2px;
         }
     }
