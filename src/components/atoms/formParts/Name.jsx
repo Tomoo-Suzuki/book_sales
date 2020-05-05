@@ -1,7 +1,7 @@
 import React from "react";
 
 const Name = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
 
   return (
     <dl className="require">
@@ -13,8 +13,9 @@ const Name = (props) => {
             name="last_name"
             required
             placeholder="山田"
-            value={val.last_name}
-            onChange={(e) => updateState(e)}
+            defaultValue={val.last_name}
+            // value={val.last_name}
+            onChange={(e) => updateForm(e)}
           />
         </span>
         <span>
@@ -23,8 +24,9 @@ const Name = (props) => {
             name="first_name"
             required
             placeholder="京子"
-            value={val.first_name}
-            onChange={(e) => updateState(e)}
+            // value={val.first_name}
+            defaultValue={val.first_name}
+            onChange={(e) => updateForm(e)}
           />
         </span>
       </dd>
