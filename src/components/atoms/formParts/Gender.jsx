@@ -1,8 +1,7 @@
 import React from "react";
 
 const Gender = (props) => {
-  const { val, updateState } = props;
-
+  const { val, updateForm } = props;
   return (
     <dl className="require">
       <dt>ジェンダー</dt>
@@ -12,9 +11,9 @@ const Gender = (props) => {
           <input
             type="radio"
             name="gender"
-            value="man"
-            checked={val.gender === "man"}
-            onChange={(e) => updateState(e)}
+            value={0}
+            checked={Number(val.gender) === 0}
+            onChange={(e) => updateForm(e)}
           />
         </label>
         <label>
@@ -22,9 +21,9 @@ const Gender = (props) => {
           <input
             type="radio"
             name="gender"
-            value="woman"
-            checked={val.gender === "woman"}
-            onChange={(e) => updateState(e)}
+            value={1}
+            checked={Number(val.gender) === 1}
+            onChange={(e) => updateForm(e)}
           />
         </label>
         <label>
@@ -32,9 +31,9 @@ const Gender = (props) => {
           <input
             type="radio"
             name="gender"
-            value="lgbt"
-            checked={val.gender === "lgbt"}
-            onChange={(e) => updateState(e)}
+            value={2}
+            checked={Number(val.gender) === 2}
+            onChange={(e) => updateForm(e)}
           />
         </label>
       </dd>

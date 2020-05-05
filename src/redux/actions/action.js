@@ -18,3 +18,10 @@ export const delete_account = (object) => ({
   type: 'DELETE_ACCOUNT',
   value: object
 });
+
+export const form_controll = function (object) {
+  return ({
+    type: 'FORM_CONTROLL',
+    value: object
+  })
+};

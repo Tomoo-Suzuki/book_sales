@@ -1,6 +1,6 @@
 import React from "react";
 const NameKana = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
 
   return (
     <dl className="require">
@@ -14,8 +14,8 @@ const NameKana = (props) => {
             pattern="[ァ-ヴー/s ]+"
             placeholder="ヤマダ"
             title="カタカナを入力してください"
-            value={val.last_name_kana}
-            onChange={(e) => updateState(e)}
+            defaultValue={val.last_name_kana}
+            onChange={(e) => updateForm(e)}
           />
         </span>
         <span>
@@ -26,8 +26,8 @@ const NameKana = (props) => {
             pattern="[ァ-ヴー/s ]+"
             placeholder="キョウコ"
             title="カタカナを入力してください"
-            value={val.first_name_kana}
-            onChange={(e) => updateState(e)}
+            defaultValue={val.first_name_kana}
+            onChange={(e) => updateForm(e)}
           />
         </span>
       </dd>

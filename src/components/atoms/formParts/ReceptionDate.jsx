@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReceptionDate = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
 
   return (
     <dl>
@@ -12,7 +12,7 @@ const ReceptionDate = (props) => {
           type="hidden"
           name="receptionDate"
           value={val.reception_date}
-          onChange={(e) => updateState(e)}
+          onChange={(e) => updateForm(e)}
         />
       </dd>
     </dl>

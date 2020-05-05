@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tel = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
 
   return (
     <dl className="require">
@@ -13,8 +13,8 @@ const Tel = (props) => {
           required
           placeholder="09021334566"
           pattern="\d{2,4}-?\d{3,4}-?\d{3,4}"
-          value={val.tel}
-          onChange={(e) => updateState(e)}
+          defaultValue={val.tel}
+          onChange={(e) => updateForm(e)}
         />
       </dd>
     </dl>
