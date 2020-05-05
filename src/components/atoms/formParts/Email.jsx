@@ -1,6 +1,6 @@
 import React from "react";
 const Email = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
 
   return (
     <span>
@@ -14,8 +14,8 @@ const Email = (props) => {
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
             placeholder="aaa@bbb.cc.dd"
             title="メールアドレス"
-            value={val.email}
-            onChange={(e) => updateState(e)}
+            defaultValue={val.email}
+            onChange={(e) => updateForm(e)}
           />
         </dd>
       </dl>
@@ -29,8 +29,8 @@ const Email = (props) => {
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
             placeholder="aaa@bbb.cc.dd"
             title="メールアドレス確認"
-            value={val.email_confirm}
-            onChange={(e) => updateState(e)}
+            defaultValue={val.email_confirm}
+            onChange={(e) => updateForm(e)}
           />
         </dd>
       </dl>

@@ -1,8 +1,7 @@
 import React from "react";
 
-const Gender = (props) => {
-  const { val, updateState } = props;
-
+const Purpose = (props) => {
+  const { val, updateForm } = props;
   return (
     <dl>
       <dt>ご利用目的</dt>
@@ -13,9 +12,9 @@ const Gender = (props) => {
             id="upload"
             type="checkbox"
             name="purpose"
-            value="0"
-            checked={val.purpose.upload === "1"}
-            onChange={(e) => updateState(e)}
+            defaultValue={0}
+            checked={Number(val.purpose) === 0}
+            onChange={(e) => updateForm(e)}
           />
         </label>
         <label>
@@ -24,9 +23,9 @@ const Gender = (props) => {
             id="read"
             type="checkbox"
             name="purpose"
-            value="1"
-            checked={val.purpose.read === "1"}
-            onChange={(e) => updateState(e)}
+            defaultValue={1}
+            checked={Number(val.purpose) === 1}
+            onChange={(e) => updateForm(e)}
           />
         </label>
         <label>
@@ -35,9 +34,9 @@ const Gender = (props) => {
             id="buy"
             type="checkbox"
             name="purpose"
-            value="2"
-            checked={val.purpose.buy === "1"}
-            onChange={(e) => updateState(e)}
+            defaultValue={2}
+            checked={Number(val.purpose) === 2}
+            onChange={(e) => updateForm(e)}
           />
         </label>
         <label>
@@ -46,9 +45,9 @@ const Gender = (props) => {
             id="sell"
             type="checkbox"
             name="purpose"
-            value="3"
-            checked={val.purpose.sell === "1"}
-            onChange={(e) => updateState(e)}
+            defaultValue={3}
+            checked={Number(val.purpose) === 3}
+            onChange={(e) => updateForm(e)}
           />
         </label>
         <label>
@@ -57,13 +56,13 @@ const Gender = (props) => {
             id="other"
             type="checkbox"
             name="purpose"
-            value="4"
-            checked={val.purpose.other === "1"}
-            onChange={(e) => updateState(e)}
+            value={4}
+            checked={Number(val.purpose) === 4}
+            onChange={(e) => updateForm(e)}
           />
         </label>
       </dd>
     </dl>
   );
 };
-export default Gender;
+export default Purpose;

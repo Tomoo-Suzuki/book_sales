@@ -17,10 +17,9 @@ import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
 
 import moment from "moment";
 
-// import setFormData from "_lib/setFormData";
+import setFormData from "_lib/setFormData";
 import { insertAccount } from "_queries/mutation/insertAccount";
 import { selectAccount } from "_queries/query/selectAccount";
-import { form_controll } from "_redux/actions/action.js";
 
 import "_scss/index";
 
@@ -28,11 +27,34 @@ class FormAccount extends React.Component {
   constructor(props) {
     super(props);
     const today = moment().format("YYYY年MM月DD日");
-    this.state = {};
+    this.state = {
+      zip: "",
+      prefecture: "",
+      city: "",
+      address3: "",
+      building: "",
+      birthday: "",
+      email: "",
+      email_confirm: "",
+      gender: "",
+      purpose: {
+        upload: "",
+        read: "",
+        buy: "",
+        sell: "",
+        other: "",
+      },
+      first_name: "",
+      first_name_kana: "",
+      last_name: "",
+      last_name_kana: "",
+      tel: "",
+      reception_date: today,
+    };
+    this.setFormData = setFormData.bind(this);
     this.submitFormData = this.submitFormData.bind(this);
     this.getData = this.getData.bind(this);
-    this.formDispatch = this.formDispatch.bind(this);
-    this.getData("l_ryuusei_y@gmail.com");
+    this.getData("ryuusei_y@gmail.com");
   }
   getData(email) {
     selectAccount(email, this.props.dispatch);
@@ -41,14 +63,9 @@ class FormAccount extends React.Component {
     const thisFrom = document.forms.accountForm;
     insertAccount(thisFrom, this.props.dispatch);
   }
-  formDispatch(e, isCheckbox) {
-    let tempHash = {};
-    tempHash.key = e.target.name;
-    tempHash.val = e.target.value;
-    this.props.dispatch(form_controll(tempHash));
-  }
   render() {
-    const val = this.props.account || {};
+    console.log(this.state);
+    console.log(this.props);
     return (
       <div className="Bookseries">
         <Helmet>
@@ -62,57 +79,57 @@ class FormAccount extends React.Component {
           <form name="accountForm">
             <input type="hidden" name="id" value="00030" />
             <ReceptionDate
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <Name
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <NameKana
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <Tel
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <Email
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <Address
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <Gender
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <Purpose
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e, true);
               }}
             />
             <Birthday
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
+              val={this.state}
+              updateState={(e) => {
+                this.setFormData(e);
               }}
             />
             <BtnPost submit={this.submitFormData} btnName="確認する" />
