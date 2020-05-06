@@ -29,31 +29,6 @@ class FormAccount extends React.Component {
     super(props);
     const today = moment().format("YYYY年MM月DD日");
     this.state = {};
-    // this.state = {
-    //   zip: "",
-    //   prefecture: "",
-    //   city: "",
-    //   address3: "",
-    //   building: "",
-    //   birthday: "",
-    //   email: "",
-    //   email_confirm: "",
-    //   gender: "",
-    //   purpose: {
-    //     upload: "",
-    //     read: "",
-    //     buy: "",
-    //     sell: "",
-    //     other: "",
-    //   },
-    //   first_name: "",
-    //   first_name_kana: "",
-    //   last_name: "",
-    //   last_name_kana: "",
-    //   tel: "",
-    //   reception_date: today,
-    // };
-    // this.setFormData = setFormData.bind(this);
     this.submitFormData = this.submitFormData.bind(this);
     this.getData = this.getData.bind(this);
     this.formDispatch = this.formDispatch.bind(this);
