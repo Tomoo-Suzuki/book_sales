@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import Navigation from "_components/organisms/Navigation";
 
-class PurchaseHistory extends React.Component {
+class History extends React.Component {
   constructor(props) {
     super(props);
     this.items = this.props.items;
@@ -18,15 +18,15 @@ class PurchaseHistory extends React.Component {
             content="BookseriesTopのディスクリプション"
           />
           <meta name="keyword=" content="suzuki,book,bookseries,top" />
-          <title>BookSales | Help</title>
+          <title>BookSales | History</title>
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
 
-        <h1>Help</h1>
+        <h1>History</h1>
         <Navigation />
       </div>
     );
   }
 }
 
-export default PurchaseHistory;
+export default History;
