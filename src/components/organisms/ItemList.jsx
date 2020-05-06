@@ -9,7 +9,6 @@ class ItemList extends React.Component {
     this.item = this.props.items;
   }
   render() {
-    console.log(this.item);
     return (
       <li>
         <Labels labels={this.item.itemFlag} />

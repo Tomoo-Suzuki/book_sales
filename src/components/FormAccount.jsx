@@ -17,7 +17,6 @@ import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
 
 import moment from "moment";
 
-// import setFormData from "_lib/setFormData";
 import { insertAccount } from "_queries/mutation/insertAccount";
 import { selectAccount } from "_queries/query/selectAccount";
 import { form_controll } from "_redux/actions/action.js";
@@ -126,5 +125,3 @@ const mapStateToProps = (state) => {
   return { account: state.account.user };
 };
 export default Redux.connect(mapStateToProps)(FormAccount);
-
-// export default Redux.connect()(FormAccount);

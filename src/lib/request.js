@@ -8,6 +8,7 @@ export default async function request(que, key) {
     })
     .then(function (res) {
       const hash = res.data.data[key];
+      console.log(res)
       return hash
     })
     .catch(function (e) {

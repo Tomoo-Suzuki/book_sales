@@ -1,19 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import * as Redux from "react-redux";
 
 import Navigation from "_components/organisms/Navigation";
-import Itemlist from "_components/organisms/ItemList";
 
-class GenreTop extends React.Component {
+import { selectGenre } from "_queries/query/selectGenre.js";
+
+class Genre extends React.Component {
   constructor(props) {
     super(props);
-    this.items = this.props.items;
+    const { id } = props.match.params;
+    this.getData(id);
+  }
+  getData(genre) {
+    selectGenre(genre, this.props.dispatch);
   }
   render() {
-    let itemLists = this.items.map(function(elm, key) {
-      return <Itemlist items={elm} key={key} />;
-    });
-
     return (
       <div className="Bookseries">
         <Helmet>
@@ -24,12 +26,16 @@ class GenreTop extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookserie,genre" />
         </Helmet>
-        <h1>GenreTop</h1>
+        <h1>Genre</h1>
         <Navigation />
-        {itemLists}
       </div>
     );
   }
 }
 
-export default GenreTop;
+const mapStateToProps = (state) => {
+  return { items: state.items };
+};
+export default Redux.connect(mapStateToProps)(Genre);
+
+// export default Genre;
