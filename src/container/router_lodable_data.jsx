@@ -14,6 +14,10 @@ const List = Loadable({
   loader: () => import("_components/List"),
   loading: Loading,
 });
+const Ranking = Loadable({
+  loader: () => import("_components/Ranking"),
+  loading: Loading,
+});
 const Detail = Loadable({
   loader: () => import("_components/Detail"),
   loading: Loading,
@@ -38,6 +42,36 @@ const FormAccount = Loadable({
   loader: () => import("_components/FormAccount"),
   loading: Loading,
 });
+
+const PurchaseHistory = Loadable({
+  loader: () => import("_components/PurchaseHistory"),
+  loading: Loading,
+});
+const Point = Loadable({
+  loader: () => import("_components/Point"),
+  loading: Loading,
+});
+const Cart = Loadable({
+  loader: () => import("_components/Cart"),
+  loading: Loading,
+});
+const Wish = Loadable({
+  loader: () => import("_components/Wish"),
+  loading: Loading,
+});
+const Mypage = Loadable({
+  loader: () => import("_components/Mypage"),
+  loading: Loading,
+});
+const BookShelfTop = Loadable({
+  loader: () => import("_components/BookshelfTop"),
+  loading: Loading,
+});
+const Help = Loadable({
+  loader: () => import("_components/Help"),
+  loading: Loading,
+});
+
 const routes = [
   {
     path: "/",
@@ -56,6 +90,12 @@ const routes = [
     exact: true,
     name: "list",
     component: List,
+  },
+  {
+    path: "/panking",
+    exact: true,
+    name: "ranking",
+    component: Ranking,
   },
   {
     path: "/detail",
@@ -92,6 +132,48 @@ const routes = [
     exact: true,
     name: "account",
     component: FormAccount,
+  },
+  {
+    path: "/mypage/purchase-history",
+    exact: true,
+    name: "history",
+    component: PurchaseHistory,
+  },
+  {
+    path: "/mypage/point",
+    exact: true,
+    name: "point",
+    component: Point,
+  },
+  {
+    path: "/cart",
+    exact: true,
+    name: "cart",
+    component: Cart,
+  },
+  {
+    path: "/wish",
+    exact: true,
+    name: "wish",
+    component: Wish,
+  },
+  {
+    name: "mypage",
+    exact: true,
+    path: "/mypage",
+    component: Mypage,
+  },
+  {
+    path: "/bookshelf",
+    exact: true,
+    name: "bookshelf",
+    component: BookShelfTop,
+  },
+  {
+    path: "/help",
+    exact: true,
+    name: "help",
+    component: Help,
   },
 ];
 export default routes;
