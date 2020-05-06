@@ -6,10 +6,10 @@ const Top = Loadable({
   loader: () => import("_components/Top"),
   loading: Loading,
 });
-const Genre = Loadable({
-  loader: () => import("_components/Genre"),
-  loading: Loading,
-});
+// const Genre = Loadable({
+//   loader: () => import("_components/Genre"),
+//   loading: Loading,
+// });
 const List = Loadable({
   loader: () => import("_components/List"),
   loading: Loading,
@@ -42,9 +42,8 @@ const FormAccount = Loadable({
   loader: () => import("_components/FormAccount"),
   loading: Loading,
 });
-
-const PurchaseHistory = Loadable({
-  loader: () => import("_components/PurchaseHistory"),
+const History = Loadable({
+  loader: () => import("_components/History"),
   loading: Loading,
 });
 const Point = Loadable({
@@ -63,10 +62,6 @@ const Mypage = Loadable({
   loader: () => import("_components/Mypage"),
   loading: Loading,
 });
-const BookShelfTop = Loadable({
-  loader: () => import("_components/BookshelfTop"),
-  loading: Loading,
-});
 const Help = Loadable({
   loader: () => import("_components/Help"),
   loading: Loading,
@@ -79,12 +74,11 @@ const routes = [
     name: "top",
     component: Top,
   },
-  {
-    path: "/genre:id",
-    exact: true,
-    name: "genre",
-    component: Genre,
-  },
+  //   {
+  //     path: "/genre",
+  //     name: "genre",
+  //     component: Genre,
+  //   },
   {
     path: "/list",
     exact: true,
@@ -92,7 +86,7 @@ const routes = [
     component: List,
   },
   {
-    path: "/panking",
+    path: "/ranking",
     exact: true,
     name: "ranking",
     component: Ranking,
@@ -134,13 +128,13 @@ const routes = [
     component: FormAccount,
   },
   {
-    path: "/mypage/purchase-history",
+    path: "/history",
     exact: true,
     name: "history",
-    component: PurchaseHistory,
+    component: History,
   },
   {
-    path: "/mypage/point",
+    path: "/point",
     exact: true,
     name: "point",
     component: Point,
@@ -162,12 +156,6 @@ const routes = [
     exact: true,
     name: "mypage",
     component: Mypage,
-  },
-  {
-    path: "/bookshelf",
-    exact: true,
-    name: "bookshelf",
-    component: BookShelfTop,
   },
   {
     path: "/help",

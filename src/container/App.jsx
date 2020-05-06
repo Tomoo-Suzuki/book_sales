@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Link, Redirect, Switch } from "react-router-dom";
 import routes from "_container/router_lodable_data.jsx";
 import Header from "_components/organisms/Header";
 import Footer from "_components/organisms/Footer";
+import Genre from "_components/Genre";
 
 import "_scss/index.scss";
 class App extends React.Component {
@@ -50,11 +51,20 @@ class App extends React.Component {
           <div className="contents">
             <div className="contents-inner">
               <div>
-                <ul>{this.navs}</ul>
+                <ul>
+                  {this.navs}
+                  <Link to="/genre/11">GENRE</Link>
+                </ul>
               </div>
               <div>
                 <Switch>
                   {this.elms}
+                  <Route
+                    name="genre"
+                    exact
+                    path="/genre/:id"
+                    component={Genre}
+                  />
                   <Redirect exact from="/" to="/" />
                 </Switch>
               </div>
