@@ -1,7 +1,7 @@
 import React from "react";
 
 const Address = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
   const prefecture = [
     { label: "選択してください", value: "" },
 
@@ -69,8 +69,8 @@ const Address = (props) => {
             name="zip"
             required
             placeholder="117-2345"
-            value={val.zip}
-            onChange={(e) => updateState(e)}
+            defaultValue={val.zip}
+            onChange={(e) => updateForm(e)}
           />
         </div>
         <div>
@@ -79,8 +79,8 @@ const Address = (props) => {
               name="prefecture"
               required
               placeholder="東京都"
-              value={val.prefecture}
-              onChange={(e) => updateState(e)}
+              defaultValue={val.prefecture}
+              onChange={(e) => updateForm(e)}
             >
               {prefectureLists}
             </select>
@@ -92,8 +92,8 @@ const Address = (props) => {
               name="city"
               required
               placeholder="豊島区池袋"
-              value={val.city}
-              onChange={(e) => updateState(e)}
+              defaultValue={val.city}
+              onChange={(e) => updateForm(e)}
             />
           </span>
           <span>
@@ -102,8 +102,8 @@ const Address = (props) => {
               name="address3"
               required
               placeholder="3-7-18"
-              value={val.adress3}
-              onChange={(e) => updateState(e)}
+              defaultValue={val.adress3}
+              onChange={(e) => updateForm(e)}
             />
           </span>
           <span>
@@ -112,8 +112,8 @@ const Address = (props) => {
               name="building"
               required
               placeholder="ブルジュファリハ"
-              value={val.useId}
-              onChange={(e) => updateState(e)}
+              defaultValue={val.useId}
+              onChange={(e) => updateForm(e)}
             />
           </span>
         </div>

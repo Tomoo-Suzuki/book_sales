@@ -1,3 +1,5 @@
+@import './color';
+
 html {
     font-size: 62.5%;
 }
@@ -5,7 +7,6 @@ html {
 .wrapper {
     .contents {
         min-height: 500px;
-        ;
 
         .contents-inner {
             width: 940px;
@@ -13,3 +14,8 @@ html {
         }
     }
 }
+
+// a {
+//     color: $sell_green_dark;
+//     font-weight: bold;
+// }

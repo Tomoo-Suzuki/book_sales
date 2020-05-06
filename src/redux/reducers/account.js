@@ -18,6 +18,14 @@ function account(state = initialState, action) {
       return Object.assign({}, state, {
         user: action.value
       })
+    case 'FORM_CONTROLL':
+      const key = action.value.key
+      const val = action.value.val
+      let tempState = Object.assign({}, state.user);
+      tempState[key] = val
+      return Object.assign({}, state, {
+        user: tempState
+      })
     default:
       return state
   }

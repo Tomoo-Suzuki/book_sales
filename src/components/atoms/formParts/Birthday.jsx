@@ -1,7 +1,7 @@
 import React from "react";
 
 const Birthday = (props) => {
-  const { val, updateState } = props;
+  const { val, updateForm } = props;
 
   return (
     <dl className="require">
@@ -10,8 +10,8 @@ const Birthday = (props) => {
         <input
           type="date"
           name="birthday"
-          value={val.birthday}
-          onChange={(e) => updateState(e)}
+          defaultValue={val.birthday}
+          onChange={(e) => updateForm(e)}
         />
       </dd>
     </dl>

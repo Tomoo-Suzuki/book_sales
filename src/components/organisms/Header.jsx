@@ -13,9 +13,11 @@ class Header extends React.Component {
       <header className="headerBook">
         <div className="headerBook_inner">
           <div className="headerBook_inner_upper">
-            <Logo logoType="0" />
-            <SearchBox />
-            <MenuHeader />
+            <Logo logoType="0" className="logo" />
+            <div>
+              <MenuHeader />
+              <SearchBox />
+            </div>
             <SiteSwitcher />
           </div>
           <div className="headerBook_inner_lower">

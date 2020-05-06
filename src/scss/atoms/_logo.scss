@@ -1,5 +1,10 @@
-.imgWrap {
-    >img {
-        width: 12rem;
+.logo {
+    display: block;
+    margin-right: 1rem;
+
+    .imgWrap {
+        >img {
+            width: 100%;
+        }
     }
 }

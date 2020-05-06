@@ -1,7 +1,6 @@
 export default function setFormData(e, isCheckbox) {
   if (isCheckbox) {
 
-    console.log(e.target.name)
     const key = e.target.id;
     const newPurpose = {
       ...this.state.purpose
