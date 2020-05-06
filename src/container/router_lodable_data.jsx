@@ -80,7 +80,7 @@ const routes = [
     component: Top,
   },
   {
-    path: "/genre",
+    path: "/genre:id",
     exact: true,
     name: "genre",
     component: Genre,
@@ -158,9 +158,9 @@ const routes = [
     component: Wish,
   },
   {
-    name: "mypage",
-    exact: true,
     path: "/mypage",
+    exact: true,
+    name: "mypage",
     component: Mypage,
   },
   {

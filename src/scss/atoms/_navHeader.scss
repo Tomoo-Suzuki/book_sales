@@ -17,6 +17,12 @@
             color: #ffffff;
             background: $sell_green_dark;
             border-radius: 2px;
+
+            >a {
+                color: #ffffff;
+                text-decoration: none;
+                ;
+            }
         }
     }
 }
