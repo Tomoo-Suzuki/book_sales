@@ -20,6 +20,19 @@ class Genre extends React.Component {
     selectGenre(id_genre, this.props.dispatch);
   }
   render() {
+    const items = this.props.item.genre;
+    // console.log(items);
+    let lists;
+    if (items) {
+      lists = "";
+      if (Object.keys(items).length > 0) {
+        console.log(items);
+        lists = items.map((item, key) => {
+          console.log(item);
+          return <ItemList data={item} key={`item_` + key} />;
+        });
+      }
+    }
     return (
       <div className="Bookseries">
         <Helmet>
@@ -32,16 +45,14 @@ class Genre extends React.Component {
         </Helmet>
         <h1>Genre</h1>
         <Navigation />
-        <ul>
-          <ItemList data={this.props} />
-        </ul>
+        <ul>{lists}</ul>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  return state;
+  return { item: state.item };
 };
 // const mapDispatchToProps = (dispatch) => ({
 //   selectGenre: (id_genre) => dispatch(selectGenre(id_genre)),
