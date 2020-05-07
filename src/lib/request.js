@@ -4,12 +4,11 @@ export default async function request(que, key) {
   const url = "http://localhost:7777/graphql";
   return axios
     .post(url, {
-      query: que
+      query: que,
     })
     .then(function (res) {
       const hash = res.data.data[key];
-      console.log(res)
-      return hash
+      return hash;
     })
     .catch(function (e) {
       console.log("反映テスト01");
