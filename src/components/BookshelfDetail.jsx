@@ -7,13 +7,8 @@ import Itemlist from "_components/organisms/ItemList";
 class BookshelfDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.items = this.props.items;
   }
   render() {
-    let itemLists = this.items.map(function(elm, key) {
-      return <Itemlist items={elm} key={key} />;
-    });
-
     return (
       <div className="Bookshelf">
         <Helmet>
@@ -26,7 +21,6 @@ class BookshelfDetail extends React.Component {
         </Helmet>
         <h1>BookshelfDetail</h1>
         <Navigation />
-        {itemLists}
       </div>
     );
   }

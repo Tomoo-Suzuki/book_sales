@@ -1,7 +1,6 @@
 import React from "react";
 export const ItemDataWrap = (props) => {
   const data = props.data;
-  console.log(data);
   return (
     <span>
       <a href={data.url_detail}>{data.name_book}</a>

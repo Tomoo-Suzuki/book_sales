@@ -13,22 +13,22 @@ class BtnWrap extends React.Component {
     this.status = this.props.status;
     this.buttons = [];
     if (this.status === 0) {
-      this.buttons.push(<BtnCart />);
-      this.buttons.push(<BtnWish />);
-      this.buttons.push(<BtnTrial />);
+      this.buttons.push(<BtnCart key="bc" />);
+      this.buttons.push(<BtnWish key="bw" />);
+      this.buttons.push(<BtnTrial key="bt" />);
     } else if (this.status === 1) {
-      this.buttons.push(<BtnReserve />);
-      this.buttons.push(<BtnWish />);
+      this.buttons.push(<BtnReserve key="br" />);
+      this.buttons.push(<BtnWish key="bw" />);
     } else if (this.status === 2) {
-      this.buttons.push(<BtnCartNew />);
-      this.buttons.push(<BtnWishNew />);
-      this.buttons.push(<BtnTrialNew />);
+      this.buttons.push(<BtnCartNew key="bcn" />);
+      this.buttons.push(<BtnWishNew key="bwn" />);
+      this.buttons.push(<BtnTrialNew key="btn" />);
     } else if (this.status === 3) {
-      this.buttons.push(<BtnReserveNew />);
-      this.buttons.push(<BtnWishNew />);
-      this.buttons.push(<BtnTrialNew />);
+      this.buttons.push(<BtnReserveNew key="brn" />);
+      this.buttons.push(<BtnWishNew key="bwn" />);
+      this.buttons.push(<BtnTrialNew key="btn" />);
     } else if (this.status === 4) {
-      this.buttons.push(<BtnFree />);
+      this.buttons.push(<BtnFree key="bf" />);
     }
     return <ul>{this.buttons}</ul>;
   }
