@@ -18,11 +18,15 @@ class Genre extends React.Component {
     selectGenre(genre, this.props.dispatch);
   }
   render() {
-    const items = this.props.item;
+    const items = this.props.item.genre;
+    console.log(items);
     let lists;
-    // if (items) {
-    //   lists = items.map((item, key) => <ItemList data={item} key={key} />);
-    // }
+    if (items) {
+      if (Object.keys(items).length > 0) {
+        console.log(items);
+        lists = items.map((item, key) => <ItemList data={item} key={key} />);
+      }
+    }
     return (
       <div className="Bookseries">
         <Helmet>
@@ -35,7 +39,7 @@ class Genre extends React.Component {
         </Helmet>
         <h1>Genre</h1>
         <Navigation />
-        {/* <ul>{lists}</ul> */}
+        <ul>{lists}</ul>
       </div>
     );
   }
