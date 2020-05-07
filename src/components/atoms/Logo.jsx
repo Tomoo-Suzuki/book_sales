@@ -14,7 +14,7 @@ export default function Logo(props) {
   return (
     <Link to="/" className="logo">
       <div className="imgWrap">
-        <img src={`./img/logo_${type}.svg`} alt={`logo ${type}`} />
+        <img src={`/img/logo_${type}.svg`} alt={`logo ${type}`} />
       </div>
     </Link>
   );

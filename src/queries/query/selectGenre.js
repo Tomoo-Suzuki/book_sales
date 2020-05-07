@@ -1,6 +1,6 @@
-// import {
-//   select_account
-// } from "_redux/actions/action.js";
+import {
+  select_genre
+} from "_redux/actions/action.js";
 import request from "_lib/request";
 
 export const selectGenre = (genre, dispatch) => {
@@ -42,7 +42,6 @@ export const selectGenre = (genre, dispatch) => {
     }
 }`;
   request(query, "selectGenre").then((res) => {
-    // console.log(res)
-    // dispatch(select_genre(res));
+    dispatch(select_genre(res));
   });
 };
