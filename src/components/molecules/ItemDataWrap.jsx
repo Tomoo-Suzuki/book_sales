@@ -1,21 +1,18 @@
 import React from "react";
-class ItemDataWrap extends React.Component {
-  render() {
-    this.data = this.props.datas;
-    this.pabeType = this.props.pabeType;
-    return (
-      <span>
-        <a href="">{this.data.name}</a>
-        <a href="">{this.data.auther}</a>
-        <a href="">{this.data.publisher}</a>
-        <p>{this.data.category}</p>
-        <p>{this.data.label}</p>
-        <p>{this.data.price} 円(税込)</p>
-        <p>{this.data.point} ポイント</p>
-        <p>{this.data.releaseDate}</p>
-        <p>{this.data.explain}</p>
-      </span>
-    );
-  }
-}
-export default ItemDataWrap;
+export const ItemDataWrap = (props) => {
+  const data = props.data;
+  console.log(data);
+  return (
+    <span>
+      <a href={data.url_detail}>{data.name_book}</a>
+      <a href={data.url_detail}>{data.id_auther}</a>
+      <a href={data.url_detail}>{data.id_publisher}</a>
+      <p>{data.name_series}</p>
+      <p>{data.label}</p>
+      <p>{data.price_now} 円(税込)</p>
+      <p>{data.point} ポイント</p>
+      <p>{data.date_sales}</p>
+      <p>{data.book_detail}</p>
+    </span>
+  );
+};
