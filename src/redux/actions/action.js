@@ -25,3 +25,10 @@ export const form_controll = function (object) {
     value: object
   })
 };
+
+export const select_genre = function (object) {
+  return ({
+    type: 'SELECT_GENRE',
+    value: object
+  })
+};
