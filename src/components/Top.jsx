@@ -25,6 +25,14 @@ class Top extends React.Component {
 
         <h1>Top</h1>
         <Navigation />
+        <div>売れてる商品</div>
+        <div>注目商品</div>
+        <div>お得なキャンペーン</div>
+        <div>新着</div>
+        <div>ランキング</div>
+        <div>割引</div>
+        <div>閲覧履歴からのおすすめ</div>
+        <div>予約</div>
       </div>
     );
   }

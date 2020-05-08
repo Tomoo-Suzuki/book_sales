@@ -21,6 +21,19 @@ class Ranking extends React.Component {
         </Helmet>
         <h1>List</h1>
         <Navigation />
+        <div>全体ランキング</div>
+        <div>各ジャンル１位</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
+        <div>各ジャンルランキング</div>
       </div>
     );
   }
