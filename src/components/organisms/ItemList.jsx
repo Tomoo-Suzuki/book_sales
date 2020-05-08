@@ -10,15 +10,14 @@ class ItemList extends React.Component {
     super(props);
   }
   render() {
-    console.log(this.props);
-    const items = this.props.data.item.genre;
+    const items = this.props.data.item.item;
     let lists;
     if (items) {
       lists = "";
       if (Object.keys(items).length > 0) {
         lists = items.map((item, key) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={`itemwrap` + key}>
               <Labels data={item} key={`labels` + key} />
               <PhotoWrap data={item} key={`photo` + key} />
               <ItemDataWrap pageType={1} data={item} key={`data` + key} />

@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import * as Redux from "react-redux";
+import { Helmet } from "react-helmet";
 
 import Navigation from "_components/organisms/Navigation";
 import ItemList from "_components/organisms/ItemList";
@@ -11,12 +11,10 @@ class Genre extends React.Component {
   constructor(props) {
     super(props);
     this.id_genre = props.match.params.id;
-    // console.log(this.id_genre);
     this.getData = this.getData.bind(this);
     this.getData(this.id_genre);
   }
   getData(id_genre) {
-    // selectGenre(id_genre, this.props.dispatch);
     selectGenre(id_genre, this.props.dispatch);
   }
   render() {
@@ -47,5 +45,3 @@ const mapStateToProps = (state) => {
 //   selectGenre: (id_genre) => dispatch(selectGenre(id_genre)),
 // });
 export default Redux.connect(mapStateToProps)(Genre);
-
-// export default Genre;

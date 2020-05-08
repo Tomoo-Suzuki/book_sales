@@ -1,13 +1,23 @@
 import React from "react";
+import * as Redux from "react-redux";
 import { Helmet } from "react-helmet";
 
 import Navigation from "_components/organisms/Navigation";
 import Itemlist from "_components/organisms/ItemList";
 
+import { selectList } from "_queries/query/selectList.js";
+
 class List extends React.Component {
   constructor(props) {
     super(props);
     this.items = this.props.items;
+    this.getData = this.getData.bind(this);
+    console.log("LISTLIST");
+    this.getData();
+  }
+  getData() {
+    console.log("callll");
+    selectList(this.props.dispatch);
   }
   render() {
     return (
@@ -22,9 +32,18 @@ class List extends React.Component {
         </Helmet>
         <h1>List</h1>
         <Navigation />
+        <ul>
+          <Itemlist data={this.props} />
+        </ul>
       </div>
     );
   }
 }
 
-export default List;
+const mapStateToProps = (state) => {
+  return state;
+};
+// const mapDispatchToProps = (dispatch) => ({
+//   selectGenre: (id_genre) => dispatch(selectGenre(id_genre)),
+// });
+export default Redux.connect(mapStateToProps)(List);

@@ -4,7 +4,11 @@ function item(state = initialState, action) {
   switch (action.type) {
     case 'SELECT_GENRE':
       return Object.assign({}, state, {
-        genre: action.value
+        item: action.value
+      })
+    case 'SELECT_LIST':
+      return Object.assign({}, state, {
+        item: action.value
       })
     default:
       return state
