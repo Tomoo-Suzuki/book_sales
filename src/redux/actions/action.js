@@ -32,3 +32,15 @@ export const select_genre = function (object) {
     value: object
   })
 };
+export const select_list = function (object) {
+  return ({
+    type: 'SELECT_LIST',
+    value: object
+  })
+};
+export const select_ranking = function (object) {
+  return ({
+    type: 'SELECT_RANKING',
+    value: object
+  })
+};

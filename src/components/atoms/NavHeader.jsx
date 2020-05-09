@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { selectGenre } from "_queries/query/selectGenre.js";
 
 import "_scss/atoms/_navHeader";
+
 const navHeaderLists = [
   { text: "異世界ファンタジー", link: "/genre/1", param: 1 },
   { text: "現代ファンタジー", link: "/genre/2", param: 2 },
