@@ -18,6 +18,18 @@ class Genre extends React.Component {
     selectGenre(id_genre, this.props.dispatch);
   }
   render() {
+    let itemLists;
+    try {
+      if (Object.keys(this.props.item.item).length > 1) {
+        console.log(this.props.item.item);
+        itemList = <ItemList data={this.props.item.item} pageType={0} />;
+      }
+    } catch (e) {
+      console.log(e);
+      if (this.props.item.item === undefined) {
+        console.log("props still undef");
+      }
+    }
     return (
       <div className="Bookseries">
         <Helmet>
@@ -30,9 +42,7 @@ class Genre extends React.Component {
         </Helmet>
         <h1>Genre</h1>
         <Navigation />
-        <ul>
-          <ItemList data={this.props} />
-        </ul>
+        <ul>{itemLists}</ul>
       </div>
     );
   }

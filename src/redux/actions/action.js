@@ -38,3 +38,9 @@ export const select_list = function (object) {
     value: object
   })
 };
+export const select_ranking = function (object) {
+  return ({
+    type: 'SELECT_RANKING',
+    value: object
+  })
+};

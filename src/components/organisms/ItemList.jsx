@@ -10,7 +10,8 @@ class ItemList extends React.Component {
     super(props);
   }
   render() {
-    const items = this.props.data.item.item;
+    console.log(this.props);
+    const items = this.props.data;
     let lists;
     if (items) {
       lists = "";

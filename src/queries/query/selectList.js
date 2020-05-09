@@ -4,7 +4,6 @@ import {
 import request from "_lib/request";
 
 export const selectList = (dispatch) => {
-  console.log('caaaaaalllllllll')
   const query = `{
     selectList{
       id_book,
@@ -43,7 +42,6 @@ export const selectList = (dispatch) => {
     }
 }`;
   request(query, "selectList").then((res) => {
-    console.log(res)
     dispatch(select_list(res));
   });
 };
