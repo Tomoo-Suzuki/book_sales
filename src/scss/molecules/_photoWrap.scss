@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import '../color';
+
+.photoWrap {
+    .imgBox {
+        max-width: 20rem;
+        max-height: 20rem;
+
+        >img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import '../color';
+
+%link {
+    // color: $sell_green_dark;
+    color: $black_strong;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        opacity: 0.5;
+    }
+}
+
+.itemDataWrap {
+    .name_book {
+        @extend %link;
+        font-size: 2rem;
+        color: $sell_green_dark;
+    }
+
+    .name_auther {
+        @extend %link;
+        font-size: 1.6rem;
+    }
+
+    .name_publisher {
+        @extend %link;
+        font-size: 1.6rem;
+    }
+
+    .name_series {
+        font-size: 1.6rem;
+    }
+
+    .name_label {}
+
+    .price_now {
+        font-size: 1.2rem;
+
+        >span {
+            font-size: 1.6rem;
+        }
+
+    }
+
+    .point {
+        color: $read_orange;
+        font-size: 1.2rem;
+
+        >span {
+            font-size: 1.6rem;
+        }
+    }
+
+    .date_sales {
+        color: $sell_green_dark;
+        font-size: 1.4rem;
+    }
+
+    .book_detail {
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+}
