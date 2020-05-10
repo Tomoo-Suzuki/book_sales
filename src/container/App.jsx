@@ -23,8 +23,6 @@ class App extends React.Component {
     const items = this.state.items;
     const itemLength = Object.keys(items).length;
     this.navs = [];
-
-    // if (itemLength) {
     this.elms = routes.map((route, idx) => {
       this.navs.push(
         <li key={idx}>
@@ -43,7 +41,6 @@ class App extends React.Component {
         />
       ) : null;
     });
-    // }
     return (
       <BrowserRouter>
         <div className="wrapper">
