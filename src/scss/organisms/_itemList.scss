@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import '../color';
+
+.itemListBox {
+
+    .itemList {
+        list-style-type: none;
+
+        margin-bottom: 2rem;
+
+        >div {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    }
+}

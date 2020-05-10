@@ -8,6 +8,8 @@ import { BtnCartNew } from "_components/atoms/submitBtn/purchase/BtnCartNew";
 import { BtnReserveNew } from "_components/atoms/submitBtn/purchase/BtnReserveNew";
 import { BtnWishNew } from "_components/atoms/submitBtn/purchase/BtnWishNew";
 import { BtnTrialNew } from "_components/atoms/submitBtn/purchase/BtnTrialNew";
+
+import "_scss/molecules/_btnWrap";
 class BtnWrap extends React.Component {
   render() {
     this.status = this.props.status;
@@ -30,7 +32,7 @@ class BtnWrap extends React.Component {
     } else if (this.status === 4) {
       this.buttons.push(<BtnFree key="bf" />);
     }
-    return <ul>{this.buttons}</ul>;
+    return <ul className="btnWrap">{this.buttons}</ul>;
   }
 }
 export default BtnWrap;

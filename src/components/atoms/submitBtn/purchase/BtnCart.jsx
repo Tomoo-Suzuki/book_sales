@@ -1,21 +1,20 @@
 import React from "react";
 export const BtnCart = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_cart">
+      <span className="btn">
         <span>カートに入れる</span>
-      </a>
-      <span>sid0000000001</span>
-      <span>カートに入れました</span>
+      </span>
+      <span className="msg_btn">カートに入れました</span>
     </li>
   );
 };
 export const BtnCartL = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_cart_l">
+      <span>
         <span>カートに入れる</span>
-      </a>
+      </span>
     </li>
   );
 };

@@ -1,21 +1,20 @@
 import React from "react";
 export const BtnReserveNew = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_reserve_new">
+      <span className="btn">
         <span>最新刊を予約する</span>
-      </a>
-      <span>sid0000000001</span>
-      <span>予約しました</span>
+      </span>
+      <span className="msg_btn">予約しました</span>
     </li>
   );
 };
 export const BtnReserveNewL = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_reserve_new_l">
+      <span>
         <span>最新刊を予約する</span>
-      </a>
+      </span>
     </li>
   );
 };
