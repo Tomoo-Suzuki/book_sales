@@ -11,39 +11,28 @@ import "_scss/index.scss";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: "" };
-    const thisClass = this;
-    function dataSet(callBackData) {
-      thisClass.setState({ items: callBackData });
-    }
-    const url = "./dummy/item.json";
-    fetchBook(url, dataSet);
   }
   render() {
-    const items = this.state.items;
-    const itemLength = Object.keys(items).length;
     this.navs = [];
 
-    if (itemLength) {
-      this.elms = routes.map((route, idx) => {
-        this.navs.push(
-          <li key={idx}>
-            <Link to={route.path} key={idx}>
-              {route.name}
-            </Link>
-          </li>
-        );
-        return route.component ? (
-          <Route
-            key={route.name}
-            name={route.name}
-            exact={route.exact}
-            path={route.path}
-            render={(props) => <route.component items={items} />}
-          />
-        ) : null;
-      });
-    }
+    this.elms = routes.map((route, idx) => {
+      this.navs.push(
+        <li key={idx}>
+          <Link to={route.path} key={idx}>
+            {route.name}
+          </Link>
+        </li>
+      );
+      return route.component ? (
+        <Route
+          key={route.name}
+          name={route.name}
+          exact={route.exact}
+          path={route.path}
+          render={(props) => <route.component />}
+        />
+      ) : null;
+    });
     return (
       <BrowserRouter>
         <div className="wrapper">
