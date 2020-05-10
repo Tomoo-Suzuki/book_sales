@@ -42,7 +42,7 @@ class App extends React.Component {
               <div>
                 <ul>
                   {this.navs}
-                  <Link to="/genre/11">GENRE</Link>
+                  {/* <Link to="/genre/11">GENRE</Link> */}
                 </ul>
               </div>
               <div>

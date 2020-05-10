@@ -15,11 +15,19 @@ export default function Logo(props) {
     type = "read";
     link = "/";
   }
-  return (
-    <a href={link} className="logo">
+  const element =
+    props.logoType === "0" ? (
+      <h1 className="imgWrap">
+        <img src={`/img/logo_${type}.svg`} alt={`logo ${type}`} />
+      </h1>
+    ) : (
       <div className="imgWrap">
         <img src={`/img/logo_${type}.svg`} alt={`logo ${type}`} />
       </div>
+    );
+  return (
+    <a href={link} className="logo">
+      {element}
     </a>
   );
 }

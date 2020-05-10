@@ -23,7 +23,7 @@ class Top extends React.Component {
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
 
-        <h1>Top</h1>
+        <h2 className="ttl_h2">Top</h2>
         <Navigation />
         <div>売れてる商品</div>
         <div>注目商品</div>

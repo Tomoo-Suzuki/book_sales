@@ -22,7 +22,7 @@ class Mypage extends React.Component {
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
 
-        <h1>Mypage</h1>
+        <h2 className="ttl_h2">Mypage</h2>
         <Navigation />
       </div>
     );

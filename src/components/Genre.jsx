@@ -40,7 +40,7 @@ class Genre extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookserie,genre" />
         </Helmet>
-        <h1>Genre</h1>
+        <h2 className="ttl_h2">Genre</h2>
         <Navigation />
         {itemLists}
       </div>

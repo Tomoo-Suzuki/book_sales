@@ -40,7 +40,7 @@ class List extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookseries,list" />
         </Helmet>
-        <h1>List</h1>
+        <h2 className="ttl_h2">List</h2>
         <Navigation />
         {itemLists}
       </div>
