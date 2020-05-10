@@ -55,7 +55,7 @@ class FormAccount extends React.Component {
           <meta name="description" content="会員登録フォーム" />
           <meta name="keyword" content="suzuki,book,bookseries, detail" />
         </Helmet>
-        <h2 className="ttl_h2">Form</h2>
+        <h2 className="ttl_h2">アカウントの登録</h2>
         <Navigation />
         <main className="form-book">
           <form name="accountForm">

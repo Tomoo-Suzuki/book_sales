@@ -43,7 +43,6 @@ class FormLogin extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookseries, detail" />
         </Helmet>
-        <h2 className="ttl_h2">Form</h2>
         <Navigation />
         <main className="form-book">
           <h2 className="ttl_h2">ログイン</h2>
