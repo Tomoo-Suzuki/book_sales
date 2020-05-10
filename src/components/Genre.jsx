@@ -42,7 +42,7 @@ class Genre extends React.Component {
         </Helmet>
         <h1>Genre</h1>
         <Navigation />
-        <ul>{itemLists}</ul>
+        {itemLists}
       </div>
     );
   }

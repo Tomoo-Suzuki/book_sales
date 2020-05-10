@@ -1,21 +1,20 @@
 import React from "react";
 export const BtnWishNew = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_wish_new">
+      <span className="btn">
         <span>最新刊をリストに入れる</span>
-      </a>
-      <span>sid0000000001</span>
-      <span>最新刊をリストに入れました</span>
+      </span>
+      <span className="msg_btn">最新刊をリストに入れました</span>
     </li>
   );
 };
 export const BtnWishNewL = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_wish_new_l">
+      <span>
         <span>最新刊をリストに入れる</span>
-      </a>
+      </span>
     </li>
   );
 };

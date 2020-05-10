@@ -1,19 +1,19 @@
 import React from "react";
 export const BtnTrial = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_trial">
+      <span className="btn">
         <span>[無料]試し読み</span>
-      </a>
+      </span>
     </li>
   );
 };
 export const BtnTrialL = () => {
   return (
-    <li>
-      <a href="">
+    <li className="btn_trial_l">
+      <span>
         <span>[無料]試し読み</span>
-      </a>
+      </span>
     </li>
   );
 };

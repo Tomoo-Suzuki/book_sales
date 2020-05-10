@@ -42,9 +42,7 @@ class List extends React.Component {
         </Helmet>
         <h1>List</h1>
         <Navigation />
-        <ul>
-          <ul>{itemLists}</ul>
-        </ul>
+        {itemLists}
       </div>
     );
   }

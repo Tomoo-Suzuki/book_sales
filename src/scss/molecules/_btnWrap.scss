@@ -1,0 +1,76 @@
+@charset "utf-8";
+@import '../color';
+
+%btn_base {
+    >li {
+        list-style-type: none;
+        width: 16rem;
+        text-align: center;
+        border-radius: .3rem;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .5;
+        }
+
+        >.btn {
+            display: table;
+            width: 100%;
+            height: 3.2rem;
+
+            >span {
+                display: table-cell;
+                vertical-align: middle;
+                color: #ffffff;
+            }
+        }
+
+        .msg_btn {
+            display: none;
+        }
+    }
+}
+
+.btnWrap {
+    @extend %btn_base;
+
+    .btn_cart {
+        background: $sell_green_dark;
+        border-bottom: solid .5rem $sell_green_shadow;
+    }
+
+    .btn_cart_new {
+        background: $sell_green_dark;
+        border-bottom: solid .5rem $sell_green_shadow;
+    }
+
+    .btn_wish {
+        background: $upload_blue_dark;
+        border-bottom: solid .5rem $upload_blue_shadow;
+    }
+
+    .btn_wish_new {
+        background: $upload_blue_dark;
+        border-bottom: solid .5rem $upload_blue_shadow;
+    }
+
+    .btn_free {}
+
+
+    .btn_reserve {}
+
+    .btn_reserve_new {}
+
+    .btn_trial {
+        background: $read_orange;
+        border-bottom: solid .5rem $read_orange_dark;
+    }
+
+    .btn_trial_new {
+        background: $read_orange;
+        border-bottom: solid .5rem $read_orange_dark;
+    }
+
+}
