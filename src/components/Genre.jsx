@@ -22,7 +22,7 @@ class Genre extends React.Component {
     try {
       if (Object.keys(this.props.item.item).length > 1) {
         console.log(this.props.item.item);
-        itemList = <ItemList data={this.props.item.item} pageType={0} />;
+        itemLists = <ItemList data={this.props.item.item} pageType={0} />;
       }
     } catch (e) {
       console.log(e);

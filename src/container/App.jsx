@@ -11,17 +11,8 @@ import "_scss/index.scss";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: "" };
-    const thisClass = this;
-    function dataSet(callBackData) {
-      thisClass.setState({ items: callBackData });
-    }
-    const url = "./dummy/item.json";
-    fetchBook(url, dataSet);
   }
   render() {
-    const items = this.state.items;
-    const itemLength = Object.keys(items).length;
     this.navs = [];
     this.elms = routes.map((route, idx) => {
       this.navs.push(
