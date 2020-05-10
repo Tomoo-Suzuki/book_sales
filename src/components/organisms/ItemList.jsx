@@ -1,5 +1,4 @@
 import React from "react";
-import * as Redux from "react-redux";
 
 import Labels from "_components/atoms/Labels";
 import PhotoWrap from "_components/molecules/PhotoWrap";
@@ -32,5 +31,3 @@ class ItemList extends React.Component {
   }
 }
 export default ItemList;
-
-// export default Redux.connect()(ItemList);

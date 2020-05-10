@@ -1,17 +1,29 @@
 import React from "react";
+import "_scss/molecules/_itemDataWrap";
+
 export const ItemDataWrap = (props) => {
   const data = props.data;
   return (
-    <span>
-      <a href={data.url_detail}>{data.name_book}</a>
-      <a href={data.url_detail}>{data.id_auther}</a>
-      <a href={data.url_detail}>{data.id_publisher}</a>
-      <p>{data.name_series}</p>
-      <p>{data.label}</p>
-      <p>{data.price_now} 円(税込)</p>
-      <p>{data.point} ポイント</p>
-      <p>{data.date_sales}</p>
-      <p>{data.book_detail}</p>
+    <span className="itemDataWrap">
+      <a href={data.url_detail} className="name_book">
+        {data.name_book}
+      </a>
+      <a href={data.url_detail} className="name_auther">
+        {data.id_author}
+      </a>
+      <a href={data.url_detail} className="name_publisher">
+        {data.id_publisher}
+      </a>
+      <p className="name_series">{data.name_series}</p>
+      <p className="name_label">{data.label}</p>
+      <p className="price_now">
+        <span>{data.price_now}</span> 円(税込)
+      </p>
+      <p className="point">
+        <span>{data.point}</span> ポイント
+      </p>
+      <p className="date_sales">{data.date_sales}</p>
+      <p className="book_detail">{data.book_detail}</p>
     </span>
   );
 };

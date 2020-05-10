@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import '../color';
+
+%labelBox {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0;
+
+    >li {
+        width: 80px;
+        height: 13px;
+        line-height: 13px;
+        text-align: center;
+        margin: 0 auto 2px auto;
+        ;
+        font-size: 9px;
+        display: inline-block;
+        border-radius: 1px;
+        background: #ffffff;
+    }
+
+    .label_new {
+        border: 1px solid #e60012;
+        color: #e60012;
+    }
+
+    .label_discount {
+        border: 1px solid #2578B0;
+        background: #2578B0;
+        color: #ffffff;
+    }
+
+    .label_discount_num {
+        border: 1px solid #2578B0;
+        background: #2578B0;
+        color: #ffffff;
+    }
+
+    .label_free {
+        border: 1px solid #eb944d;
+        background: #eb944d;
+        color: #ffffff;
+    }
+
+    .label_finish {
+        border: 1px solid #2a8e9d;
+        background: #2a8e9d;
+        color: #ffffff;
+    }
+
+}
+
+.btn.point {
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    border-top: 1px solid #ff6600;
+    border-bottom: 1px solid #ff6600;
+    color: #ff6600;
+    font-size: 10px;
+    margin: 0 0 5px 0;
+    padding: 1px 0;
+    letter-spacing: normal;
+    max-width: 100px;
+}
+
+.labelBox {
+    @extend %labelBox;
+    margin: 0 0 5px 4.329%;
+
+    >li {
+        margin-right: 4px;
+    }
+}
+
+// .display_listLarge_book {
+//     .labelBox {
+//         @extend %labelBox;
+//         display: block;
+//         overflow: hidden;
+//         text-align: center;
+//         height: 13px;
+
+//         >li {
+//             display: none;
+
+//             &:nth-of-type(1) {
+//                 display: block;
+//             }
+//         }
+//     }
+
+//     .btn.point {
+//         text-align: center;
+//         background-color: transparent;
+//         border: 0;
+//         border-top: 1px solid #ff6600;
+//         border-bottom: 1px solid #ff6600;
+//         color: #ff6600;
+//         font-size: 10px;
+//         margin: 0 0 5px 0;
+//         padding: 1px 0;
+//         letter-spacing: normal !important;
+//         max-width: 100px;
+//         position: absolute;
+//         bottom: -12px;
+//         font-weight: bold;
+//     }
+// }
