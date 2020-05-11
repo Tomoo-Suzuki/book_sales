@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import '../color';
+
+.nav_common {
+    .nav_common_upper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    .nav_common_lower {}
+}

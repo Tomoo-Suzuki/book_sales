@@ -5,19 +5,21 @@ import BtnConfig from "_components/atoms/uiBtn/BtnConfig";
 import DisplayNum from "_components/atoms/DisplayNum";
 import Pager from "_components/atoms/Pager";
 import BtnOrderChange from "_components/atoms/uiBtn/BtnOrderChange";
+
+import "_scss/organisms/_navigation";
+
 const Navigation = () => {
   return (
-    <nav className="">
-      <div>
+    <nav className="nav_common">
+      <div className="nav_common_upper">
         <ItemCount />
         <BtnStyleChange />
         <BtnConfig />
       </div>
-      <div>
+      <div className="nav_common_lower">
         <DisplayNum />
         <Pager />
       </div>
-      <BtnOrderChange />
     </nav>
   );
 };

@@ -22,7 +22,7 @@ class Help extends React.Component {
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
 
-        <h1>Help</h1>
+        <h2 className="ttl_h2">Help</h2>
         <Navigation />
       </div>
     );

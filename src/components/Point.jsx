@@ -22,7 +22,7 @@ class Point extends React.Component {
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
 
-        <h1>Point</h1>
+        <h2 className="ttl_h2">Point</h2>
         <Navigation />
       </div>
     );

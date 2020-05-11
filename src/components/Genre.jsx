@@ -18,15 +18,15 @@ class Genre extends React.Component {
     selectGenre(id_genre, this.props.dispatch);
   }
   render() {
+    const items = this.props.item.item;
+
     let itemLists;
     try {
-      if (Object.keys(this.props.item.item).length > 1) {
-        console.log(this.props.item.item);
-        itemLists = <ItemList data={this.props.item.item} pageType={0} />;
+      if (Object.keys(items).length > 1) {
+        itemLists = <ItemList data={items} pageType={0} />;
       }
     } catch (e) {
-      console.log(e);
-      if (this.props.item.item === undefined) {
+      if (items === undefined) {
         console.log("props still undef");
       }
     }
@@ -40,7 +40,7 @@ class Genre extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookserie,genre" />
         </Helmet>
-        <h1>Genre</h1>
+        <h2 className="ttl_h2">Genre</h2>
         <Navigation />
         {itemLists}
       </div>

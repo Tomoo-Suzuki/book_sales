@@ -89,59 +89,59 @@ class Ranking extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookseries,list" />
         </Helmet>
-        <h1>List</h1>
+        <h2 className="ttl_h2">Ranking</h2>
         <Navigation />
         <section className="ranking">
-          <h3>全体ランキング</h3>
+          <h3 className="ttl_h3">全体ランキング</h3>
           {itemListsBest}
         </section>
         <section className="ranking">
-          <h3>各ジャンル１位</h3>
+          <h3 className="ttl_h3">各ジャンル１位</h3>
           {itemListsEach1}
         </section>
         <section className="ranking">
-          <h3>ジャンル1ランキング</h3>
+          <h3 className="ttl_h3">ジャンル1ランキング</h3>
           {itemListsGenre1}
         </section>
         <section className="ranking">
-          <h3>各ジャンル2ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル2ランキング</h3>
           {itemListsGenre2}
         </section>
         <section className="ranking">
-          <h3>各ジャンル3ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル3ランキング</h3>
           {itemListsGenre3}
         </section>
         <section className="ranking">
-          <h3>各ジャンル4ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル4ランキング</h3>
 
           {itemListsGenre4}
         </section>
         <section className="ranking">
-          <h3>各ジャンル5ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル5ランキング</h3>
           {itemListsGenre5}
         </section>
         <section className="ranking">
-          <h3>各ジャンル6ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル6ランキング</h3>
           {itemListsGenre6}
         </section>
         <section className="ranking">
-          <h3>各ジャンル7ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル7ランキング</h3>
           {itemListsGenre7}
         </section>
         <section className="ranking">
-          <h3>各ジャンル8ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル8ランキング</h3>
           {itemListsGenre8}
         </section>
         <section className="ranking">
-          <h3>各ジャンル9ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル9ランキング</h3>
           {itemListsGenre9}
         </section>
         <section className="ranking">
-          <h3>各ジャンル10ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル10ランキング</h3>
           {itemListsGenre10}
         </section>
         <section className="ranking">
-          <h3>各ジャンル11ランキング</h3>
+          <h3 className="ttl_h3">各ジャンル11ランキング</h3>
           {itemListsGenre11}
         </section>
       </div>

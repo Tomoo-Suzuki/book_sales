@@ -3,15 +3,16 @@ import "_scss/molecules/_itemDataWrap";
 
 export const ItemDataWrap = (props) => {
   const data = props.data;
+  console.log(data);
   return (
     <span className="itemDataWrap">
-      <a href={data.url_detail} className="name_book">
+      <a href={`/detail/` + data.id_book} className="name_book">
         {data.name_book}
       </a>
-      <a href={data.url_detail} className="name_auther">
+      <a href={`/detail/` + data.id_book} className="name_auther">
         {data.id_author}
       </a>
-      <a href={data.url_detail} className="name_publisher">
+      <a href={`/detail/` + data.id_book} className="name_publisher">
         {data.id_publisher}
       </a>
       <p className="name_series">{data.name_series}</p>

@@ -43,10 +43,9 @@ class FormLogin extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookseries, detail" />
         </Helmet>
-        <h1>Form</h1>
         <Navigation />
         <main className="form-book">
-          <h2>ログイン</h2>
+          <h2 className="ttl_h2">ログイン</h2>
           <form name="loginForm">
             <UserId
               val={this.state}

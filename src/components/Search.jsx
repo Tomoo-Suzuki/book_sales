@@ -19,7 +19,7 @@ class Search extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookseries,search" />
         </Helmet>
-        <h1>Search</h1>
+        <h2 className="ttl_h2">Search</h2>
         <Navigation />
       </div>
     );
