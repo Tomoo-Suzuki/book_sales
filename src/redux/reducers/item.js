@@ -14,6 +14,10 @@ function item(state = initialState, action) {
       return Object.assign({}, state, {
         ranking: action.value
       })
+    case 'SELECT_DETAIL':
+      return Object.assign({}, state, {
+        detail: action.value
+      })
     default:
       return state
   }

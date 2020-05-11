@@ -11,7 +11,6 @@ class ItemList extends React.Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     const items = this.props.data;
     let lists;
     if (items) {

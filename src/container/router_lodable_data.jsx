@@ -18,10 +18,10 @@ const Ranking = Loadable({
   loader: () => import("_components/Ranking"),
   loading: Loading,
 });
-const Detail = Loadable({
-  loader: () => import("_components/Detail"),
-  loading: Loading,
-});
+// const Detail = Loadable({
+//   loader: () => import("_components/Detail"),
+//   loading: Loading,
+// });
 const Search = Loadable({
   loader: () => import("_components/Search"),
   loading: Loading,
@@ -91,12 +91,12 @@ const routes = [
     name: "ranking",
     component: Ranking,
   },
-  {
-    path: "/detail",
-    exact: true,
-    name: "detail",
-    component: Detail,
-  },
+  //   {
+  //     path: "/detail",
+  //     exact: true,
+  //     name: "detail",
+  //     component: Detail,
+  //   },
   {
     path: "/search",
     exact: true,

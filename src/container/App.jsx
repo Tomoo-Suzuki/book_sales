@@ -6,6 +6,7 @@ import routes from "_container/router_lodable_data.jsx";
 import Header from "_components/organisms/Header";
 import Footer from "_components/organisms/Footer";
 import Genre from "_components/Genre";
+import Detail from "_components/Detail";
 
 import "_scss/index.scss";
 class App extends React.Component {
@@ -43,6 +44,7 @@ class App extends React.Component {
                 <ul>
                   {this.navs}
                   {/* <Link to="/genre/11">GENRE</Link> */}
+                  <Link to="/detail/9000184683">DETAIL</Link>
                 </ul>
               </div>
               <div>
@@ -53,6 +55,13 @@ class App extends React.Component {
                     exact
                     path="/genre/:id"
                     component={Genre}
+                  />
+                  <Redirect exact from="/" to="/" />
+                  <Route
+                    name="detail"
+                    exact
+                    path="/detail/:id_book"
+                    component={Detail}
                   />
                   <Redirect exact from="/" to="/" />
                 </Switch>

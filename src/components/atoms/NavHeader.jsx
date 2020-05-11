@@ -26,7 +26,6 @@ class NavHeader extends React.Component {
     this.getData = this.getData.bind(this);
   }
   getData(id_genre) {
-    console.log(id_genre);
     selectGenre(id_genre, this.props.dispatch);
   }
 

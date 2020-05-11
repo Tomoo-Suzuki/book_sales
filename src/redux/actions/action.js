@@ -44,3 +44,9 @@ export const select_ranking = function (object) {
     value: object
   })
 };
+export const select_detail = function (object) {
+  return ({
+    type: 'SELECT_DETAIL',
+    value: object
+  })
+};
