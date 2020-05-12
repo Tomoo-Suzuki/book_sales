@@ -1,7 +1,7 @@
 import React from "react";
 
 import Labels from "_components/atoms/Labels";
-import PhotoWrap from "_components/molecules/PhotoWrap";
+import PhotoWrap from "_components/atoms/PhotoWrap";
 import { ItemDataWrap } from "_components/molecules/ItemDataWrap";
 import BtnWrap from "_components/molecules/BtnWrap";
 
@@ -11,6 +11,7 @@ class ItemList extends React.Component {
     super(props);
   }
   render() {
+    const pageType = this.props.pageType;
     const items = this.props.data;
     let lists;
     if (items) {
@@ -21,7 +22,12 @@ class ItemList extends React.Component {
             <li className="itemList" key={`itemwrap` + key}>
               <Labels data={item} key={`labels` + key} />
               <div>
-                <PhotoWrap data={item} key={`photo` + key} />
+                <PhotoWrap
+                  data={item}
+                  rank={key}
+                  pageType={pageType}
+                  key={`photo` + key}
+                />
                 <ItemDataWrap pageType={1} data={item} key={`data` + key} />
                 <BtnWrap
                   pageType={1}

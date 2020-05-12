@@ -1,7 +1,7 @@
 import React from "react";
 
 import Labels from "_components/atoms/Labels";
-import PhotoWrap from "_components/molecules/PhotoWrap";
+import PhotoWrap from "_components/atoms/PhotoWrap";
 import { ItemDataWrap } from "_components/molecules/ItemDataWrap";
 import BtnWrap from "_components/molecules/BtnWrap";
 
