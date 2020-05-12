@@ -50,3 +50,9 @@ export const select_detail = function (object) {
     value: object
   })
 };
+export const update_display = function (object) {
+  return ({
+    type: 'UPDATE_DISPLAY',
+    value: object
+  })
+};

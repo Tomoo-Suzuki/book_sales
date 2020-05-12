@@ -17,6 +17,8 @@ class Ranking extends React.Component {
     selectRanking(this.props.dispatch);
   }
   render() {
+    const ranking = this.props.item.ranking;
+    const display_style = this.props.ui.display_style;
     let itemListsBest;
     let itemListsEach1;
     let itemListsGenre1;
@@ -30,55 +32,109 @@ class Ranking extends React.Component {
     let itemListsGenre9;
     let itemListsGenre10;
     let itemListsGenre11;
+
     try {
-      if (Object.keys(this.props.item.ranking).length > 1) {
+      if (Object.keys(ranking).length > 1) {
+        // console.log(Object.keys(ranking));
         itemListsBest = (
-          <ItemList data={this.props.item.ranking.bestRanking} pageType={1} />
+          <ItemList
+            data={ranking.bestRanking}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsEach1 = (
-          <ItemList data={this.props.item.ranking.eachNo1} pageType={1} />
+          <ItemList
+            data={ranking.eachNo1}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre1 = (
-          <ItemList data={this.props.item.ranking.rankGenre1} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre1}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre2 = (
-          <ItemList data={this.props.item.ranking.rankGenre2} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre2}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre3 = (
-          <ItemList data={this.props.item.ranking.rankGenre3} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre3}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre4 = (
-          <ItemList data={this.props.item.ranking.rankGenre4} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre4}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre5 = (
-          <ItemList data={this.props.item.ranking.rankGenre5} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre5}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre6 = (
-          <ItemList data={this.props.item.ranking.rankGenre6} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre6}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre7 = (
-          <ItemList data={this.props.item.ranking.rankGenre7} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre7}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre8 = (
-          <ItemList data={this.props.item.ranking.rankGenre8} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre8}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre9 = (
-          <ItemList data={this.props.item.ranking.rankGenre9} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre9}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre10 = (
-          <ItemList data={this.props.item.ranking.rankGenre10} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre10}
+            display_style={display_style}
+            pageType={1}
+          />
         );
         itemListsGenre11 = (
-          <ItemList data={this.props.item.ranking.rankGenre11} pageType={1} />
+          <ItemList
+            data={ranking.rankGenre11}
+            display_style={display_style}
+            pageType={1}
+          />
         );
       }
     } catch (e) {
-      if (this.props.item.ranking === undefined) {
+      if (ranking === undefined) {
         console.log("props still undef");
       }
     }
     return (
-      <div className="Bookseries">
+      <div className={`Bookseries display_` + display_style}>
         <Helmet>
           <title>Bookseries | Ranking</title>
           <meta
