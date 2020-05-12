@@ -17,7 +17,6 @@ const ui_display_style = (state) => state.ui;
 
 const BtnWrap = (props) => {
   const uiState = useSelector(ui_display_style);
-  console.log(uiState.display_style);
 
   const status = props.status;
   const buttons = [];

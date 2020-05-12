@@ -21,11 +21,9 @@ class List extends React.Component {
     let itemLists;
     try {
       if (Object.keys(this.props.item.item).length > 1) {
-        console.log(this.props.item.item);
         itemLists = <ItemList data={this.props.item.item} />;
       }
     } catch (e) {
-      console.log(e);
       if (this.props.item.item === undefined) {
         console.log("props still undef");
       }
