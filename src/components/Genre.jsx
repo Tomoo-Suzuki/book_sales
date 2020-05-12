@@ -19,6 +19,7 @@ class Genre extends React.Component {
   }
   render() {
     const items = this.props.item.item;
+    const display_style = this.props.ui.display_style;
 
     let itemLists;
     try {
@@ -31,7 +32,7 @@ class Genre extends React.Component {
       }
     }
     return (
-      <div className="Bookseries">
+      <div className={`Bookseries display_` + display_style}>
         <Helmet>
           <title>Bookseries | Genre</title>
           <meta

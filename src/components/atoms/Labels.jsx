@@ -25,20 +25,6 @@ const Labels = (props) => {
         </li>
       );
     }
-    if (labels.label_free) {
-      labelElements.push(
-        <li className="label_free" key="free">
-          無料
-        </li>
-      );
-    }
-    if (labels.label_free_s) {
-      labelElements.push(
-        <li className="label_free" key="hasfree">
-          無料あり
-        </li>
-      );
-    }
 
     if (labels.label_complete_s) {
       labelElements.push(

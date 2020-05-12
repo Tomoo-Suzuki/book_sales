@@ -34,7 +34,6 @@ class Ranking extends React.Component {
       rankGenre10: "創作論・評論ランキング",
       rankGenre11: "詩・童話・その他ランキング",
     };
-
     let itemLists = [];
 
     try {
@@ -79,7 +78,4 @@ class Ranking extends React.Component {
 const mapStateToProps = (state) => {
   return state;
 };
-// const mapDispatchToProps = (dispatch) => ({
-//   selectGenre: (id_genre) => dispatch(selectGenre(id_genre)),
-// });
 export default Redux.connect(mapStateToProps)(Ranking);

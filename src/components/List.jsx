@@ -17,7 +17,7 @@ class List extends React.Component {
     selectList(this.props.dispatch);
   }
   render() {
-    // console.log(this.props);
+    const display_style = this.props.ui.display_style;
     let itemLists;
     try {
       if (Object.keys(this.props.item.item).length > 1) {
@@ -29,7 +29,7 @@ class List extends React.Component {
       }
     }
     return (
-      <div className="Bookseries">
+      <div className={`Bookseries display_` + display_style}>
         <Helmet>
           <title>Bookseries | List</title>
           <meta
