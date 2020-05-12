@@ -1,13 +1,17 @@
-import React from 'react';
+import React from "react";
+
+import "_scss/atoms/_btnStyleChange";
+
 const BtnStyleChange = () => {
-    return (
-        <div className="BtnStyleChange">
-            <dl>
-                <dt>表示切替 : </dt>
-                <dd className="displayDetail"></dd>
-                <dd className="displayLarge"></dd>
-            </dl>
-        </div>
-    );
+  return (
+    <div className="btn_style_box">
+      <dl className="btn_style">
+        <dt>表示 : </dt>
+        <dd className="display_slider"></dd>
+        <dd className="display_thumbnail"></dd>
+        <dd className="display_list"></dd>
+      </dl>
+    </div>
+  );
 };
 export default BtnStyleChange;

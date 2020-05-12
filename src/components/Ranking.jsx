@@ -102,44 +102,44 @@ class Ranking extends React.Component {
           {itemListsGenre1}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル2ランキング</h3>
+          <h3 className="ttl_h3">ジャンル2ランキング</h3>
           {itemListsGenre2}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル3ランキング</h3>
+          <h3 className="ttl_h3">ジャンル3ランキング</h3>
           {itemListsGenre3}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル4ランキング</h3>
+          <h3 className="ttl_h3">ジャンル4ランキング</h3>
 
           {itemListsGenre4}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル5ランキング</h3>
+          <h3 className="ttl_h3">ジャンル5ランキング</h3>
           {itemListsGenre5}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル6ランキング</h3>
+          <h3 className="ttl_h3">ジャンル6ランキング</h3>
           {itemListsGenre6}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル7ランキング</h3>
+          <h3 className="ttl_h3">ジャンル7ランキング</h3>
           {itemListsGenre7}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル8ランキング</h3>
+          <h3 className="ttl_h3">ジャンル8ランキング</h3>
           {itemListsGenre8}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル9ランキング</h3>
+          <h3 className="ttl_h3">ジャンル9ランキング</h3>
           {itemListsGenre9}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル10ランキング</h3>
+          <h3 className="ttl_h3">ジャンル10ランキング</h3>
           {itemListsGenre10}
         </section>
         <section className="ranking">
-          <h3 className="ttl_h3">各ジャンル11ランキング</h3>
+          <h3 className="ttl_h3">ジャンル11ランキング</h3>
           {itemListsGenre11}
         </section>
       </div>
