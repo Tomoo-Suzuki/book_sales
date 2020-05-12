@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import '../color';
+
+.btn_style_box {
+    .btn_style {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        >dt,
+        >dd {
+
+            height: 2rem;
+            margin-left: 1rem;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        >dt {
+            width: 3rem;
+        }
+
+        >dd {
+            width: 2rem;
+            cursor: pointer;
+        }
+
+        .display_slider {
+            background: url(/img/display_slider.svg) center center no-repeat;
+            background-size: 2rem;
+        }
+
+        .display_thumbnail {
+            background: url(/img/display_thumbnail.svg) center center no-repeat;
+            background-size: 2rem;
+
+        }
+
+        .display_list {
+            background: url(/img/display_list.svg) center center no-repeat;
+            background-size: 2rem;
+
+        }
+    }
+
+}

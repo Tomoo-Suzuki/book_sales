@@ -3,7 +3,6 @@ import "_scss/atoms/_photoWrap";
 
 const PhotoWrap = (props) => {
   const photo = props.data;
-  console.log(props.rank);
   const ranking = Number(props.rank) + 1;
   let icon_rank;
   let special;
