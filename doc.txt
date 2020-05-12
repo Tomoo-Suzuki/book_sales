@@ -1,11 +1,54 @@
-docker build -t book-sales:fst .
+docker-compose build
 
-docker run -d -p 8888:8888 -v :/app --rm --name test-container1 book-sales:fst
+docker-compose build --no-cache
 
-docker run -d -p 8888:8888 --rm --name test-container1 book-sales:fst
+docker-compose up -d
 
-docker exec 736640c53fa0 sh
+docker-compose down --rmi all --volumes
 
-■下記はosx用のモジュール。TODO:削除
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+psql -U admin db_book_dev
+
+psql -h localhost -p 5432 -U admin -d db_book_dev
+
+docker network ls
+
+docker network inspect book2020_book2020
+
+docker exec -it graphql_book_dev sh
+ping -w 3 db_book_dev
+ping -w 3 book_sales_dev
+ping -w 3 book_upload_dev
+
+docker exec -it db_book_dev sh
+ping -w 3 book_upload_dev
+ping -w 3 book_sales_dev
+ping -w 3 graphql_book_dev
+
+docker exec -it book_upload_dev sh
+ping -w 3 db_book_dev
+ping -w 3 book_sales_dev
+ping -w 3 book_upload_dev
+
+docker exec -it book_sales_dev sh
+ping -w 3 book_upload_dev
+ping -w 3 db_book_dev
+ping -w 3 graphql_book_dev
+
+
+========================================
+
+
+lsof -i:5432 -P
+
+docker network inspect book2020
+
+
+docker network rm db_book_default
+
+
+
+
+docker network create book2020
+docker network connect book2020 book_sales_dev
+docker network connect book2020 book_upload_dev
+docker network connect book2020 db_book_dev

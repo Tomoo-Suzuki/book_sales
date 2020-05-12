@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import '../color';
+
+.photoWrap {
+    width: 20rem;
+    height: 20rem;
+    margin-right: 2rem;
+    position: relative;
+
+    .imgBox {
+        display: block;
+        width: 20rem;
+        height: 20rem;
+        text-align: center;
+
+        >img {
+            max-width: 20rem;
+            max-height: 20rem;
+        }
+    }
+
+    .icon_rank {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        background: url(/img/icon_rank.png) center center no-repeat;
+        background-size: 3rem;
+
+        >span {
+            display: inline-block;
+            margin-top: 1px;
+            margin-left: 1px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+
+    .icon_gold {
+        background: url(/img/icon_gold.png) center center no-repeat;
+        background-size: 3rem;
+    }
+
+    .icon_silver {
+        background: url(/img/icon_silver.png) center center no-repeat;
+        background-size: 3rem;
+    }
+
+    .icon_bronze {
+        background: url(/img/icon_bronze.png) center center no-repeat;
+        background-size: 3rem;
+    }
+}
