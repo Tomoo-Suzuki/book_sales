@@ -10,29 +10,50 @@ import { BtnWishNew } from "_components/atoms/submitBtn/purchase/BtnWishNew";
 import { BtnTrialNew } from "_components/atoms/submitBtn/purchase/BtnTrialNew";
 
 import "_scss/molecules/_btnWrap";
-class BtnWrap extends React.Component {
-  render() {
-    this.status = this.props.status;
-    this.buttons = [];
-    if (this.status === 0) {
-      this.buttons.push(<BtnCart key="bc" />);
-      this.buttons.push(<BtnWish key="bw" />);
-      this.buttons.push(<BtnTrial key="bt" />);
-    } else if (this.status === 1) {
-      this.buttons.push(<BtnReserve key="br" />);
-      this.buttons.push(<BtnWish key="bw" />);
-    } else if (this.status === 2) {
-      this.buttons.push(<BtnCartNew key="bcn" />);
-      this.buttons.push(<BtnWishNew key="bwn" />);
-      this.buttons.push(<BtnTrialNew key="btn" />);
-    } else if (this.status === 3) {
-      this.buttons.push(<BtnReserveNew key="brn" />);
-      this.buttons.push(<BtnWishNew key="bwn" />);
-      this.buttons.push(<BtnTrialNew key="btn" />);
-    } else if (this.status === 4) {
-      this.buttons.push(<BtnFree key="bf" />);
+
+import { useSelector } from "react-redux";
+
+const ui_display_style = (state) => state.ui;
+
+const BtnWrap = (props) => {
+  const uiState = useSelector(ui_display_style);
+
+  const status = props.status;
+  const buttons = [];
+  if (uiState.display_style === 0) {
+    ("");
+  } else if (uiState.display_style === 1) {
+    if (status === 0) {
+      buttons.push(<BtnCart key="bc" />);
+    } else if (status === 1) {
+      buttons.push(<BtnReserve key="br" />);
+    } else if (status === 2) {
+      buttons.push(<BtnCartNew key="bcn" />);
+    } else if (status === 3) {
+      buttons.push(<BtnReserveNew key="brn" />);
+    } else if (status === 4) {
+      buttons.push(<BtnFree key="bf" />);
     }
-    return <ul className="btnWrap">{this.buttons}</ul>;
+  } else {
+    if (status === 0) {
+      buttons.push(<BtnCart key="bc" />);
+      buttons.push(<BtnWish key="bw" />);
+      buttons.push(<BtnTrial key="bt" />);
+    } else if (status === 1) {
+      buttons.push(<BtnReserve key="br" />);
+      buttons.push(<BtnWish key="bw" />);
+    } else if (status === 2) {
+      buttons.push(<BtnCartNew key="bcn" />);
+      buttons.push(<BtnWishNew key="bwn" />);
+      buttons.push(<BtnTrialNew key="btn" />);
+    } else if (status === 3) {
+      buttons.push(<BtnReserveNew key="brn" />);
+      buttons.push(<BtnWishNew key="bwn" />);
+      buttons.push(<BtnTrialNew key="btn" />);
+    } else if (status === 4) {
+      buttons.push(<BtnFree key="bf" />);
+    }
   }
-}
+  return <ul className="btnWrap">{buttons}</ul>;
+};
 export default BtnWrap;

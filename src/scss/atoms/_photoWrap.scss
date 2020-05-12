@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import '../color';
 
+
 .photoWrap {
     width: 20rem;
     height: 20rem;
@@ -55,4 +56,61 @@
         background: url(/img/icon_bronze.png) center center no-repeat;
         background-size: 3rem;
     }
+}
+
+.display_0,
+.display_1 {
+
+    .photoWrap {
+        width: 14rem;
+        height: 14rem;
+        margin-right: 1rem;
+        margin-bottom: .5rem;
+        ;
+
+
+        .imgBox {
+            display: block;
+            width: 14rem;
+            height: 14rem;
+            text-align: center;
+
+            >img {
+                max-width: 14rem;
+                max-height: 14rem;
+            }
+        }
+
+        .icon_rank {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 2.4rem;
+            height: 2.4rem;
+            line-height: 2.4rem;
+            background: url(/img/icon_rank.png) center center no-repeat;
+            background-size: 2.4rem;
+
+            >span {
+                font-size: 1.4rem;
+            }
+        }
+
+        .icon_gold {
+            background: url(/img/icon_gold.png) center center no-repeat;
+            background-size: 2.4rem;
+        }
+
+        .icon_silver {
+            background: url(/img/icon_silver.png) center center no-repeat;
+            background-size: 2.4rem;
+        }
+
+        .icon_bronze {
+            background: url(/img/icon_bronze.png) center center no-repeat;
+            background-size: 2.4rem;
+        }
+    }
+
 }

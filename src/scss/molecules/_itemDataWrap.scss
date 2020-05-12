@@ -73,3 +73,41 @@
         font-weight: normal;
     }
 }
+
+.display_0,
+.display_1 {
+
+    .itemDataWrap {
+        width: 90%;
+        margin: auto;
+        display: block;
+
+        >a {
+            display: block;
+        }
+
+        .name_book {
+            @extend %link;
+            color: $sell_green_dark;
+            font-size: 1.2rem;
+            max-height: 2.5rem;
+            min-height: 2.5rem;
+            overflow: hidden;
+        }
+
+        .name_auther {
+            @extend %link;
+            font-size: 1.2rem;
+            margin-bottom: .5rem;
+        }
+
+        .price_now {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+
+            >span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
