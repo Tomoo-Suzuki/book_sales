@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import Navigation from "_components/organisms/Navigation";
 import Itemlist from "_components/organisms/ItemList";
 
-class Top extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.items = this.props.items;
@@ -38,4 +38,4 @@ class Top extends React.Component {
   }
 }
 
-export default Top;
+export default Home;
