@@ -2,8 +2,8 @@ import React from "react";
 import Loadable from "react-loadable";
 import Loading from "_components/atoms/Loading";
 
-const Top = Loadable({
-  loader: () => import("_components/Top"),
+const Home = Loadable({
+  loader: () => import("_components/Home"),
   loading: Loading,
 });
 // const Genre = Loadable({
@@ -71,8 +71,8 @@ const routes = [
   {
     path: "/",
     exact: true,
-    name: "top",
-    component: Top,
+    name: "Home",
+    component: Home,
   },
   //   {
   //     path: "/genre",
