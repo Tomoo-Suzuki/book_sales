@@ -28,13 +28,21 @@ class ItemList extends React.Component {
                   pageType={pageType}
                   key={`photo` + key}
                 />
-                <ItemDataWrap pageType={1} data={item} key={`data` + key} />
-                <BtnWrap
-                  pageType={1}
+                <ItemDataWrap
+                  pageType={pageType}
                   data={item}
-                  status={2}
-                  key={`btn_` + key}
+                  key={`data` + key}
                 />
+                <>
+                  {!pageType === "2" ? (
+                    <BtnWrap
+                      pageType={pageType}
+                      data={item}
+                      status={2}
+                      key={`btn_` + key}
+                    />
+                  ) : null}
+                </>
               </div>
             </li>
           );

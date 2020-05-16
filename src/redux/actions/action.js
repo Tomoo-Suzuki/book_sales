@@ -56,3 +56,18 @@ export const update_display = function (object) {
     value: object
   })
 };
+
+////////
+export const select_bookshelf_top = function (object) {
+  return ({
+    type: 'SELECT_BOOKSHEL_TOP',
+    value: object
+  })
+};
+
+export const select_bookshelf_detail = function (object) {
+  return ({
+    type: 'SELECT_BOOKSHEL_DETAIL',
+    value: object
+  })
+};
