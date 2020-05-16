@@ -12,6 +12,7 @@
             flex-wrap: nowrap;
             justify-content: space-between;
         }
+
     }
 }
 
@@ -32,6 +33,45 @@
             }
         }
     }
+}
 
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 600px) {
+    .itemListBox {
+        .itemList {
+            margin-bottom: 2rem;
+
+            >div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .display_0,
+    .display_1 {
+        .itemListBox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            .itemList {
+                display: block;
+                width: 11rem;
+                margin-right: 1rem;
+                margin-bottom: 2rem;
+
+                >div {
+                    display: block;
+                }
+            }
+        }
+    }
 
 }
+
+@media screen and (max-width: 413px) {}

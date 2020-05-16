@@ -32,3 +32,30 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {
+    .nav_header {
+        height: 3.2rem;
+        border-bottom: dashed 1px $upload_blue_light;
+
+        >ul {
+            height: 3.2rem;
+            width: 95%;
+            margin: auto;
+
+            >li {
+                font-size: 1.3rem;
+                font-weight: bold;
+                margin: 0 0.5rem;
+                padding: 0.3rem 1rem;
+                color: #ffffff;
+                border-radius: 2px;
+                height: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 413px) {}
