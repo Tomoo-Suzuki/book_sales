@@ -154,3 +154,74 @@ textarea {
         }
     }
 }
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {
+    .form-book {
+        width: 98% !important;
+        margin: 2.4rem auto;
+        font-size: 1.2rem;
+
+        dl {
+            margin-bottom: 2rem;
+            display: block;
+
+            dt,
+            dd {
+                font-size: 1.2rem;
+
+                margin-bottom: 1rem;
+
+            }
+
+            dt {
+                //width: 100%;
+                vertical-align: top;
+                color: $sell_green_dark;
+                font-weight: bold;
+                display: inline-block;
+                border-left: .4rem solid $sell_green_dark;
+                padding-left: .6rem;
+            }
+
+            dd {
+                width: 100%;
+                display: block;
+
+                >div,
+                >span,
+                >div>span {
+                    margin-right: 1.6rem;
+                }
+
+                >div {
+                    margin-bottom: 1.6rem;
+                }
+
+                input[type='text'],
+                input[type='email'],
+                input[type='tel'],
+                input[type='date'],
+                input[type='password'] {
+                    display: inline-block;
+                    border: #eeeeee solid 1px;
+                    border-radius: 3px;
+                    width: 100%;
+                    padding: 4px;
+                    height: 2rem;
+                }
+
+                textarea {
+                    width: 100%;
+                }
+
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 413px) {}

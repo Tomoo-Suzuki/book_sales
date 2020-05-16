@@ -77,7 +77,32 @@
         text-align: center;
 
         >li {
-            width: 40px;
+            width: 4rem;
         }
     }
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 600px) {
+    .labelBox {
+        >li {
+            width: 6rem;
+        }
+
+    }
+
+    .display_0,
+    .display_1 {
+        .labelBox {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+
+
+}
+
+@media screen and (max-width: 413px) {}

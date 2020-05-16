@@ -2,7 +2,6 @@
 @import '../color';
 
 %link {
-    // color: $sell_green_dark;
     color: $black_strong;
     text-decoration: none;
 
@@ -111,3 +110,182 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {
+    .itemDataWrap {
+
+        .name_book {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .name_auther {
+            font-size: 1.6rem;
+            margin-bottom: .5rem;
+        }
+
+        .name_publisher {
+            font-size: 1.6rem;
+            margin-bottom: .5rem;
+        }
+
+        .name_series {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .name_label {}
+
+        .price_now {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+
+            >span {
+                font-size: 1.6rem;
+            }
+
+        }
+
+        .point {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+
+            >span {
+                font-size: 1.6rem;
+            }
+        }
+
+        .date_sales {
+            font-size: 1.4rem;
+        }
+
+        .book_detail {
+            font-size: 1.4rem;
+            font-weight: normal;
+        }
+    }
+
+    .display_0,
+    .display_1 {
+
+        .itemDataWrap {
+            width: 90%;
+            margin: auto;
+            display: block;
+
+            >a {
+                display: block;
+            }
+
+            .name_book {
+                font-size: 1.2rem;
+                max-height: 2.5rem;
+                min-height: 2.5rem;
+                overflow: hidden;
+            }
+
+            .name_auther {
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
+            }
+
+            .price_now {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+
+                >span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .itemDataWrap {
+        width: calc(100% - 12rem);
+
+        .name_book {
+            font-size: 1.4rem;
+            width: 98%;
+        }
+
+        .name_auther {
+            font-size: 1.2rem;
+        }
+
+        .name_publisher {
+            display: none;
+        }
+
+        .name_series {
+            display: none;
+        }
+
+        .name_label {}
+
+        .price_now {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+
+            >span {
+                font-size: 1.4rem;
+            }
+
+        }
+
+        .point {
+            display: none;
+        }
+
+        .date_sales {
+            display: none;
+        }
+
+        .book_detail {
+            display: none;
+        }
+    }
+
+    .display_0,
+    .display_1 {
+
+        .itemDataWrap {
+            width: 90%;
+            margin: auto;
+            display: block;
+
+            >a {
+                display: block;
+            }
+
+            .name_book {
+                font-size: 1.2rem;
+                max-height: 2.5rem;
+                min-height: 2.5rem;
+                overflow: hidden;
+            }
+
+            .name_auther {
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
+            }
+
+            .price_now {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+
+                >span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 413px) {}

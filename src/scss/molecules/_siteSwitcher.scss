@@ -12,3 +12,26 @@
         margin-right: 1.5rem;
     }
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {
+    .nav_siteSwicher {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        // display: flex;
+        // flex-wrap: nowrap;
+        // justify-content: space-between;
+        >.logo {
+            width: 6rem;
+        }
+
+        >.logo:nth-of-type(1) {
+            margin-right: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 413px) {}

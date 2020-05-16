@@ -114,3 +114,128 @@
     }
 
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 600px) {
+
+    .photoWrap {
+        width: 11rem;
+        height: 11rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+        .imgBox {
+            display: block;
+            width: 11rem;
+            height: 11rem;
+            text-align: center;
+
+            >img {
+                max-width: 11rem;
+                max-height: 11rem;
+            }
+        }
+
+        .icon_rank {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            text-align: center;
+            line-height: 3rem;
+            background: url(/img/icon_rank.png) center center no-repeat;
+            background-size: 3rem;
+
+            >span {
+                display: inline-block;
+                margin-top: 1px;
+                margin-left: 1px;
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: #ffffff;
+            }
+        }
+
+        .icon_gold {
+            background: url(/img/icon_gold.png) center center no-repeat;
+            background-size: 3rem;
+        }
+
+        .icon_silver {
+            background: url(/img/icon_silver.png) center center no-repeat;
+            background-size: 3rem;
+        }
+
+        .icon_bronze {
+            background: url(/img/icon_bronze.png) center center no-repeat;
+            background-size: 3rem;
+        }
+    }
+
+    .display_0,
+    .display_1 {
+
+        .photoWrap {
+            display: block;
+            width: 11rem;
+            height: 11rem;
+            margin-right: 1rem;
+            margin-bottom: .5rem;
+
+
+            .imgBox {
+                display: block;
+                width: 11rem;
+                height: 11rem;
+                text-align: center;
+                border: solid #efefef 1px;
+
+                >img {
+                    max-width: 11rem;
+                    max-height: 11rem;
+                }
+            }
+
+            .icon_rank {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                width: 2.4rem;
+                height: 2.4rem;
+                line-height: 2.4rem;
+                background: url(/img/icon_rank.png) center center no-repeat;
+                background-size: 2.4rem;
+
+                >span {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .icon_gold {
+                background: url(/img/icon_gold.png) center center no-repeat;
+                background-size: 2.4rem;
+            }
+
+            .icon_silver {
+                background: url(/img/icon_silver.png) center center no-repeat;
+                background-size: 2.4rem;
+            }
+
+            .icon_bronze {
+                background: url(/img/icon_bronze.png) center center no-repeat;
+                background-size: 2.4rem;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 413px) {}

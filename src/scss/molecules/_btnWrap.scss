@@ -33,6 +33,10 @@
     }
 }
 
+.sp {
+    display: none;
+}
+
 .btnWrap {
     @extend %btn_base;
 
@@ -95,3 +99,46 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 600px) {
+    .sp {
+        display: block !important;
+    }
+
+    .btnWrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+
+        >li {
+            width: 10rem;
+            margin-right: 1rem;
+
+            .btn {
+                height: 2.4rem;
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    .display_0,
+    .display_1 {
+
+        .btnWrap {
+            >li {
+                >.btn {
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 413px) {}
