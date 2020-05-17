@@ -38,7 +38,6 @@ class Ranking extends React.Component {
 
     try {
       if (Object.keys(ranking).length > 1) {
-        console.log(Object.keys(ranking));
         itemLists = Object.keys(ranking).map(function(key, index) {
           return (
             <section className="ranking" key={index}>

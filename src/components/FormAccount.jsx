@@ -14,6 +14,7 @@ import Purpose from "_components/atoms/formParts/Purpose";
 import Birthday from "_components/atoms/formParts/Birthday";
 import ReceptionDate from "_components/atoms/formParts/ReceptionDate";
 import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
+import ProgressTracker from "_components/atoms/ProgressTracker";
 
 import moment from "moment";
 
@@ -23,11 +24,13 @@ import { form_controll } from "_redux/actions/action.js";
 
 import "_scss/index";
 
+const txtArray = ["入力・編集", "確認", "完了"];
+
 class FormAccount extends React.Component {
   constructor(props) {
     super(props);
     const today = moment().format("YYYY年MM月DD日");
-    this.state = {};
+    // this.state = {};
     this.submitFormData = this.submitFormData.bind(this);
     this.getData = this.getData.bind(this);
     this.formDispatch = this.formDispatch.bind(this);
@@ -58,6 +61,7 @@ class FormAccount extends React.Component {
         <h2 className="ttl_h2">アカウントの登録</h2>
         <Navigation />
         <main className="form-book">
+          <ProgressTracker txtArray={txtArray} status={0} />
           <form name="accountForm">
             <input type="hidden" name="id" value="00030" />
             <ReceptionDate
