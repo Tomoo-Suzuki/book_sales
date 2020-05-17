@@ -7,6 +7,7 @@ import Header from "_components/organisms/Header";
 import Footer from "_components/organisms/Footer";
 import Genre from "_components/Genre";
 import Detail from "_components/Detail";
+import BookshelfDetail from "_components/BookshelfDetail";
 
 import "_scss/index.scss";
 class App extends React.Component {
@@ -62,6 +63,12 @@ class App extends React.Component {
                     exact
                     path="/detail/:id_book"
                     component={Detail}
+                  />
+                  <Route
+                    name="bookshelf-detail"
+                    exact
+                    path="/bookshelf-detail/:id_series"
+                    component={BookshelfDetail}
                   />
                   <Redirect exact from="/" to="/" />
                 </Switch>

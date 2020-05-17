@@ -4,7 +4,7 @@ import * as Redux from "react-redux";
 import { Helmet } from "react-helmet";
 
 import Navigation from "_components/organisms/Navigation";
-import ItemList from "_components/organisms/ItemList";
+import ItemListShelf from "_components/organisms/ItemListShelf";
 
 import { selectBookshelfTop } from "_queries/query/selectBookshelfTop.js";
 
@@ -24,7 +24,25 @@ class BookshelfTop extends React.Component {
     let itemLists;
     try {
       if (Object.keys(bookshelf).length > 1) {
-        itemLists = <ItemList data={bookshelf} pageType={2} />;
+        const cloneLists = Object.assign(bookshelf);
+        const arrayLists = Array.from(cloneLists);
+        arrayLists.sort((a, b) => {
+          if (Number(a.id_series) > Number(b.id_series)) return 1;
+          if (Number(a.id_series) < Number(b.id_series)) return -1;
+          if (Number(a.id_book) > Number(b.id_book)) return -1;
+          if (Number(a.id_book) < Number(b.id_book)) return 1;
+        });
+        let latestLists = {};
+        arrayLists.map((item, index) => {
+          if (
+            latestLists[item.id_series] === undefined ||
+            Number(latestLists[item.id_series]) < Number(item.id_book)
+          ) {
+            latestLists[item.id_series] = item;
+          }
+        });
+        const items = Object.values(latestLists);
+        itemLists = <ItemListShelf data={items} shelfType={0} />;
       }
     } catch (e) {
       if (bookshelf === undefined) {

@@ -30,10 +30,10 @@ const BookshelfTop = Loadable({
   loader: () => import("_components/BookshelfTop"),
   loading: Loading,
 });
-const BookshelfDetail = Loadable({
-  loader: () => import("_components/BookshelfDetail"),
-  loading: Loading,
-});
+// const BookshelfDetail = Loadable({
+//   loader: () => import("_components/BookshelfDetail"),
+//   loading: Loading,
+// });
 const FormLogin = Loadable({
   loader: () => import("_components/FormLogin"),
   loading: Loading,
@@ -109,12 +109,12 @@ const routes = [
     name: "bookshelf-top",
     component: BookshelfTop,
   },
-  {
-    path: "/bookshelf-detail",
-    exact: true,
-    name: "bookshelf-detail",
-    component: BookshelfDetail,
-  },
+  //   {
+  //     path: "/bookshelf-detail",
+  //     exact: true,
+  //     name: "bookshelf-detail",
+  //     component: BookshelfDetail,
+  //   },
   {
     path: "/login",
     exact: true,
