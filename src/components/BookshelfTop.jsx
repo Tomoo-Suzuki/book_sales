@@ -56,7 +56,7 @@ class BookshelfTop extends React.Component {
           <meta name="description" content="BookshelfTopのディスクリプション" />
           <meta name="keyword" content="suzuki,book,bookshelf,top" />
         </Helmet>
-        <h1>BookshelfTop</h1>
+        <h2 className="ttl_h2">BookshelfTop</h2>
         <Navigation />
         {itemLists}
       </div>

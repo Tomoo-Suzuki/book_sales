@@ -13,7 +13,6 @@ class ItemList extends React.Component {
     const pageType = this.props.pageType;
     const items = this.props.data;
     const shelfType = this.props.shelfType;
-    console.log(items);
     let lists;
     if (items) {
       lists = "";
@@ -31,10 +30,12 @@ class ItemList extends React.Component {
                   data={item}
                   rank={key}
                   pageType={pageType}
+                  shelfType={shelfType}
                   key={`photo` + key}
                 />
                 <ItemDataWrap
                   pageType={pageType}
+                  shelfType={shelfType}
                   data={item}
                   key={`data` + key}
                 />

@@ -39,7 +39,7 @@ class Detail extends React.Component {
           />
           <meta name="keyword" content="suzuki,book,bookseries, detail" />
         </Helmet>
-        <h1>Detail</h1>
+        <h2 className="ttl_h2">Detail</h2>
         <Navigation />
         {thisItem}
         <div>tableitemlistDetail</div>
