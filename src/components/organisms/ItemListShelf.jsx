@@ -1,9 +1,8 @@
 import React from "react";
 
-import Labels from "_components/atoms/Labels";
-import PhotoWrap from "_components/atoms/PhotoWrap";
+import LabelsShelf from "_components/atoms/LabelsShelf";
+import PhotoWrapShelf from "_components/atoms/PhotoWrapShelf";
 import { ItemDataWrap } from "_components/molecules/ItemDataWrap";
-import BtnWrap from "_components/molecules/BtnWrap";
 
 import "_scss/organisms/_itemList";
 class ItemList extends React.Component {
@@ -13,6 +12,8 @@ class ItemList extends React.Component {
   render() {
     const pageType = this.props.pageType;
     const items = this.props.data;
+    const shelfType = this.props.shelfType;
+    console.log(items);
     let lists;
     if (items) {
       lists = "";
@@ -20,9 +21,13 @@ class ItemList extends React.Component {
         lists = items.map((item, key) => {
           return (
             <li className="itemList" key={`itemwrap` + key}>
-              <Labels data={item} key={`labels` + key} />
+              <LabelsShelf
+                data={item}
+                key={`labels` + key}
+                shelfType={shelfType}
+              />
               <div>
-                <PhotoWrap
+                <PhotoWrapShelf
                   data={item}
                   rank={key}
                   pageType={pageType}
@@ -32,12 +37,6 @@ class ItemList extends React.Component {
                   pageType={pageType}
                   data={item}
                   key={`data` + key}
-                />
-                <BtnWrap
-                  pageType={pageType}
-                  data={item}
-                  status={2}
-                  key={`btn_` + key}
                 />
               </div>
             </li>

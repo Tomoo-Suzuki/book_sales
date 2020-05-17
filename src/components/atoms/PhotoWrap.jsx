@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "_scss/atoms/_photoWrap";
 
 const PhotoWrap = (props) => {
@@ -21,12 +23,12 @@ const PhotoWrap = (props) => {
     );
   }
   return (
-    <a href={`/detail/` + photo.id_book} className="photoWrap">
+    <Link to={`/detail/` + photo.id_book} className="photoWrap">
       {icon_rank}
       <span className="imgBox">
         <img src={photo.url_img} alt={photo.name_book} />
       </span>
-    </a>
+    </Link>
   );
 };
 export default PhotoWrap;

@@ -1,25 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import "_scss/molecules/_itemDataWrap";
 
 import { useSelector } from "react-redux";
 
 const ui_display_style = (state) => state.ui;
 
-export const ItemDataWrap = (props) => {
+export const ItemDataWrapShelf = (props) => {
   const uiState = useSelector(ui_display_style);
   const data = props.data;
   return (
     <span className="itemDataWrap">
-      <Link to={`/detail/` + data.id_book} className="name_book">
+      <Link to={`/bookshelf-detail/` + data.id_book} className="name_book">
         {data.name_book}
       </Link>
-      <Link to={`/detail/` + data.id_book} className="name_auther">
+      <Link to={`/bookshelf-detail/` + data.id_book} className="name_auther">
         {data.id_author}
       </Link>
       {uiState.display_style === 2 || uiState.display_style === undefined ? (
         <>
-          <Link to={`/detail/` + data.id_book} className="name_publisher">
+          <Link
+            to={`/bookshelf-detail/` + data.id_book}
+            className="name_publisher"
+          >
             {data.id_publisher}
           </Link>
           <p className="name_series">{data.name_series}</p>
