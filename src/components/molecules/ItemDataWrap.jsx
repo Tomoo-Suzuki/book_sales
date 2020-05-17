@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "_scss/molecules/_itemDataWrap";
 
 import { useSelector } from "react-redux";
@@ -10,17 +11,17 @@ export const ItemDataWrap = (props) => {
   const data = props.data;
   return (
     <span className="itemDataWrap">
-      <a href={`/detail/` + data.id_book} className="name_book">
+      <Link to={`/detail/` + data.id_book} className="name_book">
         {data.name_book}
-      </a>
-      <a href={`/detail/` + data.id_book} className="name_auther">
+      </Link>
+      <Link to={`/detail/` + data.id_book} className="name_auther">
         {data.id_author}
-      </a>
+      </Link>
       {uiState.display_style === 2 || uiState.display_style === undefined ? (
         <>
-          <a href={`/detail/` + data.id_book} className="name_publisher">
+          <Link to={`/detail/` + data.id_book} className="name_publisher">
             {data.id_publisher}
-          </a>
+          </Link>
           <p className="name_series">{data.name_series}</p>
           <p className="name_label">{data.label}</p>
         </>

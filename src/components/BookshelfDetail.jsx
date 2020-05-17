@@ -24,38 +24,39 @@ class BookshelfDetail extends React.Component {
   render() {
     const bookshelf = this.props.bookshelf.top;
     const display_style = this.props.ui.display_style;
-    let itemLists;
-    try {
-      if (Object.keys(bookshelf).length > 1) {
-        const cloneLists = Object.assign(bookshelf);
-        const arrayLists = Array.from(cloneLists);
-        arrayLists.sort((a, b) => {
-          if (Number(a.id_series) > Number(b.id_series)) return 1;
-          if (Number(a.id_series) < Number(b.id_series)) return -1;
-          if (Number(a.id_book) > Number(b.id_book)) return -1;
-          if (Number(a.id_book) < Number(b.id_book)) return 1;
-        });
-        let latestLists = {};
-        arrayLists.map((item, index) => {
-          if (
-            latestLists[item.id_series] === undefined ||
-            Number(latestLists[item.id_series]) < Number(item.id_book)
-          ) {
-            latestLists[item.id_series] = item;
-          }
-        });
-        const items = Object.values(latestLists);
-        itemLists = <ItemListShelf data={items} shelfType={0} />;
-      }
-    } catch (e) {
-      if (bookshelf === undefined) {
-        console.log("props still undef");
-      }
-    }
+    console.log(bookshelf);
+    // let itemLists;
+    // try {
+    //   if (Object.keys(bookshelf).length > 1) {
+    //     const cloneLists = Object.assign(bookshelf);
+    //     const arrayLists = Array.from(cloneLists);
+    //     arrayLists.sort((a, b) => {
+    //       if (Number(a.id_series) > Number(b.id_series)) return 1;
+    //       if (Number(a.id_series) < Number(b.id_series)) return -1;
+    //       if (Number(a.id_book) > Number(b.id_book)) return -1;
+    //       if (Number(a.id_book) < Number(b.id_book)) return 1;
+    //     });
+    //     let latestLists = {};
+    //     arrayLists.map((item, index) => {
+    //       if (
+    //         latestLists[item.id_series] === undefined ||
+    //         Number(latestLists[item.id_series]) < Number(item.id_book)
+    //       ) {
+    //         latestLists[item.id_series] = item;
+    //       }
+    //     });
+    //     const items = Object.values(latestLists);
+    //     itemLists = <ItemListShelf data={items} shelfType={0} />;
+    //   }
+    // } catch (e) {
+    //   if (bookshelf === undefined) {
+    //     console.log("props still undef");
+    //   }
+    // }
     return (
       <div className={`Bookseries display_` + display_style}>
         <Helmet>
-          <title>Bookshelf | Top</title>
+          <title>Bookshelf | DETAIL</title>
           <meta
             name="description"
             content="BookshelfDetailのディスクリプション"
@@ -64,7 +65,7 @@ class BookshelfDetail extends React.Component {
         </Helmet>
         <h1>BookshelfDetail</h1>
         <Navigation />
-        {itemLists}
+        {/* {itemLists} */}
       </div>
     );
   }
