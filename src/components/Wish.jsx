@@ -22,7 +22,7 @@ class Wish extends React.Component {
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
 
-        <h1>Wish</h1>
+        <h2 className="ttl_h2">Wish</h2>
         <Navigation />
       </div>
     );
