@@ -2,7 +2,7 @@ import React from "react";
 import "_scss/atoms/_logo";
 import { Link } from "react-router-dom";
 
-export default function Logo(props) {
+const Logo = (props) => {
   let type;
   let link;
   if (props.logoType === "0") {
@@ -30,4 +30,5 @@ export default function Logo(props) {
       {element}
     </a>
   );
-}
+};
+export default Logo;
