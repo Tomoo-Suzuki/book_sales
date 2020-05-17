@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import '../color';
+
+.progressTrackerBox {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .progressTracker {
+        position: relative;
+        width: 15rem;
+        height: 5rem;
+        text-align: center;
+        // border: solid 1px #cfcfcf;
+
+        .text {
+            color: $sell_green_dark;
+        }
+
+        .progressPointer {
+            position: absolute;
+            top: 45%;
+            left: calc(50% - .65rem);
+            background: $sell_green_dark;
+            border-radius: 50%;
+            width: 1.3rem;
+            height: 1.3rem;
+
+            .pointerInner {
+                position: absolute;
+                top: .4rem;
+                left: .4rem;
+                background: #ffffff;
+                border-radius: 50%;
+                width: .5rem;
+                height: .5rem;
+            }
+
+            .progressBar {
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+                display: block;
+                width: 14rem;
+                height: .2rem;
+                border-radius: 0;
+                background: $sell_green_dark;
+
+            }
+
+            &.current {
+
+                background: #ffffff;
+                border: solid 2px $sell_green_dark;
+                width: .9rem;
+                height: .9rem;
+
+                .pointerInner {
+                    background: $read_orange_light;
+                    top: .2rem;
+                    left: .2rem;
+                }
+            }
+
+            &.done {
+                opacity: 0.5;
+                background: $sell_green_dark;
+                border: solid 2px $sell_green_dark;
+                width: .9rem;
+                height: .9rem;
+
+                .pointerInner {
+                    background: $sell_green_dark;
+                    top: .2rem;
+                    left: .2rem;
+                }
+
+            }
+        }
+
+        &:last-of-type {
+            .progressBar {
+                display: none;
+
+            }
+        }
+
+    }
+}

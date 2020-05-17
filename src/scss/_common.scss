@@ -1,3 +1,4 @@
+@charset "utf-8";
 @import './color';
 
 html {
@@ -35,7 +36,7 @@ html {
     padding-bottom: 0.5rem;
     background-size: 2.6rem;
     border-bottom: solid 1px $sell_green_dark;
-    margin-bottom: 2.8rem;
+    margin-bottom: 4rem;
     position: relative;
 
     &:before {

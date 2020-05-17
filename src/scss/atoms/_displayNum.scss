@@ -1,0 +1,33 @@
+@charset "utf-8";
+@import '../color';
+
+.displayNumBox {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+
+    .ttl_displayNum {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .displayNum {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: end;
+
+        >li {
+            font-size: 1.6rem;
+            margin-left: 1rem;
+            cursor: pointer;
+            color: $sell_green_dark;
+            font-weight: bold;
+
+            &:hover {
+                opacity: .5;
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
