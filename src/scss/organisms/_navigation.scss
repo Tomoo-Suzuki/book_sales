@@ -2,11 +2,19 @@
 @import '../color';
 
 .nav_common {
+    margin-bottom: 4rem;
+
     .nav_common_upper {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
+        margin-bottom: 3rem;
     }
 
-    .nav_common_lower {}
+    .nav_common_lower {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+    }
 }

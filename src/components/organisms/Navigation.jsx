@@ -17,8 +17,8 @@ const Navigation = () => {
         <BtnConfig />
       </div>
       <div className="nav_common_lower">
-        <DisplayNum />
         <Pager />
+        <DisplayNum />
       </div>
     </nav>
   );
