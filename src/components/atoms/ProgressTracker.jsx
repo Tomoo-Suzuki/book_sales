@@ -3,7 +3,6 @@ import React from "react";
 import "_scss/atoms/_progressTracker";
 
 const ProgressTracker = (props) => {
-  console.log(props.txtArray);
   const ptElemants = props.txtArray.map((text, index) => {
     return (
       <div className="progressTracker" key={index}>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Address = (props) => {
-  const { val, updateForm } = props;
+  const { val, updateForm, validate, error } = props;
   const prefecture = [
     { label: "選択してください", value: "" },
 
@@ -71,6 +71,7 @@ const Address = (props) => {
             placeholder="117-2345"
             defaultValue={val.zip}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </div>
         <div>
@@ -81,6 +82,7 @@ const Address = (props) => {
               placeholder="東京都"
               defaultValue={val.prefecture}
               onChange={(e) => updateForm(e)}
+              onBlur={(e) => validate(e)}
             >
               {prefectureLists}
             </select>
@@ -94,6 +96,7 @@ const Address = (props) => {
               placeholder="豊島区池袋"
               defaultValue={val.city}
               onChange={(e) => updateForm(e)}
+              onBlur={(e) => validate(e)}
             />
           </span>
           <span>
@@ -104,18 +107,23 @@ const Address = (props) => {
               placeholder="3-7-18"
               defaultValue={val.adress3}
               onChange={(e) => updateForm(e)}
+              onBlur={(e) => validate(e)}
             />
           </span>
           <span>
             <input
               type="text"
               name="building"
-              required
               placeholder="ブルジュファリハ"
               defaultValue={val.useId}
               onChange={(e) => updateForm(e)}
+              onBlur={(e) => validate(e)}
             />
           </span>
+          {error.zip}
+          {error.prefecture}
+          {error.city}
+          {error.address3}
         </div>
       </dd>
     </dl>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Name = (props) => {
-  const { val, updateForm } = props;
+  const { val, updateForm, validate, error } = props;
 
   return (
     <dl className="require">
@@ -16,6 +16,7 @@ const Name = (props) => {
             defaultValue={val.last_name}
             // value={val.last_name}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </span>
         <span>
@@ -27,9 +28,12 @@ const Name = (props) => {
             // value={val.first_name}
             defaultValue={val.first_name}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </span>
       </dd>
+      {error.last_name}
+      {error.first_name}
     </dl>
   );
 };

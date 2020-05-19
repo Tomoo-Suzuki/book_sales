@@ -1,8 +1,7 @@
 import React from "react";
 
 const Birthday = (props) => {
-  const { val, updateForm } = props;
-
+  const { val, updateForm, validate, error } = props;
   return (
     <dl className="require">
       <dt>生年月日</dt>
@@ -12,8 +11,10 @@ const Birthday = (props) => {
           name="birthday"
           defaultValue={val.birthday}
           onChange={(e) => updateForm(e)}
+          onBlur={(e) => validate(e)}
         />
       </dd>
+      {error.birthday}
     </dl>
   );
 };

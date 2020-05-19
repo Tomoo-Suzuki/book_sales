@@ -1,6 +1,6 @@
 import React from "react";
 const Email = (props) => {
-  const { val, updateForm } = props;
+  const { val, updateForm, validate, error } = props;
 
   return (
     <span>
@@ -16,6 +16,7 @@ const Email = (props) => {
             title="メールアドレス"
             defaultValue={val.email}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </dd>
       </dl>
@@ -31,9 +32,12 @@ const Email = (props) => {
             title="メールアドレス確認"
             defaultValue={val.email_confirm}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </dd>
       </dl>
+      {error.email}
+      {error.email_confirm}
     </span>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tel = (props) => {
-  const { val, updateForm } = props;
+  const { val, updateForm, validate, error } = props;
 
   return (
     <dl className="require">
@@ -15,8 +15,10 @@ const Tel = (props) => {
           pattern="\d{2,4}-?\d{3,4}-?\d{3,4}"
           defaultValue={val.tel}
           onChange={(e) => updateForm(e)}
+          onBlur={(e) => validate(e)}
         />
       </dd>
+      {error.tel}
     </dl>
   );
 };

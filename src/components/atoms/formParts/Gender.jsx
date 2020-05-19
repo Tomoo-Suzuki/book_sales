@@ -1,7 +1,7 @@
 import React from "react";
 
 const Gender = (props) => {
-  const { val, updateForm } = props;
+  const { val, updateForm, validate, error } = props;
   return (
     <dl className="require">
       <dt>ジェンダー</dt>
@@ -14,6 +14,7 @@ const Gender = (props) => {
             value={0}
             checked={Number(val.gender) === 0}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </label>
         <label>
@@ -24,6 +25,7 @@ const Gender = (props) => {
             value={1}
             checked={Number(val.gender) === 1}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </label>
         <label>
@@ -34,9 +36,11 @@ const Gender = (props) => {
             value={2}
             checked={Number(val.gender) === 2}
             onChange={(e) => updateForm(e)}
+            onBlur={(e) => validate(e)}
           />
         </label>
       </dd>
+      {error.gender}
     </dl>
   );
 };
