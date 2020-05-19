@@ -17,8 +17,8 @@ const Tel = (props) => {
           onChange={(e) => updateForm(e)}
           onBlur={(e) => validate(e)}
         />
+        <span className="msg">{error.tel}</span>
       </dd>
-      {error.tel}
     </dl>
   );
 };

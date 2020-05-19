@@ -58,7 +58,7 @@ class FormAccount extends React.Component {
   render() {
     const val = this.props.account.user || {};
     const error = this.props.account.msg || {};
-    console.log(this.props.account);
+    console.log(this.props.account.user);
     return (
       <div className="Bookseries">
         <Helmet>

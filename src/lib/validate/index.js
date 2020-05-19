@@ -1,5 +1,6 @@
 import {
-  form_validate
+  form_validate,
+  form_controll
 } from '_redux/actions/action';
 
 import * as regs from '_lib/validate/regularExpressions'
@@ -26,12 +27,13 @@ const text_error = {
 export const validator = (e, dispatch) => {
 
   const name = e.target.name;
-  const value = e.target.value;
+  let value = e.target.value;
   const is_required = e.target.required;
+  const tempHash = {}
+  tempHash.key = name;
+
   if (is_required) {
     const res = logics.check_empty(value);
-    const tempHash = {}
-    tempHash.key = name;
     if (res) {
       tempHash.val = text_error.required[name];
       dispatch(form_validate(tempHash));
@@ -40,6 +42,27 @@ export const validator = (e, dispatch) => {
       dispatch(form_validate(tempHash));
     }
   }
+  if (name === 'last_name' || name === 'first_name') {
+    value = logics.trim_space(value);
+    value = logics.delete_htmlspecialchars(value);
+    tempHash.val = value;
+    console.log(tempHash.val)
+    dispatch(form_controll(tempHash));
+  }
+
+  if (name === 'last_name_kana' || name === 'first_name_kana') {
+    value = logics.trim_space(value);
+    value = logics.delete_htmlspecialchars(value);
+    tempHash.val = value;
+    const is_kana = regs.katakana_all.test(value);
+    console.log(tempHash.val)
+    dispatch(form_controll(tempHash));
+    if (!is_kana) {
+      tempHash.val = 'カタカナのご入力をお願いいたします。';
+      dispatch(form_validate(tempHash));
+    }
+  }
+
 
   //trim_space(name, value);
 

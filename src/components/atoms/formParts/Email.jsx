@@ -18,6 +18,7 @@ const Email = (props) => {
             onChange={(e) => updateForm(e)}
             onBlur={(e) => validate(e)}
           />
+          <span className="msg"> {error.email}</span>
         </dd>
       </dl>
       <dl className="require">
@@ -34,10 +35,9 @@ const Email = (props) => {
             onChange={(e) => updateForm(e)}
             onBlur={(e) => validate(e)}
           />
+          <span className="msg">{error.email_confirm}</span>
         </dd>
       </dl>
-      {error.email}
-      {error.email_confirm}
     </span>
   );
 };

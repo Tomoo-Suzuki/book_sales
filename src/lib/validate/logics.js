@@ -3,7 +3,6 @@ export const check_empty = (v) => {
 }
 
 export const trim_space = (v) => {
-  console.log(v);
   v = v.replace(/\s+/g, '');
   return v;
 }

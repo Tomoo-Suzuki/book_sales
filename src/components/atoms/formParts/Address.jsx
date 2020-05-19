@@ -63,7 +63,7 @@ const Address = (props) => {
     <dl className="require">
       <dt>ご住所</dt>
       <dd className="adress-data-wrap">
-        <div>
+        <div className="form_horizontal">
           <input
             type="text"
             name="zip"
@@ -73,8 +73,9 @@ const Address = (props) => {
             onChange={(e) => updateForm(e)}
             onBlur={(e) => validate(e)}
           />
+          <span className="msg">{error.zip}</span>
         </div>
-        <div>
+        <div className="form_horizontal">
           <span className="selectCustome">
             <select
               name="prefecture"
@@ -86,8 +87,10 @@ const Address = (props) => {
             >
               {prefectureLists}
             </select>
+            <span className="msg">{error.prefecture}</span>
           </span>
-
+        </div>
+        <div className="form_horizontal">
           <span>
             <input
               type="text"
@@ -98,7 +101,10 @@ const Address = (props) => {
               onChange={(e) => updateForm(e)}
               onBlur={(e) => validate(e)}
             />
+            <span className="msg"> {error.city}</span>
           </span>
+        </div>
+        <div className="form_horizontal">
           <span>
             <input
               type="text"
@@ -109,7 +115,10 @@ const Address = (props) => {
               onChange={(e) => updateForm(e)}
               onBlur={(e) => validate(e)}
             />
+            <span className="msg">{error.address3}</span>
           </span>
+        </div>
+        <div className="form_horizontal">
           <span>
             <input
               type="text"
@@ -120,10 +129,6 @@ const Address = (props) => {
               onBlur={(e) => validate(e)}
             />
           </span>
-          {error.zip}
-          {error.prefecture}
-          {error.city}
-          {error.address3}
         </div>
       </dd>
     </dl>

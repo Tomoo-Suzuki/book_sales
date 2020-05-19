@@ -13,8 +13,8 @@ const Birthday = (props) => {
           onChange={(e) => updateForm(e)}
           onBlur={(e) => validate(e)}
         />
+        <span className="msg">{error.birthday}</span>
       </dd>
-      {error.birthday}
     </dl>
   );
 };

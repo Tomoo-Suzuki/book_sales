@@ -39,8 +39,8 @@ const Gender = (props) => {
             onBlur={(e) => validate(e)}
           />
         </label>
+        <span> {error.gender}</span>
       </dd>
-      {error.gender}
     </dl>
   );
 };
