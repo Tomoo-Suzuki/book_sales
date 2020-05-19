@@ -81,9 +81,6 @@ class FormAccount extends React.Component {
                 }}
               />
               <Name
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -91,9 +88,6 @@ class FormAccount extends React.Component {
                 error={error}
               />
               <NameKana
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -101,9 +95,6 @@ class FormAccount extends React.Component {
                 error={error}
               />
               <Tel
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -112,9 +103,6 @@ class FormAccount extends React.Component {
               />
 
               <Email
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -123,9 +111,6 @@ class FormAccount extends React.Component {
               />
 
               <Address
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -134,9 +119,6 @@ class FormAccount extends React.Component {
               />
 
               <Gender
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -145,9 +127,6 @@ class FormAccount extends React.Component {
               />
 
               <Purpose
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
@@ -155,9 +134,6 @@ class FormAccount extends React.Component {
                 error={error}
               />
               <Birthday
-                updateForm={(e) => {
-                  this.formDispatch(e);
-                }}
                 validate={(e) => {
                   this.validate(e);
                 }}
