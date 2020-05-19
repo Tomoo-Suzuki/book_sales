@@ -1,18 +1,22 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import updateFormSelf from "_lib/updateFormSelf";
+
+const userSelector = (state) => state.account.user;
 
 const ReceptionDate = (props) => {
-  const { val, updateForm } = props;
-
+  //   const { val, updateForm } = props;
+  const user = useSelector(userSelector);
   return (
     <dl>
       <dt>ご登録日</dt>
       <dd>
-        <span>{val.reception_date}</span>
+        <span>{user.reception_date}</span>
         <input
           type="hidden"
           name="receptionDate"
-          value={val.reception_date}
-          onChange={(e) => updateForm(e)}
+          value={user.reception_date}
+          onChange={(e) => updateFormSelf(e, dispatch)}
         />
       </dd>
     </dl>

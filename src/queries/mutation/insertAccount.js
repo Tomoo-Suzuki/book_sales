@@ -1,11 +1,9 @@
 import {
   insert_account
 } from "_redux/actions/action.js";
-import formDataToHash from "_lib/formDataToHash";
 import request from "_lib/request";
 
-export const insertAccount = (form, dispatch) => {
-  const hash = formDataToHash(form);
+export const insertAccount = (hash, dispatch) => {
   const query =
     `mutation{
       insertAccount(

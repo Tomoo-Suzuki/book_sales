@@ -6,6 +6,10 @@ function account(state = initialStateAccount, action) {
       return Object.assign({}, state, {
         user: action.value
       })
+    case 'INSERT_ACCOUNT':
+      return Object.assign({}, state, {
+        user: action.value
+      })
     case 'SELECT_ACCOUNT':
       return Object.assign({}, state, {
         user: action.value

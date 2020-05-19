@@ -62,6 +62,12 @@ export const update_display = function (object) {
     value: object
   })
 };
+export const set_form_status = function (object) {
+  return ({
+    type: 'SET_FORM_STATUS',
+    value: object
+  })
+};
 
 ////////
 export const select_bookshelf_top = function (object) {

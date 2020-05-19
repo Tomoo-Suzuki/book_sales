@@ -6,6 +6,10 @@ function item(state = initialState, action) {
       return Object.assign({}, state, {
         display_style: action.value
       })
+    case 'SET_FORM_STATUS':
+      return Object.assign({}, state, {
+        status_form: action.value
+      })
 
     default:
       return state

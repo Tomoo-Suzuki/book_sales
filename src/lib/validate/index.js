@@ -31,7 +31,8 @@ export const validator = (e, dispatch) => {
   const is_required = e.target.required;
   const tempHash = {}
   tempHash.key = name;
-
+  value = logics.trim_space(value);
+  value = logics.delete_htmlspecialchars(value);
   if (is_required) {
     const res = logics.check_empty(value);
     if (res) {
@@ -42,23 +43,35 @@ export const validator = (e, dispatch) => {
       dispatch(form_validate(tempHash));
     }
   }
-  if (name === 'last_name' || name === 'first_name') {
-    value = logics.trim_space(value);
-    value = logics.delete_htmlspecialchars(value);
-    tempHash.val = value;
-    console.log(tempHash.val)
-    dispatch(form_controll(tempHash));
-  }
+  tempHash.val = value;
+  dispatch(form_controll(tempHash));
 
   if (name === 'last_name_kana' || name === 'first_name_kana') {
-    value = logics.trim_space(value);
-    value = logics.delete_htmlspecialchars(value);
-    tempHash.val = value;
     const is_kana = regs.katakana_all.test(value);
-    console.log(tempHash.val)
-    dispatch(form_controll(tempHash));
     if (!is_kana) {
       tempHash.val = 'カタカナのご入力をお願いいたします。';
+      dispatch(form_validate(tempHash));
+    }
+  }
+  if (name === 'tel') {
+    const is_tel = regs.tel.test(value);
+    if (!is_tel) {
+      tempHash.val = '数字9桁か10桁でご入力ください。';
+      dispatch(form_validate(tempHash));
+    }
+  }
+  if (name === 'email') {
+    const is_email = regs.email.test(value);
+    if (!is_email) {
+      tempHash.val = 'emailアドレスをご入力ください。';
+      dispatch(form_validate(tempHash));
+    }
+  }
+  if (name === 'email_confirm') {
+    const is_email = regs.email.test(value);
+    console.log(tempHash.val)
+    if (!is_email) {
+      tempHash.val = 'emailアドレスをご入力ください。';
       dispatch(form_validate(tempHash));
     }
   }

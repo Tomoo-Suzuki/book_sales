@@ -19,8 +19,11 @@ import ProgressTracker from "_components/atoms/ProgressTracker";
 import moment from "moment";
 
 import { insertAccount } from "_queries/mutation/insertAccount";
+import { insert_account } from "_redux/actions/action.js";
+import { set_form_status } from "_redux/actions/action.js";
 import { selectAccount } from "_queries/query/selectAccount";
-import { form_controll } from "_redux/actions/action";
+
+import initialStateAccount from "_redux/state/initialStateAccount";
 
 import { validator } from "_lib/validate/";
 
@@ -32,33 +35,32 @@ class FormAccount extends React.Component {
   constructor(props) {
     super(props);
     const today = moment().format("YYYY年MM月DD日");
-    // this.state = {};
     this.submitFormData = this.submitFormData.bind(this);
-    this.getData = this.getData.bind(this);
     this.validate = this.validate.bind(this);
-    this.formDispatch = this.formDispatch.bind(this);
-    this.getData("rryuusei_y@gmail.com");
+    this.progressStatus = this.progressStatus.bind(this);
+    this.email === "ryuusei_y@gmail.com";
+    this.props.dispatch(set_form_status(0));
+    if (this.email) {
+      selectAccount(this.email, this.props.dispatch);
+    } else {
+      //init form state
+      this.props.dispatch(insert_account(initialStateAccount.user));
+    }
   }
-  getData(email) {
-    selectAccount(email, this.props.dispatch);
+  progressStatus(status) {
+    this.props.dispatch(set_form_status(status));
   }
   submitFormData() {
-    const thisFrom = document.forms.accountForm;
-    insertAccount(thisFrom, this.props.dispatch);
+    console.log(this.props.account.user);
+    insertAccount(this.props.account.user, this.props.dispatch);
   }
   validate(e) {
     validator(e, this.props.dispatch);
   }
-  formDispatch(e, isCheckbox) {
-    let tempHash = {};
-    tempHash.key = e.target.name;
-    tempHash.val = e.target.value;
-    this.props.dispatch(form_controll(tempHash));
-  }
   render() {
-    const val = this.props.account.user || {};
-    const error = this.props.account.msg || {};
-    console.log(this.props.account.user);
+    const error = this.props.account.msg;
+    const status = this.props.ui.status_form;
+
     return (
       <div className="Bookseries">
         <Helmet>
@@ -69,108 +71,127 @@ class FormAccount extends React.Component {
         <h2 className="ttl_h2">アカウントの登録</h2>
         <Navigation />
         <main className="form-book">
-          <ProgressTracker txtArray={txtArray} status={0} />
-          <form name="accountForm">
-            <input type="hidden" name="id" value="00002" />
-            <ReceptionDate
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-            />
-            <Name
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
-            <NameKana
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
-            <Tel
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
+          <ProgressTracker txtArray={txtArray} status={status} />
+          {(status === 0 || status === 1) && (
+            <form name="accountForm">
+              <input type="hidden" name="id_user" value="00003" />
+              <ReceptionDate
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+              />
+              <Name
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
+              <NameKana
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
+              <Tel
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
 
-            <Email
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
+              <Email
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
 
-            <Address
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
+              <Address
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
 
-            <Gender
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
+              <Gender
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
 
-            <Purpose
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
-            <Birthday
-              val={val}
-              updateForm={(e) => {
-                this.formDispatch(e);
-              }}
-              validate={(e) => {
-                this.validate(e);
-              }}
-              error={error}
-            />
-
-            <BtnPost submit={this.submitFormData} btnName="確認する" />
-          </form>
+              <Purpose
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
+              <Birthday
+                updateForm={(e) => {
+                  this.formDispatch(e);
+                }}
+                validate={(e) => {
+                  this.validate(e);
+                }}
+                status={status}
+                error={error}
+              />
+              {status === 0 && (
+                <BtnPost
+                  btnClick={() => this.progressStatus(1)}
+                  btnName="確認する"
+                />
+              )}
+              {status === 1 && (
+                <>
+                  <BtnPost
+                    btnClick={() => this.progressStatus(0)}
+                    btnName="戻る"
+                  />
+                  <BtnPost
+                    btnClick={this.submitFormData}
+                    btnClick={() => this.progressStatus(2)}
+                    btnName="送信する"
+                  />
+                </>
+              )}
+            </form>
+          )}
+          {status === 2 && <div>登録いたしました。</div>}
         </main>
       </div>
     );
   }
 }
 const mapStateToProps = (state) => {
-  return { account: state.account };
+  return state;
 };
 export default Redux.connect(mapStateToProps)(FormAccount);
