@@ -25,6 +25,12 @@ export const form_controll = function (object) {
     value: object
   })
 };
+export const form_validate = function (object) {
+  return ({
+    type: 'FORM_VALIDATE',
+    value: object
+  })
+};
 
 export const select_genre = function (object) {
   return ({
@@ -53,6 +59,12 @@ export const select_detail = function (object) {
 export const update_display = function (object) {
   return ({
     type: 'UPDATE_DISPLAY',
+    value: object
+  })
+};
+export const set_form_status = function (object) {
+  return ({
+    type: 'SET_FORM_STATUS',
     value: object
   })
 };
