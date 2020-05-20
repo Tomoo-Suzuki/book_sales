@@ -21,8 +21,8 @@ const Name = (props) => {
                   name="last_name"
                   required
                   placeholder="山田"
-                  //defaultValue={val.last_name}
-                  value={user.last_name}
+                  defaultValue={user.last_name}
+                  //   value={user.last_name}
                   onChange={(e) => updateFormSelf(e, dispatch)}
                   onBlur={(e) => validate(e)}
                 />
@@ -46,8 +46,8 @@ const Name = (props) => {
                   name="first_name"
                   required
                   placeholder="京子"
-                  // defaultValue={val.first_name}
-                  value={user.first_name}
+                  defaultValue={user.first_name}
+                  //   value={user.first_name}
                   onChange={(e) => updateFormSelf(e, dispatch)}
                   onBlur={(e) => validate(e)}
                 />
