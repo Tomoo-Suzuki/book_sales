@@ -21,7 +21,7 @@ const Purpose = (props) => {
               type="checkbox"
               name="purpose"
               value={0}
-              checked={user.purpose === 0}
+              checked={Number(user.purpose) === 0}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -32,7 +32,7 @@ const Purpose = (props) => {
               type="checkbox"
               name="purpose"
               value={1}
-              checked={user.purpose === 1}
+              checked={Number(user.purpose) === 1}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -43,7 +43,7 @@ const Purpose = (props) => {
               type="checkbox"
               name="purpose"
               value={2}
-              checked={user.purpose === 2}
+              checked={Number(user.purpose) === 2}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -54,7 +54,7 @@ const Purpose = (props) => {
               type="checkbox"
               name="purpose"
               value={3}
-              checked={user.purpose === 3}
+              checked={Number(user.purpose) === 3}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -65,7 +65,7 @@ const Purpose = (props) => {
               type="checkbox"
               name="purpose"
               value={4}
-              checked={user.purpose === 4}
+              checked={Number(user.purpose) === 4}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>

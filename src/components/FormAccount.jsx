@@ -144,22 +144,27 @@ class FormAccount extends React.Component {
                 error={error}
               />
               {status === 0 && (
-                <BtnPost
-                  btnClick={() => this.progressStatus(1)}
-                  btnName="確認する"
-                />
+                <div className="btnContainer">
+                  <BtnPost
+                    btnClick={() => this.progressStatus(1)}
+                    btnName="確認する"
+                  />
+                </div>
               )}
               {status === 1 && (
                 <>
-                  <BtnPost
-                    btnClick={() => this.progressStatus(0)}
-                    btnName="戻る"
-                  />
-                  <BtnPost
-                    btnClick={this.submitFormData}
-                    btnClick={() => this.progressStatus(2)}
-                    btnName="送信する"
-                  />
+                  {" "}
+                  <div className="btnContainer">
+                    <BtnPost
+                      btnClick={() => this.progressStatus(0)}
+                      btnName="戻る"
+                    />
+                    <BtnPost
+                      btnClick={this.submitFormData}
+                      btnClick={() => this.progressStatus(2)}
+                      btnName="送信する"
+                    />
+                  </div>
                 </>
               )}
             </form>
