@@ -8,19 +8,19 @@ import * as logics from '_lib/validate/logics'
 
 const text_error = {
   required: {
-    first_name: '名前のご入力をお願いします。',
-    last_name: '苗字のご入力をお願いしま',
-    first_name_kana: 'フリガナ(名)のご入力をお願いします。',
-    last_name_kana: 'フリガナ(苗字)のご入力をお願いします。',
-    tel: '電話番号のご入力をお願いします。',
-    email: 'メールのご入力をお願いします。',
-    email_confirm: 'メール(確認)のご入力をお願いします。',
-    prefecture: '都道府県のご選択をお願いいたします。',
-    zip: '郵便番号のご入力をお願いします。',
-    city: '市区町村のご入力をお願いします。',
-    address3: '番地のご入力をお願いします。',
-    gender: 'ジェンダーのご選択をお願いいたします。',
-    birthday: 'お誕生日のご選択をお願いいたします。'
+    first_name: '名前は必須項目です',
+    last_name: '苗字は必須項目です',
+    first_name_kana: 'フリガナ(名)は必須項目です',
+    last_name_kana: 'フリガナ(苗字)は必須項目です',
+    tel: '電話番号は必須項目です',
+    email: 'メールは必須項目です',
+    email_confirm: 'メール(確認)は必須項目です',
+    prefecture: '都道府県は必須項目です。',
+    zip: '郵便番号は必須項目です',
+    city: '市区町村は必須項目です',
+    address3: '番地は必須項目です',
+    gender: 'ジェンダーは必須項目です',
+    birthday: 'お誕生日は必須項目です。'
   }
 };
 
@@ -37,6 +37,7 @@ export const validator = (e, dispatch) => {
     const res = logics.check_empty(value);
     if (res) {
       tempHash.val = text_error.required[name];
+      console.log(tempHash.val)
       dispatch(form_validate(tempHash));
     } else {
       tempHash.val = '';
@@ -45,39 +46,50 @@ export const validator = (e, dispatch) => {
   }
   tempHash.val = value;
   dispatch(form_controll(tempHash));
+  if (value) {
 
-  if (name === 'last_name_kana' || name === 'first_name_kana') {
-    const is_kana = regs.katakana_all.test(value);
-    if (!is_kana) {
-      tempHash.val = 'カタカナのご入力をお願いいたします。';
-      dispatch(form_validate(tempHash));
+    if (name === 'last_name_kana' || name === 'first_name_kana') {
+      const is_kana = regs.katakana_all.test(value);
+      if (!is_kana) {
+        tempHash.val = 'カタカナのご入力をお願いいたします。';
+        dispatch(form_validate(tempHash));
+      }
     }
-  }
-  if (name === 'tel') {
-    const is_tel = regs.tel.test(value);
-    if (!is_tel) {
-      tempHash.val = '数字9桁か10桁でご入力ください。';
-      dispatch(form_validate(tempHash));
+    if (name === 'tel') {
+      const is_tel = regs.tel.test(value);
+      if (!is_tel) {
+        tempHash.val = '数字9桁か10桁でご入力ください。';
+        dispatch(form_validate(tempHash));
+      }
     }
-  }
-  if (name === 'email') {
-    const is_email = regs.email.test(value);
-    if (!is_email) {
-      tempHash.val = 'emailアドレスをご入力ください。';
-      dispatch(form_validate(tempHash));
+    if (name === 'email') {
+      const is_email = regs.email.test(value);
+      if (!is_email) {
+        tempHash.val = 'emailアドレスをご入力ください。';
+        dispatch(form_validate(tempHash));
+      }
     }
-  }
-  if (name === 'email_confirm') {
-    const is_email = regs.email.test(value);
-    console.log(tempHash.val)
-    if (!is_email) {
-      tempHash.val = 'emailアドレスをご入力ください。';
-      dispatch(form_validate(tempHash));
+    if (name === 'email_confirm') {
+      const is_email = regs.email.test(value);
+      if (!is_email) {
+        tempHash.val = 'emailアドレスをご入力ください。';
+        dispatch(form_validate(tempHash));
+      }
     }
-  }
 
+    if (name === 'zip') {
+      console.log(value)
+      value = logics.num_conversion(value)
+      console.log(value)
+      const is_zip = regs.zip.test(value);
+      if (!is_zip) {
+        tempHash.val = '郵便番号を数字７桁でご入力ください。';
+        dispatch(form_validate(tempHash));
+      }
+    }
 
-  //trim_space(name, value);
+    //trim_space(name, value);
+  }
 
 
 }

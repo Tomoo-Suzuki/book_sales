@@ -20,8 +20,8 @@ const Purpose = (props) => {
               id="upload"
               type="checkbox"
               name="purpose"
-              value={0}
-              checked={Number(user.purpose) === 0}
+              value={1}
+              checked={Number(user.purpose) === 1}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -31,8 +31,8 @@ const Purpose = (props) => {
               id="read"
               type="checkbox"
               name="purpose"
-              value={1}
-              checked={Number(user.purpose) === 1}
+              value={2}
+              checked={Number(user.purpose) === 2}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -42,8 +42,8 @@ const Purpose = (props) => {
               id="buy"
               type="checkbox"
               name="purpose"
-              value={2}
-              checked={Number(user.purpose) === 2}
+              value={3}
+              checked={Number(user.purpose) === 3}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -53,8 +53,8 @@ const Purpose = (props) => {
               id="sell"
               type="checkbox"
               name="purpose"
-              value={3}
-              checked={Number(user.purpose) === 3}
+              value={4}
+              checked={Number(user.purpose) === 4}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
@@ -64,8 +64,8 @@ const Purpose = (props) => {
               id="other"
               type="checkbox"
               name="purpose"
-              value={4}
-              checked={Number(user.purpose) === 4}
+              value={5}
+              checked={Number(user.purpose) === 5}
               onChange={(e) => updateFormSelf(e, dispatch)}
             />
           </label>
