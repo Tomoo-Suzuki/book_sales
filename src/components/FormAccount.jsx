@@ -38,11 +38,14 @@ class FormAccount extends React.Component {
     this.submitFormData = this.submitFormData.bind(this);
     this.validate = this.validate.bind(this);
     this.progressStatus = this.progressStatus.bind(this);
-    this.email === "ryuusei_y@gmail.com";
+    this.email = "rryuusei_y@gmail.com";
     this.props.dispatch(set_form_status(0));
-    if (this.email) {
+    if (this.email === "ryuusei_y@gmail.com") {
+      console.log("passIf");
       selectAccount(this.email, this.props.dispatch);
     } else {
+      console.log("passElse");
+
       //init form state
       this.props.dispatch(insert_account(initialStateAccount.user));
     }
