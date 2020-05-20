@@ -42,33 +42,35 @@ class FormAccount extends React.Component {
     this.progressStatus = this.progressStatus.bind(this);
     this.email = "rryuusei_y@gmail.com";
     this.props.dispatch(set_form_status(0));
+    this.flag_validate = false;
     if (this.email === "ryuusei_y@gmail.com") {
-      console.log("passIf");
       selectAccount(this.email, this.props.dispatch);
     } else {
-      console.log("passElse");
-
       //init form state
       this.props.dispatch(insert_account(initialStateAccount.user));
     }
   }
+  validate(e) {
+    validator(e, this.props.dispatch);
+  }
   progressStatus(status) {
     this.props.dispatch(set_form_status(status));
+  }
+  allValidateConfirm() {
+    console.log(this.props.account.msg);
+    if (this.flag_validate) {
+      this.progressStatus(1);
+    }
   }
   submitFormData() {
     if (this.email === "ryuusei_y@gmail.com") {
       //login認証の代わり
       //update
-      console.log("UPDATE!!!!!!!!!!!!!!!");
       updateAccount(this.props.account.user, this.props.dispatch);
     } else {
-      console.log("INSERT!!!!!!!!!!!!!!!");
       insertAccount(this.props.account.user, this.props.dispatch);
     }
     this.progressStatus(2);
-  }
-  validate(e) {
-    validator(e, this.props.dispatch);
   }
   render() {
     const error = this.props.account.msg;
@@ -156,7 +158,7 @@ class FormAccount extends React.Component {
               {status === 0 && (
                 <div className="btnContainer">
                   <BtnPost
-                    btnClick={() => this.progressStatus(1)}
+                    btnClick={() => this.allValidateConfirm()}
                     btnName="確認する"
                   />
                 </div>
