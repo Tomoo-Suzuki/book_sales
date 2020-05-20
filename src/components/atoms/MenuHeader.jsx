@@ -6,11 +6,11 @@ import "_scss/atoms/_menuHeader";
 export default function MenuHeader(props) {
   const menuHeaderLists = [
     { text: "ご注文履歴・ご返品", link: "/history" },
-    { text: "ポイント", link: "/point" },
     { text: "カート", link: "/cart" },
     { text: "欲しいものリスト", link: "/wish" },
     { text: "マイページ", link: "/mypage" },
-    { text: "ヘルプ", link: "/help" },
+    { text: "アカウント", link: "/account" },
+    { text: "ログイン", link: "/login" },
     { text: "本棚", link: "/bookshelf-top" },
   ];
   const listMenu = menuHeaderLists.map((list, index) => (

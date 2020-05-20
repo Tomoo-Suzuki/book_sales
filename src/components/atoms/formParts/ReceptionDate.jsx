@@ -8,18 +8,14 @@ const ReceptionDate = (props) => {
   //   const { val, updateForm } = props;
   const user = useSelector(userSelector);
   return (
-    <dl>
-      <dt>ご登録日</dt>
-      <dd>
-        <span>{user.reception_date}</span>
-        <input
-          type="hidden"
-          name="receptionDate"
-          value={user.reception_date}
-          onChange={(e) => updateFormSelf(e, dispatch)}
-        />
-      </dd>
-    </dl>
+    <span>
+      <input
+        type="hidden"
+        name="receptionDate"
+        value={user.reception_date}
+        onChange={(e) => updateFormSelf(e, dispatch)}
+      />
+    </span>
   );
 };
 export default ReceptionDate;

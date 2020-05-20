@@ -80,7 +80,7 @@ const Address = (props) => {
                   type="text"
                   name="zip"
                   required
-                  placeholder="117-2345"
+                  placeholder="1172345"
                   defaultValue={user.zip}
                   //   value={user.zip}
                   onChange={(e) => updateFormSelf(e, dispatch)}
