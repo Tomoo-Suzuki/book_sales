@@ -2,6 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import updateFormSelf from "_lib/updateFormSelf";
 
+import "_scss/atoms/_address";
+
 const userSelector = (state) => state.account.user;
 
 const Address = (props) => {
@@ -69,120 +71,124 @@ const Address = (props) => {
   return (
     <dl className="require">
       <dt>ご住所</dt>
-      <dd className="adress-data-wrap">
-        <>
-          {props.status === 0 && (
-            <div className="form_horizontal">
-              <input
-                type="text"
-                name="zip"
-                required
-                placeholder="117-2345"
-                // defaultValue={val.zip}
-                value={user.zip}
-                onChange={(e) => updateFormSelf(e, dispatch)}
-                onBlur={(e) => validate(e)}
-              />
-              <span className="msg">{error.zip}</span>
-            </div>
-          )}
-          {props.status === 1 && (
-            <div className="form_horizontal">{user.zip}</div>
-          )}
-        </>
-        <>
-          {props.status === 0 && (
-            <div className="form_horizontal">
-              <span className="selectCustome">
-                <select
-                  name="prefecture"
+      <dd className="adressWrap">
+        <div>
+          <>
+            {props.status === 0 && (
+              <div className="form_horizontal">
+                <input
+                  type="text"
+                  name="zip"
                   required
-                  placeholder="東京都"
-                  //   defaultValue={val.prefecture}
-                  value={user.prefecture}
+                  placeholder="117-2345"
+                  // defaultValue={val.zip}
+                  value={user.zip}
                   onChange={(e) => updateFormSelf(e, dispatch)}
                   onBlur={(e) => validate(e)}
-                >
-                  {prefectureLists}
-                </select>
+                />
+                <span className="msg">{error.zip}</span>
+              </div>
+            )}
+            {props.status === 1 && (
+              <div className="form_horizontal">{user.zip}</div>
+            )}
+          </>
+          <>
+            {props.status === 0 && (
+              <div className="form_horizontal">
+                <span className="selectCustome">
+                  <select
+                    name="prefecture"
+                    required
+                    placeholder="東京都"
+                    //   defaultValue={val.prefecture}
+                    value={user.prefecture}
+                    onChange={(e) => updateFormSelf(e, dispatch)}
+                    onBlur={(e) => validate(e)}
+                  >
+                    {prefectureLists}
+                  </select>
+                </span>
                 <span className="msg">{error.prefecture}</span>
-              </span>
-            </div>
-          )}
-          {props.status === 1 && (
-            <div className="form_horizontal">{user.prefecture}</div>
-          )}
-        </>
-        <>
-          {props.status === 0 && (
-            <div className="form_horizontal">
-              <span>
-                <input
-                  type="text"
-                  name="city"
-                  required
-                  placeholder="豊島区池袋"
-                  //   defaultValue={val.city}
-                  value={user.city}
-                  onChange={(e) => updateFormSelf(e, dispatch)}
-                  onBlur={(e) => validate(e)}
-                />
-                <span className="msg"> {error.city}</span>
-              </span>
-            </div>
-          )}{" "}
-          {props.status === 1 && (
-            <div className="form_horizontal">
-              <span>{user.city} </span>
-            </div>
-          )}
-        </>
-        <>
-          {props.status === 0 && (
-            <div className="form_horizontal">
-              <span>
-                <input
-                  type="text"
-                  name="address3"
-                  required
-                  placeholder="3-7-18"
-                  //   defaultValue={val.adress3}
-                  value={user.adress3}
-                  onChange={(e) => updateFormSelf(e, dispatch)}
-                  onBlur={(e) => validate(e)}
-                />
-                <span className="msg">{error.address3}</span>
-              </span>
-            </div>
-          )}
-          {props.status === 1 && (
-            <div className="form_horizontal">
-              <span>{user.adress3} </span>
-            </div>
-          )}
-        </>
-        <>
-          {props.status === 0 && (
-            <div className="form_horizontal">
-              <span>
-                <input
-                  type="text"
-                  name="building"
-                  placeholder="ブルジュファリハ"
-                  //   defaultValue={val.useId}
-                  value={user.useId}
-                  onChange={(e) => updateFormSelf(e, dispatch)}
-                  onBlur={(e) => validate(e)}
-                />
-              </span>
-            </div>
-          )}
-          {props.status === 1 && (
-            <div className="form_horizontal">
-              <span>{user.useId}</span>
-            </div>
-          )}
-        </>
+              </div>
+            )}
+            {props.status === 1 && (
+              <div className="form_horizontal">{user.prefecture}</div>
+            )}
+          </>
+        </div>
+        <div>
+          <>
+            {props.status === 0 && (
+              <div className="form_horizontal">
+                <span>
+                  <input
+                    type="text"
+                    name="city"
+                    required
+                    placeholder="豊島区池袋"
+                    //   defaultValue={val.city}
+                    value={user.city}
+                    onChange={(e) => updateFormSelf(e, dispatch)}
+                    onBlur={(e) => validate(e)}
+                  />
+                  <span className="msg"> {error.city}</span>
+                </span>
+              </div>
+            )}{" "}
+            {props.status === 1 && (
+              <div className="form_horizontal">
+                <span>{user.city} </span>
+              </div>
+            )}
+          </>
+          <>
+            {props.status === 0 && (
+              <div className="form_horizontal">
+                <span>
+                  <input
+                    type="text"
+                    name="address3"
+                    required
+                    placeholder="3-7-18"
+                    //   defaultValue={val.adress3}
+                    value={user.adress3}
+                    onChange={(e) => updateFormSelf(e, dispatch)}
+                    onBlur={(e) => validate(e)}
+                  />
+                  <span className="msg">{error.address3}</span>
+                </span>
+              </div>
+            )}
+            {props.status === 1 && (
+              <div className="form_horizontal">
+                <span>{user.adress3} </span>
+              </div>
+            )}
+          </>
+          <>
+            {props.status === 0 && (
+              <div className="form_horizontal">
+                <span>
+                  <input
+                    type="text"
+                    name="building"
+                    placeholder="ブルジュファリハ"
+                    //   defaultValue={val.useId}
+                    value={user.useId}
+                    onChange={(e) => updateFormSelf(e, dispatch)}
+                    onBlur={(e) => validate(e)}
+                  />
+                </span>
+              </div>
+            )}
+            {props.status === 1 && (
+              <div className="form_horizontal">
+                <span>{user.useId}</span>
+              </div>
+            )}
+          </>
+        </div>
       </dd>
     </dl>
   );

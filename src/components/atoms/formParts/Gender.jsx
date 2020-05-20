@@ -20,7 +20,7 @@ const Gender = (props) => {
               type="radio"
               name="gender"
               value={0}
-              checked={Number(user.gender) === 0}
+              checked={user.gender === 0}
               onChange={(e) => updateFormSelf(e, dispatch)}
               onBlur={(e) => validate(e)}
             />
@@ -31,7 +31,7 @@ const Gender = (props) => {
               type="radio"
               name="gender"
               value={1}
-              checked={Number(user.gender) === 1}
+              checked={user.gender === 1}
               onChange={(e) => updateFormSelf(e, dispatch)}
               onBlur={(e) => validate(e)}
             />
@@ -42,7 +42,7 @@ const Gender = (props) => {
               type="radio"
               name="gender"
               value={2}
-              checked={Number(user.gender) === 2}
+              checked={user.gender === 2}
               onChange={(e) => updateFormSelf(e, dispatch)}
               onBlur={(e) => validate(e)}
             />
