@@ -81,8 +81,8 @@ const Address = (props) => {
                   name="zip"
                   required
                   placeholder="117-2345"
-                  // defaultValue={val.zip}
-                  value={user.zip}
+                  defaultValue={user.zip}
+                  //   value={user.zip}
                   onChange={(e) => updateFormSelf(e, dispatch)}
                   onBlur={(e) => validate(e)}
                 />
@@ -101,8 +101,8 @@ const Address = (props) => {
                     name="prefecture"
                     required
                     placeholder="東京都"
-                    //   defaultValue={val.prefecture}
-                    value={user.prefecture}
+                    defaultValue={user.prefecture}
+                    // value={user.prefecture}
                     onChange={(e) => updateFormSelf(e, dispatch)}
                     onBlur={(e) => validate(e)}
                   >
@@ -127,8 +127,8 @@ const Address = (props) => {
                     name="city"
                     required
                     placeholder="豊島区池袋"
-                    //   defaultValue={val.city}
-                    value={user.city}
+                    defaultValue={user.city}
+                    // value={user.city}
                     onChange={(e) => updateFormSelf(e, dispatch)}
                     onBlur={(e) => validate(e)}
                   />
@@ -151,8 +151,8 @@ const Address = (props) => {
                     name="address3"
                     required
                     placeholder="3-7-18"
-                    //   defaultValue={val.adress3}
-                    value={user.adress3}
+                    defaultValue={user.adress3}
+                    // value={user.adress3}
                     onChange={(e) => updateFormSelf(e, dispatch)}
                     onBlur={(e) => validate(e)}
                   />
@@ -174,8 +174,8 @@ const Address = (props) => {
                     type="text"
                     name="building"
                     placeholder="ブルジュファリハ"
-                    //   defaultValue={val.useId}
-                    value={user.useId}
+                    defaultValue={user.useId}
+                    // value={user.useId}
                     onChange={(e) => updateFormSelf(e, dispatch)}
                     onBlur={(e) => validate(e)}
                   />
