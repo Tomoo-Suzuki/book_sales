@@ -6,7 +6,7 @@ const updateFormSelf = (e, dispatch) => {
   let tempHash = {};
   tempHash.key = e.target.name;
   tempHash.val = e.target.value;
-  dispatch(form_controll(tempHash));
+  dispatch(form_controll(tempHash))
 };
 
 export default updateFormSelf;

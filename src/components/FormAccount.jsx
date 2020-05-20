@@ -32,6 +32,7 @@ import "_scss/index";
 
 const txtArray = ["入力・編集", "確認", "完了"];
 
+//TODO input-txt, onChangs, value属性に値を設定すると、１文字目確定問題。
 class FormAccount extends React.Component {
   constructor(props) {
     super(props);
