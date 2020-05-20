@@ -1,7 +1,11 @@
-import initialState from '_redux/state/initialState.js'
+import initialStateAccount from '_redux/state/initialStateAccount.js'
 
-function account(state = initialState, action) {
+function account(state = initialStateAccount, action) {
   switch (action.type) {
+    case 'INSERT_ACCOUNT':
+      return Object.assign({}, state, {
+        user: action.value
+      })
     case 'INSERT_ACCOUNT':
       return Object.assign({}, state, {
         user: action.value
@@ -25,6 +29,14 @@ function account(state = initialState, action) {
       tempState[key] = val
       return Object.assign({}, state, {
         user: tempState
+      })
+    case 'FORM_VALIDATE':
+      const key_validate = action.value.key
+      const val_validate = action.value.val
+      let tempState_validate = Object.assign({}, state.msg);
+      tempState_validate[key_validate] = val_validate;
+      return Object.assign({}, state, {
+        msg: tempState_validate
       })
     default:
       return state

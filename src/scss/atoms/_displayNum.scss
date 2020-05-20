@@ -17,15 +17,14 @@
         justify-content: end;
 
         >li {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             margin-left: 1rem;
             cursor: pointer;
             color: $sell_green_dark;
-            font-weight: bold;
+            text-decoration: underline;
 
             &:hover {
                 opacity: .5;
-                text-decoration: underline;
             }
         }
     }

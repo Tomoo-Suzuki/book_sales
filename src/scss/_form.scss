@@ -1,4 +1,5 @@
-@import 'color';
+@charset "utf-8";
+@import './color';
 
 input[type='text'],
 input[type='email'],
@@ -9,13 +10,14 @@ textarea {
     border: solid #eeeeee 1px;
 }
 
+
 .form-book {
     width: 75.6rem;
     margin: 7.2rem auto;
     font-size: 1.4rem;
 
     dl {
-        margin-bottom: 2.4rem;
+        margin-bottom: 3.2rem;
         display: table;
 
         dt,
@@ -31,16 +33,18 @@ textarea {
 
         dd {
             width: 59.6rem;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
 
-            >div,
-            >span,
-            >div>span {
-                margin-right: 1.6rem;
+            >div>span,
+            >div>div {
+                margin-right: 3.2rem;
             }
 
-            >div {
-                margin-bottom: 1.6rem;
-            }
+            // >div {
+            //     margin-bottom: 1.6rem;
+            // }
 
             input[type='text'],
             input[type='email'],
@@ -54,9 +58,35 @@ textarea {
                 padding: 4px;
                 height: 2rem;
             }
-
         }
 
+    }
+}
+
+%msg {
+    color: $read_orange_dark;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 1rem;
+}
+
+.msg {
+    @extend %msg;
+    display: inline-block;
+    margin-left: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.form_horizontal {
+    >span {
+        display: block;
+        margin-bottom: .8rem;
+    }
+
+    >.msg {
+        @extend %msg;
+        margin-left: 0;
     }
 }
 

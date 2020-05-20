@@ -3,10 +3,10 @@ import {
 } from "_redux/actions/action.js";
 import request from "_lib/request";
 
-export const insertAccount = (hash, dispatch) => {
+export const updateAccount = (hash, dispatch) => {
   const query =
     `mutation{
-      insertAccount(
+      updateAccount(
               email:"` + hash.email + `",
               email_confirm:"` + hash.email_confirm + `",
               id_user:"` + hash.id_user + `",
@@ -38,7 +38,7 @@ export const insertAccount = (hash, dispatch) => {
               purpose
       }
     }`;
-  request(query, "insertAccount").then((res) => {
+  request(query, "updateAccount").then((res) => {
     console.log(res)
     dispatch(insert_account(res));
   });
