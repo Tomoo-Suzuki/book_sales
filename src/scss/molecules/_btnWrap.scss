@@ -37,9 +37,19 @@
     display: none;
 }
 
+.btnContainer {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 .btnWrap {
-    margin-top: 8rem;
     @extend %btn_base;
+
+    >div:nth-last-of-type(1) {
+        margin-right: 5rem;
+    }
 
     .btn_cart {
         background: $sell_green_dark;
