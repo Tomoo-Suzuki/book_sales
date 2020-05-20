@@ -19,6 +19,7 @@ import ProgressTracker from "_components/atoms/ProgressTracker";
 import moment from "moment";
 
 import { insertAccount } from "_queries/mutation/insertAccount";
+import { updateAccount } from "_queries/mutation/updateAccount";
 import { insert_account } from "_redux/actions/action.js";
 import { set_form_status } from "_redux/actions/action.js";
 import { selectAccount } from "_queries/query/selectAccount";
@@ -54,8 +55,16 @@ class FormAccount extends React.Component {
     this.props.dispatch(set_form_status(status));
   }
   submitFormData() {
-    console.log(this.props.account.user);
-    insertAccount(this.props.account.user, this.props.dispatch);
+    if (this.email === "ryuusei_y@gmail.com") {
+      //login認証の代わり
+      //update
+      console.log("UPDATE!!!!!!!!!!!!!!!");
+      updateAccount(this.props.account.user, this.props.dispatch);
+    } else {
+      console.log("INSERT!!!!!!!!!!!!!!!");
+      insertAccount(this.props.account.user, this.props.dispatch);
+    }
+    this.progressStatus(2);
   }
   validate(e) {
     validator(e, this.props.dispatch);
@@ -71,7 +80,7 @@ class FormAccount extends React.Component {
           <meta name="description" content="会員登録フォーム" />
           <meta name="keyword" content="suzuki,book,bookseries, detail" />
         </Helmet>
-        <h2 className="ttl_h2">アカウントの登録</h2>
+        <h2 className="ttl_h2">アカウントの登録・修正</h2>
         <Navigation />
         <main className="form-book">
           <ProgressTracker txtArray={txtArray} status={status} />
@@ -161,7 +170,6 @@ class FormAccount extends React.Component {
                     />
                     <BtnPost
                       btnClick={this.submitFormData}
-                      btnClick={() => this.progressStatus(2)}
                       btnName="送信する"
                     />
                   </div>

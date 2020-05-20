@@ -22,11 +22,12 @@ html {
     font-size: 2.4rem;
     color: $black;
     background: url(/img/h2.svg)left top no-repeat;
-    padding-left: 3.6rem;
+    padding-left: 4rem;
     padding-bottom: 1rem;
     background-size: 3rem;
     border-bottom: dashed 3px $sell_green_dark;
     margin-bottom: 2.8rem;
+    font-weight: normal;
 }
 
 .ttl_h3 {
