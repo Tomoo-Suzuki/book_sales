@@ -84,7 +84,7 @@ textarea {
         margin-bottom: .8rem;
     }
 
-    >.msg {
+    >span>.msg {
         @extend %msg;
         margin-left: 0;
     }
@@ -161,7 +161,7 @@ textarea {
         width: 10px;
         height: 10px;
         display: block;
-        top: 0;
+        top: .5rem;
         right: 3px;
     }
 }

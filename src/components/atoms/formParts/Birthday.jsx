@@ -19,6 +19,7 @@ const Birthday = (props) => {
             name="birthday"
             //defaultValue={val.birthday}
             value={user.birthday}
+            required
             onChange={(e) => updateFormSelf(e, dispatch)}
             onBlur={(e) => validate(e)}
           />

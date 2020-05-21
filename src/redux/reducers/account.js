@@ -38,6 +38,14 @@ function account(state = initialStateAccount, action) {
       return Object.assign({}, state, {
         msg: tempState_validate
       })
+    case 'RESULT_VALIDATE':
+      const key_res_validate = action.value.key
+      const val_res_validate = action.value.val
+      let tempState_res_validate = Object.assign({}, state.flag);
+      tempState_res_validate[key_res_validate] = val_res_validate;
+      return Object.assign({}, state, {
+        flag: tempState_res_validate
+      })
     default:
       return state
   }

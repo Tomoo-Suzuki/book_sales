@@ -31,6 +31,12 @@ export const form_validate = function (object) {
     value: object
   })
 };
+export const result_validate = function (object) {
+  return ({
+    type: 'RESULT_VALIDATE',
+    value: object
+  })
+};
 
 export const select_genre = function (object) {
   return ({
