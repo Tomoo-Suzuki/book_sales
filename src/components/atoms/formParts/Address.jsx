@@ -108,7 +108,7 @@ const Address = (props) => {
                   >
                     {prefectureLists}
                   </select>
-                </span>
+                </span>{" "}
                 <span className="msg">{error.prefecture}</span>
               </div>
             )}

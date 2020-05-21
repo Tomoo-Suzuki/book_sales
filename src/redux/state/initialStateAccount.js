@@ -30,8 +30,24 @@ const initialStateAccount = {
     prefecture: "",
     city: "",
     address3: "",
-    gender: null,
+    gender: "",
     birthday: ""
+  },
+  flag: {
+    last_name: false,
+    first_name: false,
+    last_name_kana: false,
+    first_name_kana: false,
+    birthday: false,
+    tel: false,
+    email: false,
+    email_confirm: false,
+    zip: false,
+    prefecture: false,
+    city: false,
+    address3: false,
+    gender: false,
+    birthday: false
   }
 }
 

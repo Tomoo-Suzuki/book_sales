@@ -20,6 +20,7 @@ const Gender = (props) => {
               name="gender"
               value={1}
               checked={Number(user.gender) === 1}
+              required
               onChange={(e) => updateFormSelf(e, dispatch)}
               onBlur={(e) => validate(e)}
             />
@@ -31,6 +32,7 @@ const Gender = (props) => {
               name="gender"
               value={2}
               checked={Number(user.gender) === 2}
+              required
               onChange={(e) => updateFormSelf(e, dispatch)}
               onBlur={(e) => validate(e)}
             />
@@ -42,11 +44,12 @@ const Gender = (props) => {
               name="gender"
               value={3}
               checked={Number(user.gender) === 3}
+              required
               onChange={(e) => updateFormSelf(e, dispatch)}
               onBlur={(e) => validate(e)}
             />
           </label>
-          <span> {error.gender}</span>
+          <span className="msg"> {error.gender}</span>
         </dd>
       )}
       {props.status === 1 && (
