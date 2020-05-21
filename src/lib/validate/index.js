@@ -25,19 +25,22 @@ const text_error = {
 };
 
 export const validator = (e, dispatch) => {
-
-  const name = e.target.name;
-  let value = e.target.value;
   const is_required = e.target.required;
+  console.log(is_required)
+  const name = e.target.name;
+  console.log(name)
+  let value = e.target.value;
+  console.log(value)
   const tempHash = {}
   tempHash.key = name;
-  value = logics.trim_space(value);
-  value = logics.delete_htmlspecialchars(value);
+  if (value) {
+    value = logics.trim_space(value);
+    value = logics.delete_htmlspecialchars(value);
+  }
   if (is_required) {
     const res = logics.check_empty(value);
     if (res) {
       tempHash.val = text_error.required[name];
-      console.log(tempHash.val)
       dispatch(form_validate(tempHash));
     } else {
       tempHash.val = '';
@@ -78,15 +81,20 @@ export const validator = (e, dispatch) => {
     }
 
     if (name === 'zip') {
-      console.log(value)
       value = logics.num_conversion(value)
-      console.log(value)
       const is_zip = regs.zip.test(value);
       if (!is_zip) {
         tempHash.val = '郵便番号を数字７桁でご入力ください。';
         dispatch(form_validate(tempHash));
       }
     }
+    // if (name === 'gender') {
+    //   if (!value) {
+    //     tempHash.val = '郵便番号を数字７桁でご入力ください。';
+    //     dispatch(form_validate(tempHash));
+    //   }
+    // }
+
 
     //trim_space(name, value);
   }

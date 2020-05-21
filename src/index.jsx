@@ -1,16 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import reducer from "_redux/reducers/";
 import App from "_container/App";
 
-import "_scss/index";
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import configureStore from "_redux/store";
 
+const store = configureStore();
+import "_scss/index";
 ReactDOM.render(
   <Provider store={store}>
     <App />

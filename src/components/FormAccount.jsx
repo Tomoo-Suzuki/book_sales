@@ -20,8 +20,13 @@ import moment from "moment";
 
 import { insertAccount } from "_queries/mutation/insertAccount";
 import { updateAccount } from "_queries/mutation/updateAccount";
-import { insert_account } from "_redux/actions/action.js";
-import { set_form_status } from "_redux/actions/action.js";
+import {
+  insert_account,
+  set_form_status,
+  form_validate,
+  form_controll,
+} from "_redux/actions/action";
+
 import { selectAccount } from "_queries/query/selectAccount";
 
 import initialStateAccount from "_redux/state/initialStateAccount";
@@ -39,15 +44,15 @@ class FormAccount extends React.Component {
     const today = moment().format("YYYY年MM月DD日");
     this.submitFormData = this.submitFormData.bind(this);
     this.validate = this.validate.bind(this);
+    this.allValidateConfirm = this.allValidateConfirm.bind(this);
     this.progressStatus = this.progressStatus.bind(this);
     this.email = "rryuusei_y@gmail.com";
     this.props.dispatch(set_form_status(0));
     this.flag_validate = false;
+    //init form state
+    this.props.dispatch(insert_account(initialStateAccount.user));
     if (this.email === "ryuusei_y@gmail.com") {
       selectAccount(this.email, this.props.dispatch);
-    } else {
-      //init form state
-      this.props.dispatch(insert_account(initialStateAccount.user));
     }
   }
   validate(e) {
@@ -57,10 +62,24 @@ class FormAccount extends React.Component {
     this.props.dispatch(set_form_status(status));
   }
   allValidateConfirm() {
-    console.log(this.props.account.msg);
-    if (this.flag_validate) {
+    const flags = this.props.account.flag;
+    const user = this.props.account.user;
+    let allflags = null;
+    Object.keys(flags).map((key, index) => {
+      if (!flags[key]) {
+        allflags -= 1;
+        const tempHash = {};
+        tempHash.key = key;
+        tempHash.val = "ご選択・ご入力をお願いいたします。";
+        this.props.dispatch(form_validate(tempHash));
+      } else {
+        allflags = 0;
+      }
+    });
+    if (allflags === 0) {
       this.progressStatus(1);
     }
+    console.log(allflags);
   }
   submitFormData() {
     if (this.email === "ryuusei_y@gmail.com") {
