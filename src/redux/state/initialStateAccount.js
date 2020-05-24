@@ -22,7 +22,6 @@ const initialStateAccount = {
     first_name: "",
     last_name_kana: "",
     first_name_kana: "",
-    birthday: "",
     tel: "",
     email: "",
     email_confirm: "",
@@ -47,7 +46,6 @@ const initialStateAccount = {
     city: false,
     address3: false,
     gender: false,
-    birthday: false
   }
 }
 
