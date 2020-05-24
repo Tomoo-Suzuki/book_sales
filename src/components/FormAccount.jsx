@@ -63,7 +63,7 @@ class FormAccount extends React.Component {
   }
   allValidateConfirm() {
     const flags = this.props.account.flag;
-    const user = this.props.account.user;
+    // const user = this.props.account.user;
     let allflags = null;
     Object.keys(flags).map((key, index) => {
       if (!flags[key]) {
