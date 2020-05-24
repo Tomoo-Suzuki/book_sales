@@ -5,7 +5,7 @@ module.exports = {
   watch: true,
   mode: "development",
   entry: {
-    book: "./src/index.jsx",
+    book: "./src/index.tsx",
   },
   output: {
     filename: "[name].bundle.js",
@@ -23,19 +23,26 @@ module.exports = {
     host: "0.0.0.0", //dockerと連携する時に
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.txt$/,
         use: "raw-loader",
       },
+      // {
+      //   test: [/\.js$/, /\.jsx$/],
+      //   exclude: /node_modules/,
+      //   use: "babel-loader",
+      // },
       {
-        test: [/\.js$/, /\.jsx$/],
+        test: [/\.tsx$/],
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: "ts-loader",
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [{
+        use: [
+          {
             loader: "style-loader",
           },
           {
@@ -53,7 +60,16 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".scss", ".ts", ".css", ".json", ".txt"],
+    extensions: [
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+      ".scss",
+      ".css",
+      ".json",
+      ".txt",
+    ],
     alias: {
       _container: path.resolve(__dirname, "src/container"),
       _components: path.resolve(__dirname, "src/components"),
