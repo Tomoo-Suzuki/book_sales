@@ -9,11 +9,9 @@ export default function configureStore(initialState) {
   const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
     reducer,
-    compose(
-      applyMiddleware(sagaMiddleware, createLogger()),
-      devToolsEnhancer({})
-    ),
-    initialState
+    compose(applyMiddleware(sagaMiddleware), devToolsEnhancer({})),
+    initialState,
+    applyMiddleware(sagaMiddleware, createLogger())
   );
   sagaMiddleware.run(rootSaga);
   return store;

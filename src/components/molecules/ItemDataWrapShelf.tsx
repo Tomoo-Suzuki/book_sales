@@ -13,8 +13,8 @@ export const ItemDataWrapShelf = (props) => {
   const shelfType = props.shelfType;
   const link_to =
     shelfType === 0
-      ? `/bookshelf-detail/` + photo.id_series
-      : `/browser-viewer/` + photo.id_book;
+      ? `/bookshelf-detail/` + data.id_series
+      : `/browser-viewer/` + data.id_book;
 
   return (
     <span className="itemDataWrap">

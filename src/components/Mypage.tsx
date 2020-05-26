@@ -3,7 +3,13 @@ import { Helmet } from "react-helmet";
 
 import Navigation from "_components/organisms/Navigation";
 
-class Mypage extends React.Component {
+interface Props {
+  items: object;
+}
+interface State {}
+
+class Mypage extends React.Component<Props, State> {
+  items: object = {};
   constructor(props) {
     super(props);
     this.items = this.props.items;

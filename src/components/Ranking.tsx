@@ -7,7 +7,17 @@ import ItemList from "_components/organisms/ItemList";
 
 import { selectRanking } from "_queries/query/selectRanking.ts";
 
-class Ranking extends React.Component {
+interface Props {
+  item: {
+    ranking: object;
+  };
+  ui: {
+    display_style: number;
+  };
+}
+interface State {}
+
+class Ranking extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.getData = this.getData.bind(this);
@@ -34,7 +44,7 @@ class Ranking extends React.Component {
       rankGenre10: "創作論・評論ランキング",
       rankGenre11: "詩・童話・その他ランキング",
     };
-    let itemLists = [];
+    let itemLists: Array<any> = [];
 
     try {
       if (Object.keys(ranking).length > 1) {

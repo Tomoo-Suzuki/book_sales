@@ -10,7 +10,11 @@ import BtnPost from "_components/atoms/submitBtn/form/BtnPost";
 import request from "_lib/request";
 import { login } from "_queries/query/login";
 
-class FormLogin extends React.Component {
+interface Props {}
+interface State {}
+
+class FormLogin extends React.Component<any, any> {
+  request: any = null;
   constructor(props) {
     super(props);
     this.state = {

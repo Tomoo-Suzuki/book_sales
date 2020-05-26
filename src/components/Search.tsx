@@ -4,7 +4,10 @@ import { Helmet } from "react-helmet";
 import Navigation from "_components/organisms/Navigation";
 import Itemlist from "_components/organisms/ItemList";
 
-class Search extends React.Component {
+interface Props {}
+interface State {}
+
+class Search extends React.Component<Props, State> {
   constructor(props) {
     super(props);
   }

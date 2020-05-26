@@ -20,7 +20,7 @@ const navHeaderLists = [
   { text: "詩・童話・その他", link: "/genre/11", param: 11 },
 ];
 
-class NavHeader extends React.Component {
+class NavHeader extends React.Component<any> {
   constructor(props) {
     super(props);
     this.getData = this.getData.bind(this);

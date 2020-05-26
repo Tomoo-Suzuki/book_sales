@@ -19,7 +19,7 @@ const BtnWrap = (props) => {
   const uiState = useSelector(ui_display_style);
 
   const status = props.status;
-  const buttons = [];
+  const buttons: Array<any> = [];
   if (uiState.display_style === 0) {
     ("");
   } else if (uiState.display_style === 1) {

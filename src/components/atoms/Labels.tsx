@@ -7,7 +7,7 @@ import "_scss/atoms/_labels";
 
 const Labels = (props) => {
   const uiState = useSelector(ui_display_style);
-  let labelElements = [];
+  let labelElements: Array<any> = [];
   const labels = props.data;
   if (uiState.display_style === 0) {
     if (labels.label_new) {

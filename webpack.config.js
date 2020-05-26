@@ -23,8 +23,7 @@ module.exports = {
     host: "0.0.0.0", //dockerと連携する時に
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.txt$/,
         use: "raw-loader",
       },
@@ -41,8 +40,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [
-          {
+        use: [{
             loader: "style-loader",
           },
           {
@@ -74,8 +72,6 @@ module.exports = {
       _container: path.resolve(__dirname, "src/container"),
       _components: path.resolve(__dirname, "src/components"),
       _redux: path.resolve(__dirname, "src/redux"),
-      _scss: path.resolve(__dirname, "scss"),
-      _lib: path.resolve(__dirname, "lib"),
       _img: path.resolve(__dirname, "img"),
       _scss: path.resolve(__dirname, "src/scss"),
       _lib: path.resolve(__dirname, "src/lib"),

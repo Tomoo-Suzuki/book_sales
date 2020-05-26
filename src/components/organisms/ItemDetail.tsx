@@ -6,7 +6,7 @@ import { ItemDataWrap } from "_components/molecules/ItemDataWrap";
 import BtnWrap from "_components/molecules/BtnWrap";
 
 import "_scss/organisms/_itemList";
-class ItemListDetail extends React.Component {
+class ItemListDetail extends React.Component<any> {
   constructor(props) {
     super(props);
   }

@@ -7,7 +7,7 @@ import "_scss/atoms/_labels";
 
 const LabelsShelf = (props) => {
   const uiState = useSelector(ui_display_style);
-  let labelElements = [];
+  let labelElements: Array<any> = [];
   const labels = props.data;
   const shelfType = props.shelfType;
   if (shelfType === 0) {

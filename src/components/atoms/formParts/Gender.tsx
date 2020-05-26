@@ -7,7 +7,7 @@ const userSelector = (state) => state.account.user;
 const Gender = (props) => {
   const { val, updateForm, validate, error } = props;
   const user = useSelector(userSelector);
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   return (
     <dl className="require">
       <dt>ジェンダー</dt>

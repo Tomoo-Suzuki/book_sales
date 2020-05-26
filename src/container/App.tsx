@@ -11,12 +11,18 @@ import BookshelfDetail from "_components/BookshelfDetail";
 import BrowserViewer from "_components/BrowserViewer";
 
 import "_scss/index.scss";
-class App extends React.Component {
+
+interface Props {}
+interface State {}
+
+class App extends React.Component<Props, State> {
+  navs: Array<any> = [];
+  elms: object = [];
   constructor(props) {
     super(props);
   }
   render() {
-    this.navs = [];
+    // this.navs = [];
 
     this.elms = routes.map((route, idx) => {
       this.navs.push(
