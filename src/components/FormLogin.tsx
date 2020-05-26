@@ -28,8 +28,9 @@ class FormLogin extends React.Component<any, any> {
     this.setState({ [e.target.name]: e.target.value });
   }
   submitFormData() {
-    const loginForm = document.forms.loginForm;
-    const formData = new FormData(loginForm);
+    const Form: HTMLFormElement = document.forms[0];
+    //const loginForm: HTMLFormElement = Form.loginForm;
+    const formData = new FormData(Form);
     axios.post("/foo", formData);
     // //確認用
     // for (let item of formData) {

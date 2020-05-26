@@ -19,7 +19,7 @@ interface Props {
 }
 interface State {}
 
-interface bookshelf {
+type bookshelf = {
   id_book: string;
   no_title: number;
   name_book: string;
@@ -53,7 +53,7 @@ interface bookshelf {
   label_new: number;
   label_off: number;
   label_complete_s: number;
-}
+};
 
 class BookshelfDetail extends React.Component<Props, State> {
   id_series: string = "";
@@ -79,7 +79,7 @@ class BookshelfDetail extends React.Component<Props, State> {
           if (Number(a.id_book) < Number(b.id_book)) return 1;
         });
         let latestLists = {};
-        arrayLists.map((item: bookshelf, index): any => {
+        arrayLists.map((item: bookshelf, index: number): any => {
           if (latestLists[item.id_series] === undefined) {
             latestLists[item.id_series] = [];
           }

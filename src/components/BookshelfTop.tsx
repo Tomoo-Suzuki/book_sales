@@ -72,20 +72,25 @@ class BookshelfTop extends React.Component<any, any> {
       if (Object.keys(bookshelf).length > 1) {
         const cloneLists = Object.assign(bookshelf);
         const arrayLists = Array.from(cloneLists);
-        arrayLists.sort((a: t_bookshelf, b: t_bookshelf): number => {
-          if (Number(a.id_series) > Number(b.id_series)) return 1;
-          if (Number(a.id_series) < Number(b.id_series)) return -1;
-          if (Number(a.id_book) > Number(b.id_book)) return -1;
-          if (Number(a.id_book) < Number(b.id_book)) return 1;
+        arrayLists.sort((a: t_bookshelf, b: t_bookshelf): any => {
+          const a_id_series: number = Number(a.id_series);
+          const b_id_series: number = Number(b.id_series);
+          const a_id_book: number = Number(a.id_book);
+          const b_id_book: number = Number(b.id_book);
+          if (Number(a_id_series) > Number(b_id_series)) return 1;
+          if (Number(a_id_series) < Number(b_id_series)) return -1;
+          if (Number(a_id_book) > Number(b_id_book)) return -1;
+          if (Number(a_id_book) < Number(b_id_book)) return 1;
         });
         let latestLists = {};
-        arrayLists.map((item: t_bookshelf, index): object => {
+        arrayLists.map((item: t_bookshelf, index): any => {
           if (
             latestLists[item.id_series] === undefined ||
             Number(latestLists[item.id_series]) < Number(item.id_book)
           ) {
             latestLists[item.id_series] = item;
           }
+          return;
         });
         const items = Object.values(latestLists);
         itemLists = <ItemListShelf data={items} shelfType={0} />;
