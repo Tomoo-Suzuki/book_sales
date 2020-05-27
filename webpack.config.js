@@ -5,7 +5,7 @@ module.exports = {
   watch: true,
   mode: "development",
   entry: {
-    book: "./src/index.jsx",
+    book: "./src/index.tsx",
   },
   output: {
     filename: "[name].bundle.js",
@@ -27,10 +27,15 @@ module.exports = {
         test: /\.txt$/,
         use: "raw-loader",
       },
+      // {
+      //   test: [/\.js$/, /\.jsx$/],
+      //   exclude: /node_modules/,
+      //   use: "babel-loader",
+      // },
       {
-        test: [/\.js$/, /\.jsx$/],
+        test: [/\.tsx$/],
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: "ts-loader",
       },
       {
         test: /\.scss$/,
@@ -53,13 +58,20 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".scss", ".ts", ".css", ".json", ".txt"],
+    extensions: [
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+      ".scss",
+      ".css",
+      ".json",
+      ".txt",
+    ],
     alias: {
       _container: path.resolve(__dirname, "src/container"),
       _components: path.resolve(__dirname, "src/components"),
       _redux: path.resolve(__dirname, "src/redux"),
-      _scss: path.resolve(__dirname, "scss"),
-      _lib: path.resolve(__dirname, "lib"),
       _img: path.resolve(__dirname, "img"),
       _scss: path.resolve(__dirname, "src/scss"),
       _lib: path.resolve(__dirname, "src/lib"),
