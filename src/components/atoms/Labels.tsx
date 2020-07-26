@@ -5,7 +5,7 @@ const ui_display_style = (state) => state.ui;
 
 import "_scss/atoms/_labels";
 
-const Labels = (props) => {
+const Labels = (props):JSX.Element => {
   const uiState = useSelector(ui_display_style);
   let labelElements: Array<any> = [];
   const labels = props.data;
@@ -79,7 +79,7 @@ const Labels = (props) => {
     if (labels.label_complete_s) {
       labelElements.push(
         <li className="label_finish" key="fin">
-          完結
+        完結
         </li>
       );
     }
