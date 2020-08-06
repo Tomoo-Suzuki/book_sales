@@ -25,7 +25,8 @@
             "_img*": ["srcimg*"],
             "_scss*": ["src/scss*"],
             "_lib*": ["src/lib*"],
-            "_queries*": ["src/queries*"]
+            "_queries*": ["src/queries*"],
+            "_types*": ["src/types*"]
         }
     }
 }

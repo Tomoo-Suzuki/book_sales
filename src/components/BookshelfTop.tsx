@@ -8,6 +8,10 @@ import ItemListShelf from "_components/organisms/ItemListShelf";
 
 import { selectBookshelfTop } from "_queries/query/selectBookshelfTop.ts";
 
+//　<any, any> 何故二つか
+import { BookshelfTop } from "_types/BookshelfTop"
+
+
 interface Props {
   id_series: string;
   bookshelf: {

@@ -77,6 +77,7 @@ module.exports = {
       _lib: path.resolve(__dirname, "src/lib"),
       _queries: path.resolve(__dirname, "src/queries"),
       _dummy: path.resolve(__dirname, "dummy"),
+      _types: path.resolve(__dirname, "src/types"),
     },
   },
   /*,
