@@ -49,10 +49,9 @@ interface Props {
     status_form: number;
   };
 }
-interface State {}
 
 // class FormAccount extends React.Component<Props, State> {
-class FormAccount extends React.Component<any, any> {
+class FormAccount extends React.Component {
   email: string = "";
   flag_validate: boolean = false;
   allflags: any = null;

@@ -4,10 +4,10 @@ import updateFormSelf from "_lib/updateFormSelf";
 
 import "_scss/atoms/_address";
 
-const userSelector = (state) => state.account.user;
+const userSelector = (state: { account: { user: string; }; }) => state.account.user;
 
-const Address = (props) => {
-  const { val, updateForm, validate, error } = props;
+const Address = (props: { status?: any; validate?: any; error?: any; }) => {
+  const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
 
