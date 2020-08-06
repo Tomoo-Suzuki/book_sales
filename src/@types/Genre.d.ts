@@ -1,6 +1,5 @@
 
-export interface selectDetail  {
-    id_book :string;
+export interface Genre {
     id_book:string;
     no_title:string;
     name_book:string;
@@ -33,5 +32,5 @@ export interface selectDetail  {
     label_disc_s:string;
     label_new:string;
     label_off:string;
-    label_complete_s
+    label_complete_s:string;
 }

@@ -1,6 +1,6 @@
 
-interface selectRankingEach1 {
-    id_book:string;
+export interface Detail  {
+    id_book :string;
     no_title:string;
     name_book:string;
     point_sales:string;
@@ -19,14 +19,18 @@ interface selectRankingEach1 {
     point:string;
     id_author:string;
     id_publisher:string;
+    id_shop:string;
     url_detail:string;
     url_img:string;
+    url_img_t:string;
     url_reader:string;
+    date_register:string;
+    date_sales:string;
     label_free:string;
     label_free_s:string;
     label_disc:string;
     label_disc_s:string;
     label_new:string;
     label_off:string;
-    label_complete_s:string;
+    label_complete_s
 }

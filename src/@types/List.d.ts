@@ -1,5 +1,4 @@
-
-export interface selectGenre {
+export interface List {
     id_book:string;
     no_title:string;
     name_book:string;
@@ -32,5 +31,5 @@ export interface selectGenre {
     label_disc_s:string;
     label_new:string;
     label_off:string;
-    label_complete_s:string;
+    label_complete_s
 }

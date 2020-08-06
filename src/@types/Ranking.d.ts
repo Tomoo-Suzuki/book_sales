@@ -1,6 +1,4 @@
-
-export interface selectBookshelfTop {
-    id_user:string;
+interface Ranking {
     id_book:string;
     no_title:string;
     name_book:string;
@@ -20,18 +18,14 @@ export interface selectBookshelfTop {
     point:string;
     id_author:string;
     id_publisher:string;
-    id_shop:string;
     url_detail:string;
     url_img:string;
-    url_img_t:string;
     url_reader:string;
-    date_register:string;
-    date_sales:string;
     label_free:string;
     label_free_s:string;
     label_disc:string;
     label_disc_s:string;
     label_new:string;
     label_off:string;
-    label_complete_s
+    label_complete_s:string;
 }

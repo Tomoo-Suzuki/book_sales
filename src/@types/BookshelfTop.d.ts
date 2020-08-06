@@ -1,4 +1,6 @@
-export interface selectList {
+
+export interface BookshelfTop {
+    id_user:string;
     id_book:string;
     no_title:string;
     name_book:string;

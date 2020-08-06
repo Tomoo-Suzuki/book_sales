@@ -1,4 +1,4 @@
-interface insertUser{
+interface User{
     id_user:string;
     password:string;
     user_type:string;
