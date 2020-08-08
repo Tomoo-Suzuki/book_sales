@@ -9,57 +9,17 @@ import ItemListShelf from "_components/organisms/ItemListShelf";
 import { selectBookshelfTop } from "_queries/query/selectBookshelfTop.ts";
 
 //　<any, any> 何故二つか
-import { BookshelfTop } from "_types/BookshelfTop"
+import { InterfaceBookshelfTop } from "../types/InterfaceBookshelfTop";
 
-
-interface Props {
+interface Uis {
   id_series: string;
-  bookshelf: {
-    top: object;
-  };
   ui: {
     display_style: Number;
   };
 }
-interface State {}
-type t_bookshelf = {
-  id_book: string;
-  no_title: number;
-  name_book: string;
-  point_sales: number;
-  genre: number;
-  name_genre: string;
-  name_category: string;
-  is_complete: boolean;
-  is_latest: boolean;
-  is_reserve: boolean;
-  id_series: string;
-  name_series: string;
-  price_unit: string;
-  price_now: number;
-  book_detail: string;
-  point_id: string;
-  point: number;
-  id_author: string;
-  id_publisher: string;
-  id_shop: string;
-  url_detail: string;
-  url_img: string;
-  url_img_t: string;
-  url_reader: string;
-  date_register: string;
-  date_sales: string;
-  label_free: number;
-  label_free_s: number;
-  label_disc: number;
-  label_disc_s: number;
-  label_new: number;
-  label_off: number;
-  label_complete_s: number;
-};
 
-class BookshelfTop extends React.Component<any, any> {
-  constructor(props) {
+class BookshelfTop extends React.Component<InterfaceBookshelfTop, Uis> {
+  constructor(props: any) {
     super(props);
     this.getData = this.getData.bind(this);
     this.getData();
@@ -71,23 +31,25 @@ class BookshelfTop extends React.Component<any, any> {
   render() {
     const bookshelf = this.props.bookshelf.top;
     const display_style = this.props.ui.display_style;
-    let itemLists;
+    let itemLists: {} | null | undefined;
     try {
       if (Object.keys(bookshelf).length > 1) {
         const cloneLists = Object.assign(bookshelf);
         const arrayLists = Array.from(cloneLists);
-        arrayLists.sort((a: t_bookshelf, b: t_bookshelf): any => {
-          const a_id_series: number = Number(a.id_series);
-          const b_id_series: number = Number(b.id_series);
-          const a_id_book: number = Number(a.id_book);
-          const b_id_book: number = Number(b.id_book);
-          if (Number(a_id_series) > Number(b_id_series)) return 1;
-          if (Number(a_id_series) < Number(b_id_series)) return -1;
-          if (Number(a_id_book) > Number(b_id_book)) return -1;
-          if (Number(a_id_book) < Number(b_id_book)) return 1;
-        });
+        arrayLists.sort(
+          (a: InterfaceBookshelfTop, b: InterfaceBookshelfTop): any => {
+            const a_id_series: number = Number(a.id_series);
+            const b_id_series: number = Number(b.id_series);
+            const a_id_book: number = Number(a.id_book);
+            const b_id_book: number = Number(b.id_book);
+            if (Number(a_id_series) > Number(b_id_series)) return 1;
+            if (Number(a_id_series) < Number(b_id_series)) return -1;
+            if (Number(a_id_book) > Number(b_id_book)) return -1;
+            if (Number(a_id_book) < Number(b_id_book)) return 1;
+          }
+        );
         let latestLists = {};
-        arrayLists.map((item: t_bookshelf, index): any => {
+        arrayLists.map((item: InterfaceBookshelfTop): any => {
           if (
             latestLists[item.id_series] === undefined ||
             Number(latestLists[item.id_series]) < Number(item.id_book)
@@ -119,7 +81,7 @@ class BookshelfTop extends React.Component<any, any> {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
   return state;
 };
 export default Redux.connect(mapStateToProps)(BookshelfTop);

@@ -66,7 +66,6 @@ class Wish extends React.Component<Props, State> {
           <title>BookSales | Wish</title>
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
-
         <h2 className="ttl_h2">Wish</h2>
         <Navigation />
       </div>

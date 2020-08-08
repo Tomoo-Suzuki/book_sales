@@ -13,7 +13,6 @@ const Address = (props: { status?: any; validate?: any; error?: any; }) => {
 
   const prefecture = [
     { label: "選択してください", value: "" },
-
     { label: "北海道", value: "0" },
     { label: "青森", value: "1" },
     { label: "岩手", value: "2" },
