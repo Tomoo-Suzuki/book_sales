@@ -42,22 +42,24 @@ const txtArray = ["入力・編集", "確認", "完了"];
 interface Props {
   account: {
     flag: boolean;
-    user: object;
-    msg: object;
+    user: {};
+    msg: {};
   };
   ui: {
     status_form: number;
   };
 }
 
+interface State {}
+
 // class FormAccount extends React.Component<Props, State> {
-class FormAccount extends React.Component {
+class FormAccount extends React.Component<any, State, any> {
   email: string = "";
   flag_validate: boolean = false;
   allflags: any = null;
-  constructor(props) {
+  constructor(props: any) {
     super(props);
-    const today = moment().format("YYYY年MM月DD日");
+    //const today = moment().format("YYYY年MM月DD日");
     this.submitFormData = this.submitFormData.bind(this);
     this.validate = this.validate.bind(this);
     this.allValidateConfirm = this.allValidateConfirm.bind(this);
@@ -71,10 +73,10 @@ class FormAccount extends React.Component {
       selectAccount(this.email, this.props.dispatch);
     }
   }
-  validate(e) {
+  validate(e: any) {
     validator(e, this.props.dispatch);
   }
-  progressStatus(status) {
+  progressStatus(status: number) {
     this.props.dispatch(set_form_status(status));
   }
   allValidateConfirm() {
@@ -130,21 +132,21 @@ class FormAccount extends React.Component {
               <input type="hidden" name="id_user" value="00003" />
               <ReceptionDate />
               <Name
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
                 error={error}
               />
               <NameKana
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
                 error={error}
               />
               <Tel
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
@@ -152,7 +154,7 @@ class FormAccount extends React.Component {
               />
 
               <Email
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
@@ -160,7 +162,7 @@ class FormAccount extends React.Component {
               />
 
               <Address
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
@@ -168,7 +170,7 @@ class FormAccount extends React.Component {
               />
 
               <Gender
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
@@ -176,14 +178,14 @@ class FormAccount extends React.Component {
               />
 
               <Purpose
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
                 error={error}
               />
               <Birthday
-                validate={(e) => {
+                validate={(e: React.FormEvent<HTMLInputElement>) => {
                   this.validate(e);
                 }}
                 status={status}
@@ -220,7 +222,7 @@ class FormAccount extends React.Component {
     );
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
   return state;
 };
 export default Redux.connect(mapStateToProps)(FormAccount);

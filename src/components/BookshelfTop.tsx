@@ -8,17 +8,23 @@ import ItemListShelf from "_components/organisms/ItemListShelf";
 
 import { selectBookshelfTop } from "_queries/query/selectBookshelfTop.ts";
 
-//　<any, any> 何故二つか
 import { InterfaceBookshelfTop } from "../types/InterfaceBookshelfTop";
 
-interface Uis {
+interface Props {
   id_series: string;
+  bookshelf: {
+    top: InterfaceBookshelfTop;
+  };
   ui: {
     display_style: Number;
   };
 }
+//　<any, any> 何故二つか
+// propsにdispatchが含まれる場合
+// constructorの型、返り値
+// superの型
 
-class BookshelfTop extends React.Component<InterfaceBookshelfTop, Uis> {
+class BookshelfTop extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.getData = this.getData.bind(this);
@@ -36,20 +42,18 @@ class BookshelfTop extends React.Component<InterfaceBookshelfTop, Uis> {
       if (Object.keys(bookshelf).length > 1) {
         const cloneLists = Object.assign(bookshelf);
         const arrayLists = Array.from(cloneLists);
-        arrayLists.sort(
-          (a: InterfaceBookshelfTop, b: InterfaceBookshelfTop): any => {
-            const a_id_series: number = Number(a.id_series);
-            const b_id_series: number = Number(b.id_series);
-            const a_id_book: number = Number(a.id_book);
-            const b_id_book: number = Number(b.id_book);
-            if (Number(a_id_series) > Number(b_id_series)) return 1;
-            if (Number(a_id_series) < Number(b_id_series)) return -1;
-            if (Number(a_id_book) > Number(b_id_book)) return -1;
-            if (Number(a_id_book) < Number(b_id_book)) return 1;
-          }
-        );
+        arrayLists.sort((a: any, b: any): any => {
+          const a_id_series: number = Number(a.id_series);
+          const b_id_series: number = Number(b.id_series);
+          const a_id_book: number = Number(a.id_book);
+          const b_id_book: number = Number(b.id_book);
+          if (Number(a_id_series) > Number(b_id_series)) return 1;
+          if (Number(a_id_series) < Number(b_id_series)) return -1;
+          if (Number(a_id_book) > Number(b_id_book)) return -1;
+          if (Number(a_id_book) < Number(b_id_book)) return 1;
+        });
         let latestLists = {};
-        arrayLists.map((item: InterfaceBookshelfTop): any => {
+        arrayLists.map((item: any): any => {
           if (
             latestLists[item.id_series] === undefined ||
             Number(latestLists[item.id_series]) < Number(item.id_book)

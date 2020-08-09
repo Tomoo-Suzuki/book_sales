@@ -24,7 +24,7 @@ class FormLogin extends React.Component<any, any> {
     this.request = request.bind(this);
     this.request(login);
   }
-  setFormData(e) {
+  setFormData(e: React.FormEvent<HTMLInputElement>) {
     this.setState({ [e.target.name]: e.target.value });
   }
   submitFormData() {
@@ -54,13 +54,13 @@ class FormLogin extends React.Component<any, any> {
           <form name="loginForm">
             <UserId
               val={this.state}
-              updateState={(e) => {
+              updateState={(e: React.FormEvent<HTMLInputElement>) => {
                 this.setFormData(e);
               }}
             />
             <Password
               val={this.state}
-              updateState={(e) => {
+              updateState={(e: React.FormEvent<HTMLInputElement>) => {
                 this.setFormData(e);
               }}
             />
