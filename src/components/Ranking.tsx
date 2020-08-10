@@ -7,9 +7,11 @@ import ItemList from "_components/organisms/ItemList";
 
 import { selectRanking } from "_queries/query/selectRanking.ts";
 
+import { InterfaceRanking } from "../types/InterfaceRanking";
+
 interface Props {
   item: {
-    ranking: object;
+    ranking: InterfaceRanking;
   };
   ui: {
     display_style: number;
@@ -17,8 +19,8 @@ interface Props {
 }
 interface State {}
 
-class Ranking extends React.Component<any, any> {
-  constructor(props) {
+class Ranking extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.getData = this.getData.bind(this);
     this.getData();
@@ -48,7 +50,7 @@ class Ranking extends React.Component<any, any> {
 
     try {
       if (Object.keys(ranking).length > 1) {
-        itemLists = Object.keys(ranking).map(function(key, index) {
+        itemLists = Object.keys(ranking).map(function (key, index) {
           return (
             <section className="ranking" key={index}>
               <h3 className="ttl_h3">{data_label[key]}</h3>
@@ -84,7 +86,7 @@ class Ranking extends React.Component<any, any> {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: State) => {
   return state;
 };
 export default Redux.connect(mapStateToProps)(Ranking);

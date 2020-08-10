@@ -8,7 +8,7 @@ interface Props {}
 interface State {}
 
 class Search extends React.Component<Props, State> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
   }
   render() {

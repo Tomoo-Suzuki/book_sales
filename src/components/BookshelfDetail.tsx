@@ -44,7 +44,7 @@ class BookshelfDetail extends React.Component<Props, State> {
           if (Number(a.id_book) < Number(b.id_book)) return 1;
         });
         let latestLists = {};
-        arrayLists.map((item: any, index: number): any => {
+        arrayLists.map((item: any): any => {
           if (latestLists[item.id_series] === undefined) {
             latestLists[item.id_series] = [];
           }

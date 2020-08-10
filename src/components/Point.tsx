@@ -3,16 +3,12 @@ import { Helmet } from "react-helmet";
 
 import Navigation from "_components/organisms/Navigation";
 
-interface Props {
-  items: object;
-}
+interface Props {}
 interface State {}
 
 class Point extends React.Component<Props, State> {
-  items: object = {};
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
-    this.items = this.props.items;
   }
   render() {
     return (
@@ -27,7 +23,6 @@ class Point extends React.Component<Props, State> {
           <title>BookSales | Point</title>
           <link rel="canonical" href="http://suzuki-tomoo.com/" />
         </Helmet>
-
         <h2 className="ttl_h2">Point</h2>
         <Navigation />
       </div>
