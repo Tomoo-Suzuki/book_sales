@@ -19,13 +19,11 @@ interface Props {
     display_style: Number;
   };
 }
-//　<any, any> 何故二つか
 // propsにdispatchが含まれる場合
-// constructorの型、返り値
-// superの型
+interface State {}
 
-class BookshelfTop extends React.Component<any, any> {
-  constructor(props: any) {
+class BookshelfTop extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.getData = this.getData.bind(this);
     this.getData();
@@ -85,7 +83,7 @@ class BookshelfTop extends React.Component<any, any> {
   }
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: State) => {
   return state;
 };
 export default Redux.connect(mapStateToProps)(BookshelfTop);
