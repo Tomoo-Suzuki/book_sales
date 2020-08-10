@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import Navigation from "_components/organisms/Navigation";
 
 interface Props {
-  items: object;
   ui: {
     display_style: number;
   };
@@ -12,10 +11,8 @@ interface Props {
 interface State {}
 
 class History extends React.Component<Props, State> {
-  items: object = {};
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
-    this.items = this.props.items;
   }
   render() {
     return (

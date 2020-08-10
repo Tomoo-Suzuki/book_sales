@@ -13,9 +13,9 @@ import { login } from "_queries/query/login";
 interface Props {}
 interface State {}
 
-class FormLogin extends React.Component<any, any> {
+class FormLogin extends React.Component<Props, State> {
   request: any = null;
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       userId: "",
@@ -24,8 +24,11 @@ class FormLogin extends React.Component<any, any> {
     this.request = request.bind(this);
     this.request(login);
   }
-  setFormData(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  setFormData(e: React.FormEvent<HTMLInputElement>) {
+    this.setState({
+      [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement)
+        .value,
+    });
   }
   submitFormData() {
     const Form: HTMLFormElement = document.forms[0];
@@ -54,13 +57,13 @@ class FormLogin extends React.Component<any, any> {
           <form name="loginForm">
             <UserId
               val={this.state}
-              updateState={(e) => {
+              updateState={(e: React.FormEvent<HTMLInputElement>) => {
                 this.setFormData(e);
               }}
             />
             <Password
               val={this.state}
-              updateState={(e) => {
+              updateState={(e: React.FormEvent<HTMLInputElement>) => {
                 this.setFormData(e);
               }}
             />

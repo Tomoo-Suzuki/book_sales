@@ -1,27 +1,32 @@
 {
     "compilerOptions": {
         "target": "es5",
-        //"module": "ES2015",
         "module": "commonjs",
         "jsx": "react",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
         "strict": true,
-        // "strictPropertyInitialization": false,
-        "moduleResolution": "node",
         "esModuleInterop": true,
         "skipLibCheck": true,
         "noImplicitAny": false,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "baseUrl": "./",
         "paths": {
-            // "components/*": ["src/scripts/components/*"],
-            // "components": ["src/scripts/components"],
             "_container*": ["src/container*"],
             "_components*": ["src/components*"],
             "_redux*": ["src/redux*"],
             "_img*": ["srcimg*"],
             "_scss*": ["src/scss*"],
             "_lib*": ["src/lib*"],
-            "_queries*": ["src/queries*"]
+            "_queries*": ["src/queries*"],
+            "_types*": ["src/types*"]
         }
     }
 }

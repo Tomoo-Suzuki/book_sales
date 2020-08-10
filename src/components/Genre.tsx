@@ -7,55 +7,21 @@ import ItemList from "_components/organisms/ItemList";
 
 import { selectGenre } from "_queries/query/selectGenre.ts";
 
+import { InterfaceGenre } from "../types/InterfaceGenre";
+
 interface Props {
   id_series: string;
   item: {
-    item: object;
+    item: InterfaceGenre;
   };
   ui: {
     display_style: Number;
   };
 }
 interface State {}
-interface item {
-  id_book: string;
-  no_title: number;
-  name_book: string;
-  point_sales: number;
-  genre: number;
-  name_genre: string;
-  name_category: string;
-  is_complete: boolean;
-  is_latest: boolean;
-  is_reserve: boolean;
-  id_series: string;
-  name_series: string;
-  price_unit: string;
-  price_now: number;
-  book_detail: string;
-  point_id: string;
-  point: number;
-  id_author: string;
-  id_publisher: string;
-  id_shop: string;
-  url_detail: string;
-  url_img: string;
-  url_img_t: string;
-  url_reader: string;
-  date_register: string;
-  date_sales: string;
-  label_free: number;
-  label_free_s: number;
-  label_disc: number;
-  label_disc_s: number;
-  label_new: number;
-  label_off: number;
-  label_complete_s: number;
-}
-
-class Genre extends React.Component<any, any> {
+class Genre extends React.Component<Props, State> {
   id_genre: string = "";
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.id_genre = props.match.params.id;
     this.getData = this.getData.bind(this);
@@ -96,10 +62,7 @@ class Genre extends React.Component<any, any> {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: State) => {
   return state;
 };
-// const mapDispatchToProps = (dispatch) => ({
-//   selectGenre: (id_genre) => dispatch(selectGenre(id_genre)),
-// });
 export default Redux.connect(mapStateToProps)(Genre);

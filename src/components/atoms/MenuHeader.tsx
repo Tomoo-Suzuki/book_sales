@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 import "_scss/atoms/_menuHeader";
 
-export default function MenuHeader(props) {
-  const menuHeaderLists = [
+export default function MenuHeader():JSX.Element {
+const menuHeaderLists = [
     { text: "ご注文履歴・ご返品", link: "/history" },
     { text: "カート", link: "/cart" },
     { text: "欲しいものリスト", link: "/wish" },
@@ -12,21 +12,21 @@ export default function MenuHeader(props) {
     { text: "アカウント", link: "/account" },
     { text: "ログイン", link: "/login" },
     { text: "本棚", link: "/bookshelf-top" },
-  ];
-  const listMenu = menuHeaderLists.map((list, index) => (
+];
+const listMenu:JSX.Element[] = menuHeaderLists.map((list, index) => (
     <li key={index}>
-      <NavLink to={list.link}>
+        <NavLink to={list.link}>
         <span>
-          <span></span>
+            <span></span>
         </span>
         {list.text}
-      </NavLink>
+        </NavLink>
     </li>
-  ));
+));
 
-  return (
-    <div className="menuHeader">
-      <ul>{listMenu}</ul>
-    </div>
-  );
+return (
+<div className="menuHeader">
+    <ul>{listMenu}</ul>
+</div>
+);
 }
