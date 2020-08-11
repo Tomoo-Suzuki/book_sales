@@ -3,7 +3,17 @@ import { Link } from "react-router-dom";
 
 import "_scss/atoms/_photoWrap";
 
-const PhotoWrapShelf = (props) => {
+type Props = {
+  data: {
+    id_series: string;
+    id_book: string;
+    url_img: string;
+    name_book: string;
+  };
+  shelfType: number;
+};
+
+const PhotoWrapShelf = (props: Props): JSX.Element => {
   const photo = props.data;
   const shelfType = props.shelfType;
   const link_to =

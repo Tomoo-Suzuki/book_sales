@@ -4,8 +4,12 @@ import updateFormSelf from "_lib/updateFormSelf";
 
 const userSelector = (state) => state.account.user;
 
-const Purpose = (props) => {
-  const { val, updateForm } = props;
+type Props = {
+  status: number;
+};
+
+const Purpose = (props: Props): JSX.Element => {
+  // const { val, updateForm } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
 

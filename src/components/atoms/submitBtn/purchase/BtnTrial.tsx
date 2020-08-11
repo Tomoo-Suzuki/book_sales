@@ -1,5 +1,5 @@
 import * as React from "react";
-export const BtnTrial = () => {
+export const BtnTrial = (): JSX.Element => {
   return (
     <li className="btn_trial">
       <span className="btn">
@@ -8,7 +8,7 @@ export const BtnTrial = () => {
     </li>
   );
 };
-export const BtnTrialL = () => {
+export const BtnTrialL = (): JSX.Element => {
   return (
     <li className="btn_trial_l">
       <span>

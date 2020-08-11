@@ -3,9 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import updateFormSelf from "_lib/updateFormSelf";
 
 const userSelector = (state) => state.account.user;
+type Props = {
+  validate: () => {};
+  error: {
+    gender: string;
+  };
+  status: number;
+};
 
-const Gender = (props) => {
-  const { val, updateForm, validate, error } = props;
+const Gender = (props: Props) => {
+  const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch: any = useDispatch();
   return (

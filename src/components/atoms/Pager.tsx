@@ -1,7 +1,7 @@
 import * as React from "react";
 import "_scss/atoms/_pager";
 
-const Pager = () => {
+const Pager = (): JSX.Element => {
   return (
     <div className="pagerWrap">
       <ul className="pager">

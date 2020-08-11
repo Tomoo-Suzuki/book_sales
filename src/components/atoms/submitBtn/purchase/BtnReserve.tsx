@@ -1,5 +1,5 @@
 import * as React from "react";
-export const BtnReserve = () => {
+export const BtnReserve = (): JSX.Element => {
   return (
     <li className="btn_reserve">
       <span className="btn">
@@ -9,7 +9,7 @@ export const BtnReserve = () => {
     </li>
   );
 };
-export const BtnReserveL = () => {
+export const BtnReserveL = (): JSX.Element => {
   return (
     <li className="btn_reserve_l">
       <span>

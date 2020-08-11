@@ -3,9 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import updateFormSelf from "_lib/updateFormSelf";
 
 const userSelector = (state) => state.account.user;
+type Props = {
+  validate: (a: React.ChangeEvent<HTMLInputElement>) => {};
+  error: {
+    email: string;
+  };
+  status: number;
+};
 
-const Email = (props) => {
-  const { val, updateForm, validate, error } = props;
+const Email = (props: Props) => {
+  const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
 
@@ -25,8 +32,10 @@ const Email = (props) => {
               title="メールアドレス"
               //defaultValue={val.email}
               value={user.email}
-              onChange={(e) => updateFormSelf(e, dispatch)}
-              onBlur={(e) => validate(e)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                updateFormSelf(e, dispatch)
+              }
+              onBlur={(e: React.ChangeEvent<HTMLInputElement>) => validate(e)}
             />
             <span className="msg"> {error.email}</span>
           </dd>

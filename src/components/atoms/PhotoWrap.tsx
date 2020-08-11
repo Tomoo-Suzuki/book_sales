@@ -2,8 +2,18 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 import "_scss/atoms/_photoWrap";
+type Props = {
+  data: {
+    id_series: string;
+    id_book: string;
+    url_img: string;
+    name_book: string;
+  };
+  pageType: number;
+  rank: number;
+};
 
-const PhotoWrap = (props) => {
+const PhotoWrap = (props: Props): JSX.Element => {
   const photo = props.data;
   const ranking = Number(props.rank) + 1;
   let icon_rank;
