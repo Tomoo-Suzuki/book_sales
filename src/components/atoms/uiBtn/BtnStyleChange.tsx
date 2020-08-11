@@ -1,17 +1,12 @@
 import * as React from "react";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useDispatch } from "react-redux";
 import { update_display } from "_redux/actions/action";
 
 import "_scss/atoms/_btnStyleChange";
 
-const ui_display_style = (state) => state.ui;
-
-const BtnStyleChange = () => {
+const BtnStyleChange = (): JSX.Element => {
   const dispatch = useDispatch();
-  const uiState = useSelector(ui_display_style);
-  //   console.log(uiState);
-  const styleChange = (num) => {
+  const styleChange = (num: number) => {
     dispatch(update_display(num));
   };
   return (

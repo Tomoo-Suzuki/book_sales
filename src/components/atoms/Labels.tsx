@@ -5,7 +5,20 @@ const ui_display_style = (state) => state.ui;
 
 import "_scss/atoms/_labels";
 
-const Labels = (props):JSX.Element => {
+type Props = {
+  data: {
+    label_new: boolean;
+    label_complete_s: boolean;
+    label_free: boolean;
+    label_free_s: boolean;
+    label_disc: boolean;
+    label_disc_s: boolean;
+    label_off: boolean;
+  };
+  shelfType: number;
+};
+
+const Labels = (props: Props): JSX.Element => {
   const uiState = useSelector(ui_display_style);
   let labelElements: Array<any> = [];
   const labels = props.data;
@@ -79,7 +92,7 @@ const Labels = (props):JSX.Element => {
     if (labels.label_complete_s) {
       labelElements.push(
         <li className="label_finish" key="fin">
-        完結
+          完結
         </li>
       );
     }

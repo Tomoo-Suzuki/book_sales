@@ -4,8 +4,17 @@ import updateFormSelf from "_lib/updateFormSelf";
 
 const userSelector = (state) => state.account.user;
 
-const NameKana = (props) => {
-  const { val, updateForm, validate, error } = props;
+type Props = {
+  validate: () => {};
+  error: {
+    last_name_kana: string;
+    first_name_kana: string;
+  };
+  status: number;
+};
+
+const NameKana = (props: Props) => {
+  const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
 

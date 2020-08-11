@@ -2,7 +2,13 @@ import * as React from "react";
 
 import "_scss/atoms/_tooltip";
 
-const UserId = (props) => {
+type Props = {
+  val: {
+    useId: string;
+  };
+};
+
+const UserId = (props: Props): JSX.Element => {
   const { val, updateState } = props;
   return (
     <dl>
@@ -14,7 +20,7 @@ const UserId = (props) => {
           required
           placeholder="tsex90876"
           value={val.useId}
-          onChange={(e) => updateState(e)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateState(e)}
         />
         <span className="tooltip">
           3文字以上。半角の英数字、ハイフン、アンダースコアが使えます。ユーザーIDは一般に公開され、登録後の変更はできません。

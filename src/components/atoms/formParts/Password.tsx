@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import "_scss/atoms/submitBtn/_btnPassword.scss";
 
-const Password = (props) => {
+type Props = {
+  validate: () => {};
+  error: {
+    tel: string;
+  };
+  status: number;
+};
+
+const Password = (props: Props) => {
   const { val, updateState } = props;
   const [isVisible, funcIsVisible] = useState(false);
   let inputType = isVisible ? "text" : "password";
   let nameBtn = isVisible ? "隠す" : "表示";
-  let displayPassword = (e) => {
+  let displayPassword = (e:) => {
     e.preventDefault();
     if (isVisible === false) {
       funcIsVisible(true);
@@ -25,7 +33,7 @@ const Password = (props) => {
             required
             placeholder="tsex90876"
             value={val.useId}
-            onChange={(e) => updateState(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateState(e)}
           />
           <span className="tooltip">
             8文字以上。半角英数字、半角記号が使えます。

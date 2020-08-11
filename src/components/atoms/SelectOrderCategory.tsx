@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const SelectOrderCategory = () => {
+export const SelectOrderCategory = (): JSX.Element => {
   return (
     <select>
       <option>価格の高い順</option>

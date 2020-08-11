@@ -1,9 +1,9 @@
 import * as React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const userSelector = (state) => state.account.user;
 
-const ReceptionDate = (props) => {
+const ReceptionDate = (): JSX.Element => {
   //   const { val, updateForm } = props;
   const user = useSelector(userSelector);
   return (

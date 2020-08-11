@@ -1,5 +1,5 @@
 import * as React from "react";
-export const BtnWish = () => {
+export const BtnWish = (): JSX.Element => {
   return (
     <li className="btn_wish">
       <span className="btn">
@@ -9,7 +9,7 @@ export const BtnWish = () => {
     </li>
   );
 };
-export const BtnWishL = () => {
+export const BtnWishL = (): JSX.Element => {
   return (
     <li className="btn_wish_l">
       <span>

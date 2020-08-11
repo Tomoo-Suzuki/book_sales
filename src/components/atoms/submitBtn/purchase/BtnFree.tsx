@@ -1,5 +1,5 @@
 import * as React from "react";
-export const BtnFree = () => {
+export const BtnFree = (): JSX.Element => {
   return (
     <li className="btn_free">
       <span className="btn">
@@ -8,7 +8,7 @@ export const BtnFree = () => {
     </li>
   );
 };
-export const BtnFreeL = () => {
+export const BtnFreeL = (): JSX.Element => {
   return (
     <li className="btn_free_l">
       <span>

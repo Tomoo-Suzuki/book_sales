@@ -4,7 +4,7 @@ import updateFormSelf from "_lib/updateFormSelf";
 
 const userSelector = (state) => state.account.user;
 
-const Birthday = (props) => {
+const Birthday = (props: Props) => {
   const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
