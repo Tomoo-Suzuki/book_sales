@@ -4,7 +4,9 @@ import updateFormSelf from "_lib/updateFormSelf";
 
 const userSelector = (state) => state.account.user;
 
-const Birthday = (props: Props) => {
+import { InterfaceFormProps } from "../types/InterfaceFormProps";
+
+const Birthday = (props: InterfaceFormProps) => {
   const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
