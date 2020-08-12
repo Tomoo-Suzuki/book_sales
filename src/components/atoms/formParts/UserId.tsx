@@ -9,7 +9,7 @@ type Props = {
 };
 
 const UserId = (props: Props): JSX.Element => {
-  const { val, updateState } = props;
+  const { val } = props;
   return (
     <dl>
       <dt>ユーザーID</dt>

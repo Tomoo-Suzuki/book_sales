@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import "_scss/atoms/submitBtn/_btnPassword.scss";
 
-type Props = {
-  validate: () => {};
-  error: {
-    tel: string;
-  };
-  status: number;
-};
-
-const Password = (props: Props) => {
-  const { val, updateState } = props;
+const Password = () => {
+  // const { val, updateState } = props;
   const [isVisible, funcIsVisible] = useState(false);
   let inputType = isVisible ? "text" : "password";
   let nameBtn = isVisible ? "隠す" : "表示";

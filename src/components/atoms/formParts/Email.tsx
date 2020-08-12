@@ -2,16 +2,11 @@ import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import updateFormSelf from "_lib/updateFormSelf";
 
-const userSelector = (state) => state.account.user;
-type Props = {
-  validate: (a: React.ChangeEvent<HTMLInputElement>) => {};
-  error: {
-    email: string;
-  };
-  status: number;
-};
+import { InterfaceFormProps } from "../types/InterfaceFormProps";
 
-const Email = (props: Props) => {
+const userSelector = (state) => state.account.user;
+
+const Email = (props: InterfaceFormProps) => {
   const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();

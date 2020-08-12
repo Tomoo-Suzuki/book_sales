@@ -5,26 +5,10 @@ import updateFormSelf from "_lib/updateFormSelf";
 import "_scss/atoms/_address";
 
 const userSelector = (state: { account: any }) => state.account.user;
-type Props = {
-  validate: (a: React.ChangeEvent<HTMLInputElement>) => {};
-  error: {
-    last_name: string;
-    first_name: string;
-    last_name_kana: string;
-    first_name_kana: string;
-    gender: string;
-    birthday: string;
-    tel: string;
-    email: string;
-    zip: string;
-    prefecture: string;
-    city: string;
-    address3: string;
-  };
-  status: number;
-};
 
-const Address = (props: Props) => {
+import { InterfaceFormProps } from "../types/InterfaceFormProps";
+
+const Address = (props: InterfaceFormProps) => {
   const { validate, error } = props;
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
