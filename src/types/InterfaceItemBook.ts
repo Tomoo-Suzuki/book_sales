@@ -1,7 +1,12 @@
-export interface InterfaceItemBook {
-  id_book: string;
+import { InterfaceLabel } from "./InterfaceLabel";
+import { InterfaceItemPhotoWrap } from "./InterItemPhotoWrap";
+import { InterfaceItemDataWrap } from "./InterfaceItemDataWrap";
+
+export interface InterfaceItemBook
+  extends InterfaceLabel,
+    InterfaceItemPhotoWrap,
+    InterfaceItemDataWrap {
   no_title: number;
-  name_book: string;
   point_sales: number;
   genre: number;
   name_genre: string;
@@ -10,26 +15,10 @@ export interface InterfaceItemBook {
   is_latest: boolean;
   is_reserve: boolean;
   id_series: string;
-  name_series: string;
-  price_unit: string;
-  price_now: number;
-  book_detail: string;
-  point_id: string;
-  point: number;
-  id_author: string;
-  id_publisher: string;
   id_shop: string;
   url_detail: string;
-  url_img: string;
   url_img_t: string;
   url_reader: string;
   date_register: string;
   date_sales: string;
-  label_free: number;
-  label_free_s: number;
-  label_disc: number;
-  label_disc_s: number;
-  label_new: number;
-  label_off: number;
-  label_complete_s: number;
 }

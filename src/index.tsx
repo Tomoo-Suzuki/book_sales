@@ -6,7 +6,7 @@ import App from "_container/App";
 import configureStore from "_redux/store";
 
 import "_scss/index";
-import initialState from "_redux/state/initialState";
+// import initialState from "_redux/state/initialState";
 //TODO:initial State 修正
 const store = configureStore(/*initialState*/);
 

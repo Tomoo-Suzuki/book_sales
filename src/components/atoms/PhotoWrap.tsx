@@ -2,13 +2,11 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 import "_scss/atoms/_photoWrap";
+
+import { InterPhotoWrap } from "../types/atoms/InterPhotoWrap";
+
 type Props = {
-  data: {
-    id_series: string;
-    id_book: string;
-    url_img: string;
-    name_book: string;
-  };
+  data: InterPhotoWrap;
   pageType: number;
   rank: number;
 };
@@ -16,8 +14,8 @@ type Props = {
 const PhotoWrap = (props: Props): JSX.Element => {
   const photo = props.data;
   const ranking = Number(props.rank) + 1;
-  let icon_rank;
-  let special;
+  let icon_rank: JSX.Element = <span></span>;
+  let special: string = "";
   if (props.pageType === 1) {
     if (props.rank === 0) {
       special = "icon_gold";

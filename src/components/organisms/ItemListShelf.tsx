@@ -5,15 +5,23 @@ import PhotoWrapShelf from "_components/atoms/PhotoWrapShelf";
 import { ItemDataWrap } from "_components/molecules/ItemDataWrap";
 
 import "_scss/organisms/_itemList";
-const ItemListShelf = (props) => {
+
+import { InterfaceLabel } from "../types/atoms/InterfaceLabel";
+
+type Props = {
+  pageType: number;
+  data: InterfaceLabel;
+  shelfType: number;
+};
+const ItemListShelf = (props: Props) => {
   const pageType = props.pageType;
-  const items = props.data;
+  const items: {} = props.data;
   const shelfType = props.shelfType;
-  let lists;
+  let lists: {} | null | undefined;
   if (items) {
     lists = "";
     if (Object.keys(items).length > 0) {
-      lists = items.map((item, key) => {
+      lists = items.map((item: InterfaceLabel, key: number) => {
         return (
           <li className="itemList" key={`itemwrap` + key}>
             <LabelsShelf
@@ -24,8 +32,6 @@ const ItemListShelf = (props) => {
             <div>
               <PhotoWrapShelf
                 data={item}
-                rank={key}
-                pageType={pageType}
                 shelfType={shelfType}
                 key={`photo` + key}
               />
