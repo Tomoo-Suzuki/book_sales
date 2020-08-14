@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 import "_scss/atoms/_photoWrap";
 
+import { InterPhotoWrap } from "../types/atoms/InterPhotoWrap";
+
 type Props = {
-  data: {
-    id_series: string;
-    id_book: string;
-    url_img: string;
-    name_book: string;
-  };
+  data: InterPhotoWrap;
+  pageType: number;
+  rank: number;
   shelfType: number;
 };
 

@@ -5,20 +5,14 @@ const ui_display_style = (state) => state.ui;
 
 import "_scss/atoms/_labels";
 
+import { InterfaceLabel } from "../types/atoms/InterfaceLabel";
+
 type Props = {
-  data: {
-    label_new: boolean;
-    label_complete_s: boolean;
-    label_free: boolean;
-    label_free_s: boolean;
-    label_disc: boolean;
-    label_disc_s: boolean;
-    label_off: boolean;
-  };
+  data: InterfaceLabel;
   shelfType: number;
 };
 
-const LabelsShelf = (props: Props) => {
+const LabelsShelf = (props: Props): JSX.Element => {
   const uiState = useSelector(ui_display_style);
   let labelElements: Array<any> = [];
   const labels = props.data;

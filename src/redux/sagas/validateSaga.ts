@@ -1,4 +1,4 @@
-import { take, call, select, put, fork, takeEvery } from "redux-saga/effects";
+import { put, takeEvery } from "redux-saga/effects";
 
 import { result_validate } from "_redux/actions/action";
 
